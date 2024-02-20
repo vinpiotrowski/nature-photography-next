@@ -1,4 +1,5 @@
 import {fetchPageBySlug, fetchAllPageSlugs} from '../../utils/sanity-queries'
+import Image from '../../components/atoms/image'
 
 export async function generateStaticParams() {
 
@@ -16,6 +17,10 @@ export default async function Page(context) {
     <main>
       <div>
         <h1>{pageData.eyebrowText} {pageData.headline}</h1>
+        <Image
+          alt={''}
+          imageContent={pageData.backgroundImage}
+        />
       </div>
     </main>
   );

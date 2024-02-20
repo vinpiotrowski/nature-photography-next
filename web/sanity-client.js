@@ -1,4 +1,5 @@
 import { createClient } from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url'
 
 export const sanityClient = (isPreview) =>
     createClient({
@@ -6,5 +7,11 @@ export const sanityClient = (isPreview) =>
         dataset: 'production',
         projectId: 'w2in3wfr',
         useCdn: false,
-        perspective: 'published',
+        perspective: isPreview ? 'previewDrafts' : 'published',
+    })
+
+export const sanityImageUrlBuilder = () =>
+    imageUrlBuilder({
+        dataset: 'production',
+        projectId: 'w2in3wfr',
     })

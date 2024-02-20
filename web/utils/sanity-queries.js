@@ -1,4 +1,5 @@
 import {sanityClient} from '../sanity-client'
+import pageProjection from './sanity-projections/page-projection'
 
 
 const fetcher = async (groq, groqArgs = {}, isPreview) => {
@@ -18,7 +19,7 @@ const fetchMultiple = async (groq, groqArgs, isPreview) => {
 
 const fetchPageBySlug = async (slug, isPreview) => {
     return await fetchSingle(
-        `*[slug.current == $slug] {...}`,
+        `*[slug.current == $slug]${pageProjection}`,
         {slug},
         isPreview
     )
