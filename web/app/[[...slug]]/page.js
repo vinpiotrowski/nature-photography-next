@@ -21,8 +21,8 @@ export default async function Page(context) {
       />
 
       <PageHeading
-        eyebrowText={pageContent.eyebrowText}
-        headline={pageContent.headline}
+        eyebrowText={pageContent.pageHeading.eyebrow}
+        headline={pageContent.pageHeading.headline}
       />
     </main>
   );

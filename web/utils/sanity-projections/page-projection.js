@@ -1,12 +1,10 @@
 import imageProjection from './image-projection'
+import pageHeadingProjection from './page-heading-projection'
 
 const pageProjection = `{
     _type,
-    (_type == 'homepage') => {
-        backgroundImage ${imageProjection},
-        eyebrowText,
-        headline,
-    }
+    backgroundImage ${imageProjection},
+    pageHeading ${pageHeadingProjection}
 }`
 
 export default pageProjection

@@ -1,9 +1,9 @@
-import { HiOutlineHomeModern } from 'react-icons/hi2'
+import { RiPagesLine } from 'react-icons/ri'
 
-const homepage = {
-    name: 'homepage',
-    title: 'Homepage',
-    icon: HiOutlineHomeModern,
+const page = {
+    name: 'page',
+    title: 'Page',
+    icon: RiPagesLine,
     preview: {
       select: {
         title: 'title'
@@ -12,7 +12,7 @@ const homepage = {
         const {title} = selection
         return {
           title: title,
-          subtitle: 'Homepage',
+          subtitle: 'Page',
         }
       }
     },
@@ -43,17 +43,11 @@ const homepage = {
         },
       },
       {
-        name: 'eyebrowText',
-        title: 'Eyebrow Text',
-        type: 'string'
-      },
-      {
-        name: 'headline',
-        title: 'Headline',
-        type: 'string'
-      },
-
+        name: 'pageHeading',
+        title: 'Page Heading',
+        type: 'pageHeading'
+      }
     ]
 }
 
-export default homepage
+export default page

@@ -6,7 +6,7 @@ export const deskStructure = (S, context) => {
     S.listItem()
     .title('Pages')
     .child(
-      S.documentList().title('Pages').filter('_type == "homepage"')
+      S.documentList().title('Pages').filter('_type == "page"')
     ), 
     S.divider(),
     S.listItem()
