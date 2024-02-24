@@ -1,4 +1,6 @@
 import { BsCardHeading } from 'react-icons/bs'
+import { IconPicker } from '../components/icon-picker'
+import { IconMediaPreview } from '../components/icon-media-preview'
 
 const pageHeading = {
     name: 'pageHeading',
@@ -25,11 +27,46 @@ const pageHeading = {
         options: {
           list: [
             {title: 'Regular', value: 'reg'},
-            {title: 'Mega Chonk', value: 'mega'},
+            {title: 'Chonky', value: 'chonky'},
             {title: 'Pointy', value: 'pointy'},
           ], 
           layout: 'radio'
         }
+      },
+      {
+        name: 'iconGroup',
+        title: 'Icon Group',
+        type: 'array',
+        of: [
+          {
+            name: 'icon',
+            title: 'Icon Item',
+            type: 'object',
+            fields: [
+              {
+                name: 'icon',
+                title: 'Icon',
+                type: 'string',
+                components: {
+                  input: IconPicker
+                }
+              }
+            ],
+            preview: {
+              select: {
+                icon: 'icon'
+              },
+              prepare(selection) {
+                const {icon} = selection
+                return {
+                  title: icon,
+                  media: IconMediaPreview(icon)
+                }
+              }
+            }
+
+          }
+        ]
       },
       {
         name: 'headline',
