@@ -47,3 +47,5 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(icons.css)

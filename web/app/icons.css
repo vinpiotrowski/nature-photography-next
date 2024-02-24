@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?a1bn2i');
+  src:  url('/fonts/icomoon.eot?a1bn2i#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?a1bn2i') format('truetype'),
+    url('/fonts/icomoon.woff?a1bn2i') format('woff'),
+    url('/fonts/icomoon.svg?a1bn2i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hiking:before {
+  content: "\e901";
+}
+.icon-compass:before {
+  content: "\e902";
+}
+.icon-bird:before {
+  content: "\e903";
+}
+.icon-thermos:before {
+  content: "\e904";
+}
+.icon-camera:before {
+  content: "\e90c";
+}
+.icon-landscapes:before {
+  content: "\e90d";
+}
+.icon-conservation:before {
+  content: "\e90e";
+}
+.icon-canadian:before {
+  content: "\e90f";
+}
+.icon-articles:before {
+  content: "\e910";
+}
+.icon-badlands:before {
+  content: "\e906";
+}
+.icon-foothills:before {
+  content: "\e907";
+}
+.icon-ocean:before {
+  content: "\e908";
+}
+.icon-prairies:before {
+  content: "\e909";
+}
+.icon-mountains:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e90b";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-quotes-right:before {
+  content: "\e978";
+}
+.icon-help-circle:before {
+  content: "\e905";
+}
+.icon-menu:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-chevron-circle-left:before {
+  content: "\f137";
+}
+.icon-chevron-circle-right:before {
+  content: "\f138";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
