@@ -13,7 +13,7 @@ export default async function Page(context) {
     { w: 360, h: 480 }, // 3:4
     { w: 414, h: 552 },
     { w: 768, h: 1024 },
-    { w: 1366, h: 0 },
+    { w: 1366, h: 0 }, // honor aspect ratio
     { w: 1536, h: 0 },
     { w: 1920, h: 0 }
   ]

@@ -31,6 +31,15 @@ h1, h2, h3, h4, h5 {
   font-style: normal;
 }
 
+section:not(.chonky) h1:after {
+  background: #358faa;
+  content: " ";
+  display: block;
+  height: 5px;
+  margin: 21px auto 0;
+  width: 140px;
+}
+
 a {
   color: inherit;
   text-decoration: none;

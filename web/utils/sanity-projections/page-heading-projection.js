@@ -1,10 +1,10 @@
 import iconGroupProjection from './icon-group-projection'
 
 const pageHeadingProjection = `{
-    eyebrow,
     headline,
+    iconGroup[] ${iconGroupProjection},
     intro,
-    iconGroup[] ${iconGroupProjection}
+    variant
 }`
 
 export default pageHeadingProjection
