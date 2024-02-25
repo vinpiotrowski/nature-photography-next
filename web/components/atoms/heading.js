@@ -1,5 +1,5 @@
 const Heading1 = ({children, className = ''}) => {
-    return <h1 className={`text-5xl lg:text-7xl ${className}`}>{children}</h1>
+    return <h1 className={`text-4xl lg:text-8xl ${className}`}>{children}</h1>
 }
 
 const Heading2 = ({children, className = ''}) => {

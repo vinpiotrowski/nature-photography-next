@@ -1,5 +1,6 @@
 import {fetchPageBySlug, fetchAllPageSlugs} from '../../utils/sanity-queries'
 import Image from '../../components/atoms/image'
+import Navigation from '../../components/organisms/navigation'
 import PageHeading from '../../components/organisms/page-heading'
 
 export async function generateStaticParams() {
@@ -23,9 +24,10 @@ export default async function Page(context) {
 
   return (
     <main>
+      <Navigation />
       <Image
           alt={''}
-          className={'page-background-image'}
+          className={'absolute top-0 z-0'}
           imageContent={pageContent.backgroundImage}
           sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
       />

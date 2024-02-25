@@ -13,13 +13,11 @@ body {
 body {
   background: #212121;
   color: rgb(210,210,210);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
   line-height: 1.2;
 }
 
@@ -43,13 +41,6 @@ section:not(.chonky) h1:after {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-
-
-.page-background-image {
-  position: absolute;
-  z-index: 0;
 }
 
 
