@@ -3,7 +3,7 @@ const Heading1 = ({children, className = ''}) => {
 }
 
 const Heading2 = ({children, className = ''}) => {
-    return <h2 className={`${className}`}>{children}</h2>
+    return <h2 className={`text-xl lg:text-2xl ${className}`}>{children}</h2>
 }
 
 const Heading3 = ({children, className = ''}) => {

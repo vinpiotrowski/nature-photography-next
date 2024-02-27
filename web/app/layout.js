@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -10,8 +11,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width' />
+      </Head>
+      <html lang="en">
+        <body className={inter.className}>
+            {children}
+        </body>
+      </html>
+    </>
+
   );
 }

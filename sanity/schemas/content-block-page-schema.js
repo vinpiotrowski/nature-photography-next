@@ -1,9 +1,9 @@
-import { RiPagesLine } from 'react-icons/ri'
+import { IoDocumentOutline } from 'react-icons/io5'
 
-const page = {
-    name: 'page',
-    title: 'Page',
-    icon: RiPagesLine,
+const contentBlockPage = {
+    name: 'contentBlockPage',
+    title: 'Content Block Page',
+    icon: IoDocumentOutline,
     preview: {
       select: {
         title: 'title'
@@ -12,7 +12,7 @@ const page = {
         const {title} = selection
         return {
           title: title,
-          subtitle: 'Page',
+          subtitle: 'Content Block Page',
         }
       }
     },
@@ -32,7 +32,7 @@ const page = {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
-        description: 'Homepage must have a value of \'/\'',
+        description: 'Include leading slash eg. /about',
       },
       {
         name: 'backgroundImage',
@@ -50,4 +50,4 @@ const page = {
     ]
 }
 
-export default page
+export default contentBlockPage

@@ -10,22 +10,23 @@ export const deskStructure = (S, context) => {
     .title('Pages')
     .icon(IoDocumentOutline)
     .child(
-      S.documentList().title('Pages').filter('_type == "page"')
+      S.documentList().title('Pages').filter(`_type in ['article', 'contentBlockPage', 'gallery']`)
     ),
     S.divider(),
     S.listItem()
     .title('Articles')
     .icon(IoNewspaperOutline)
     .child(
-      S.documentList().title('Articles').filter('_type == "article"')
+      S.documentList().title('Articles').filter(`_type == 'article'`)
     ), 
     S.divider(),
     S.listItem()
     .title('Galleries')
     .icon(IoImagesOutline)
     .child(
-      S.documentList().title('Galleries').filter('_type == "gallery"')
+      S.documentList().title('Galleries').filter(`_type == 'gallery'`)
     ), 
+    S.divider(),
     orderableDocumentListDeskItem({
       type: 'photograph', 
       title: 'Photographs',

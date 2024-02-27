@@ -43,17 +43,6 @@ export const IconPicker = (props) => {
     return (
         <Box paddintTop={2}>
             <Stack space={[3, 3, 3, 3]}>
-                <img 
-                    src={currentIconObject?.path || '/static/icons/box.svg'}
-                    style={{
-                        height: '48px',
-                        width: '48px',
-                        verticalAlign: 'middle',
-                        backgroundColor: 'white',
-                        padding: '4px',
-                        border: '1px solid #CED2D9'
-                    }}
-                />
                 <Autocomplete
                     value={currentIconObject?.value}
                     fontSize={[2, 2, 2]}
