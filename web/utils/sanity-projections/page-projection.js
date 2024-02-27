@@ -1,6 +1,7 @@
 import iconGroupProjection from './icon-group-projection'
 import imageProjection from './image-projection'
 import pageHeadingProjection from './page-heading-projection'
+import photographProjection from './photograph-projection'
 
 const pageProjection = `{
     _type,
@@ -17,6 +18,7 @@ const pageProjection = `{
         shortDescription,
         longDescription,
         backgroundImage ${imageProjection},
+        'photographs': *[ _type == 'photograph' && references(^._id) ] ${photographProjection} | order(orderRank)
     },
 }`
 

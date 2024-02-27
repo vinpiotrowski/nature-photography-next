@@ -32,8 +32,8 @@ const Gallery = ({galleryContent}) => {
                 }}
             />
 
-            <section data-name='gallery' className='bg-white flex justify-center -mt-1 relative z-1'>
-                <div className='container flex flex-col gap-3 max-w-xl p-7 text-center lg:gap-7 lg:max-w-3xl lg:p-14'>
+            <section data-name='gallery' className='bg-white flex justify-center -mt-1 p-7 relative z-1 '>
+                <div className='container flex flex-col gap-3 max-w-xl text-center lg:gap-7 lg:max-w-3xl'>
                     <Heading className='uppercase' variant='h2'>
                         {subtitle}
                     </Heading>
