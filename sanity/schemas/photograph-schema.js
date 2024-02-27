@@ -1,3 +1,5 @@
+import { orderRankField } from '@sanity/orderable-document-list'
+
 const photograph = {
     name: 'photograph',
     title: 'Photograph',
@@ -30,7 +32,17 @@ const photograph = {
         name: 'location',
         title: 'Location',
         type: 'string',
-      }
+      },
+      {
+        title: 'Gallery',
+        name: 'gallery',
+        type: 'reference',
+        to: [{type: 'gallery'}]
+      },
+      orderRankField({
+        type: 'photograph',
+        hidden: true
+      })
     ],
   }
   
