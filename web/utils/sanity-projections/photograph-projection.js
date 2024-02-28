@@ -5,7 +5,8 @@ const photographProjection = `{
     shortdescription,
     longDescription,
     image ${imageProjection},
-    location
+    location,
+    orderRank
 }`
 
 export default photographProjection

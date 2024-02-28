@@ -69,7 +69,7 @@ const PageHeading = ({pageHeadingContent}) => {
                 </div>
                 <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='100,100 100,77 0,100' style={{fill: 'rgba(255, 255, 255, 1)'}}></polygon>
+                        <polygon points='0,98 0,100 100,100 100,77' style={{fill: 'rgba(255, 255, 255, 1)'}}></polygon>
                     </svg>
                 </div>
             </section>

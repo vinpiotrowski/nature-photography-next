@@ -41,7 +41,6 @@ const photograph = {
       },
       orderRankField({
         type: 'photograph',
-        hidden: true
       })
     ],
   }
