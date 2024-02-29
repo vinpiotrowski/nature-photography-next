@@ -47,4 +47,15 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-button {
+    background-color: rgba(53, 143, 170, 1);
+  }
+
+  .box-shadow-button {
+    @apply transition-all duration-500 xl:shadow-[7px_7px_0_rgba(0,0,0,0)] xl:hover:shadow-[7px_7px_0_rgba(238,182,0,1)];
+  }
+}
+
+
 @import url(icons.css)
