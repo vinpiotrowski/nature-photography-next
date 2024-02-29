@@ -4,6 +4,7 @@ import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Modal from '../molecules/modal'
 import PageHeading from '../organisms/page-heading'
+import Paragraph from '../atoms/paragraph'
 
 const Gallery = ({galleryContent}) => {
 
@@ -76,7 +77,9 @@ const Gallery = ({galleryContent}) => {
                     <Heading className='uppercase' variant='h2'>
                         {subtitle}
                     </Heading>
-                    <p>{longDescription}</p>
+                    <Paragraph>
+                        {longDescription}
+                    </Paragraph>
                 </div>
 
                 <div className='container flex flex-wrap justify-start'>
