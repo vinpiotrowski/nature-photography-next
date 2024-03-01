@@ -88,7 +88,7 @@ const Gallery = ({galleryContent}) => {
                             <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>
                                 <button onClick={() => handleClick(photo, index)}>
                                     <Image
-                                        alt={''}
+                                        alt={photo?.shortDescription}
                                         imageContent={photo?.image}
                                         sizeSteps={THUMBNAIL_SIZE_STEPS}
                                     />

@@ -15,14 +15,15 @@ const Modal = ({
   return (
     selectedImage && (
       <div className='fixed inset-0 flex justify-center items-center z-50'>
+
         <div className='bg-white bg-opacity-95 h-full w-full'>
           
           <div className='flex justify-center p-3'>
-            <Heading variant='h2' >
+            <Heading variant='h3' >
                 {selectedImage.title}
             </Heading>
             <button
-              className='absolute bg-button py-1 px-1 right-3 rounded-full 
+              className='absolute bg-button py-0.5 px-0.5 right-3 rounded-full 
                   text-xl text-white font-bold'
               onClick={onClose}
             >
@@ -33,10 +34,10 @@ const Modal = ({
             </button>
           </div>
 
-          <div className='border-black flex justify-center items-center relative'>
-            <div className='absolute bottom-0 left-0 flex flex-col gap-3 justify-center p-7
-                  translate-y-full w-full lg:max-w-prose lg:bg-panel lg:py-10 lg:px-14 
-                  lg:translate-x-[7vw] lg:translate-y-3/4'>
+          <div className='flex justify-center items-center relative'>
+            <div className='absolute bottom-0 left-0 flex flex-col gap-3 justify-center p-7 
+                  translate-y-full w-full lg:bg-panel lg:overflow-y-auto lg:max-h-[35vh] lg:max-w-prose 
+                  lg:py-10 lg:px-14 lg:translate-x-[7vw] lg:translate-y-3/4'>
               <div className='flex gap-3 items-center'>
                 <button
                   className='bg-button py-0 px-2.5 right-3 rounded-full 
@@ -53,7 +54,8 @@ const Modal = ({
                   <em className='icon-angle-right'></em>
                 </button>
                 <strong className='lg:text-white'>
-                  {('0' + (selectedIndex + 1)).slice(-2)} / 
+                  {('0' + (selectedIndex + 1)).slice(-2)} 
+                  &nbsp;/&nbsp; 
                   {('0' + images.length).slice(-2)}
                 </strong>
               </div>
@@ -62,7 +64,7 @@ const Modal = ({
               </Paragraph>
             </div>
             <Image
-              className='max-h-[56vh] lg:max-h-[77vh]'
+              className='max-h-[56vh] lg:max-h-[70vh]'
               imageContent={selectedImage.image} 
               alt='' 
             />

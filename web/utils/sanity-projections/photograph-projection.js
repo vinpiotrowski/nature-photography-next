@@ -2,7 +2,7 @@ import imageProjection from './image-projection'
 
 const photographProjection = `{
     title,
-    shortdescription,
+    shortDescription,
     longDescription,
     image ${imageProjection},
     location,

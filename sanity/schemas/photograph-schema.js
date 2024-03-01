@@ -21,7 +21,7 @@ const photograph = {
       {
           name: 'shortDescription',
           title: 'Short Description',
-          type: 'text',
+          type: 'string',
       },
       {
         name: 'longDescription',
