@@ -29,7 +29,7 @@ const Gallery = ({galleryContent}) => {
 
     useEffect(() => {
         setImages(photographs);
-    }, []);
+    }, [photographs]);
 
     const handleClick = (image, index) => {
         setSelectedImage(image),

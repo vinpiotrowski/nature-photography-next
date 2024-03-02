@@ -12,6 +12,13 @@ const Modal = ({
   selectedIndex,
 }) => {
 
+  const PHOTOGRAPH_SIZE_STEPS = [
+    { w: 768, h: 0 },
+    { w: 1366, h: 0 },
+    { w: 1536, h: 0 },
+    { w: 1920, h: 0 }
+  ]
+
   return (
     selectedImage && (
       <div className='fixed inset-0 flex justify-center items-center z-50'>
@@ -66,7 +73,8 @@ const Modal = ({
             <Image
               className='max-h-[56vh] lg:max-h-[70vh]'
               imageContent={selectedImage.image} 
-              alt='' 
+              alt={selectedImage.shortDescription}
+              sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
             />
           </div>
         </div>

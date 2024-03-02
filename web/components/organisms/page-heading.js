@@ -1,6 +1,7 @@
 import Button from '../atoms/button'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
+import Paragraph from '../atoms/paragraph'
 
 const PageHeading = ({pageHeadingContent}) => {
     const {headline, iconGroup, intro, link, variant} = pageHeadingContent
@@ -17,9 +18,9 @@ const PageHeading = ({pageHeadingContent}) => {
                     </Heading>
                 )}
                 {intro && (
-                    <p className='relative text-xl z-1 lg:text-2xl'>
+                    <Paragraph variant='chonky' className='relative z-1 '>
                         {intro}
-                    </p>
+                    </Paragraph>
                 )}
                 {link?.text && (
                     <Button linkContent={link} buttonVariant={'chonky'} />
