@@ -54,11 +54,15 @@ a {
     @apply transition-all ease-in-out duration-500;
   }
 
-  .bg-button {
-    @apply bg-[rgba(53,143,170,1)] /*lg:hover:bg-[rgba(238,182,0,1)]*/;
+  .np-button {
+    @apply bg-[rgba(53,143,170,1)];
   }
 
-  .bg-panel {
+  .np-hover {
+    @apply bg-[rgba(255,0,108,1)]
+  }
+
+  .np-panel {
     @apply bg-[#212121]
   }
 }

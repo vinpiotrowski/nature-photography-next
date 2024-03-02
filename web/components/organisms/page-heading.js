@@ -18,12 +18,12 @@ const PageHeading = ({pageHeadingContent}) => {
                     </Heading>
                 )}
                 {intro && (
-                    <Paragraph variant='chonky' className='relative z-1 '>
+                    <Paragraph variant='chonky' className='relative z-1'>
                         {intro}
                     </Paragraph>
                 )}
                 {link?.text && (
-                    <Button linkContent={link} buttonVariant={'chonky'} />
+                    <Button linkContent={link} buttonVariant={'chonky'} className=' font-bold ' />
                 )}
             </div>
         )

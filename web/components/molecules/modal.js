@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../atoms/button'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
@@ -29,37 +30,16 @@ const Modal = ({
             <Heading variant='h3' >
                 {selectedImage.title}
             </Heading>
-            <button
-              className='absolute bg-button py-0.5 px-0.5 right-3 rounded-full 
-                  text-xl text-white font-bold'
-              onClick={onClose}
-            >
-              <svg className='fill-current h-6 w-6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                  <title>Close Modal</title>  
-                  <path d="M16.707,8.707,13.414,12l3.293,3.293a1,1,0,1,1-1.414,1.414L12,13.414,8.707,16.707a1,1,0,1,1-1.414-1.414L10.586,12,7.293,8.707A1,1,0,1,1,8.707,7.293L12,10.586l3.293-3.293a1,1,0,1,1,1.414,1.414Z"/>
-              </svg>
-            </button>
+            <Button buttonVariant='close' onClick={onClose} />
           </div>
 
           <div className='flex justify-center items-center relative'>
             <div className='absolute bottom-0 left-0 flex flex-col gap-3 justify-center p-7 
-                  translate-y-full w-full lg:bg-panel lg:overflow-y-auto lg:max-h-[35vh] lg:max-w-prose 
+                  translate-y-full w-full lg:np-panel lg:overflow-y-auto lg:max-h-[35vh] lg:max-w-prose 
                   lg:py-10 lg:px-14 lg:translate-x-[7vw] lg:translate-y-3/4'>
               <div className='flex gap-3 items-center'>
-                <button
-                  className='bg-button py-0 px-2.5 right-3 rounded-full 
-                  text-xl text-white font-bold'
-                  onClick={onPrev}
-                >
-                  <em className='icon-angle-left'></em>
-                </button>
-                <button
-                  className='bg-button py-0 px-2.5 right-3 rounded-full 
-                  text-xl text-white font-bold'
-                  onClick={onNext}
-                >
-                  <em className='icon-angle-right'></em>
-                </button>
+                <Button buttonVariant='previous' onClick={onPrev} />
+                <Button buttonVariant='next' onClick={onNext} />
                 <strong className='lg:text-white'>
                   {('0' + (selectedIndex + 1)).slice(-2)} 
                   &nbsp;/&nbsp; 
