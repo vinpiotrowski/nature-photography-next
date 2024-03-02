@@ -21,6 +21,8 @@ body {
   line-height: 1.2;
 }
 
+
+
 h1, h2, h3, h4, h5 {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
@@ -33,7 +35,7 @@ section:not(.chonky) h1:after {
   content: " ";
   display: block;
   height: 5px;
-  margin: 21px auto 0;
+  margin: 1rem auto 0.5rem;
   width: 140px;
 }
 
@@ -48,8 +50,12 @@ a {
 @tailwind utilities;
 
 @layer utilities {
+  .np-transition {
+    @apply transition-all ease-in-out duration-500;
+  }
+
   .bg-button {
-    @apply transition-all duration-500 bg-[rgba(53,143,170,1)] /*lg:hover:bg-[rgba(238,182,0,1)]*/;
+    @apply bg-[rgba(53,143,170,1)] /*lg:hover:bg-[rgba(238,182,0,1)]*/;
   }
 
   .bg-panel {

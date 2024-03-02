@@ -37,7 +37,7 @@ const Navigation = ({navigationContent}) => {
                     )}
                 </button>
             </div>
-            <div className={`transition-all duration-300 ease-out block flex-grow items-center overflow-hidden w-full ${isOpen ? 'max-h-[300]' : 'max-h-0'} lg:flex lg:justify-end lg:max-h-none lg:w-auto`}>
+            <div className={`np-transition block flex-grow items-center overflow-hidden w-full ${isOpen ? 'max-h-[300px]' : 'max-h-0'} lg:flex lg:justify-end lg:max-h-none lg:w-auto`}>
                 <div className='flex flex-col gap-5 text-right text-xl lg:flex-row lg:text-2xl'>
                     <a href='/galleries' className='block px-3 lg:inline-block'>
                         Galleries
