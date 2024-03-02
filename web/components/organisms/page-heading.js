@@ -1,10 +1,11 @@
+import Button from '../atoms/button'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
 
 const PageHeading = ({pageHeadingContent}) => {
-    const {headline, iconGroup, intro, variant} = pageHeadingContent
+    const {headline, iconGroup, intro, link, variant} = pageHeadingContent
 
-    const HeadingContentBlock = ({headline, iconGroup, intro, className}) => {
+    const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
             <div className={`flex flex-col gap-3 max-w-xl text-center text-white lg:gap-7 ${className}`}>
                 {iconGroup && (
@@ -20,17 +21,21 @@ const PageHeading = ({pageHeadingContent}) => {
                         {intro}
                     </p>
                 )}
+                {link?.text && (
+                    <Button linkContent={link} buttonVariant={'chonky'} />
+                )}
             </div>
         )
     }
 
     if( variant === 'chonky') {
         return (
-            <section className={`${variant} flex flex-col justify-center items-center relative pb-40 pt-7 px-7 w-full lg:pb-56 lg:pt-14 lg:px-28`}>
+            <section className={`${variant} flex flex-col justify-center items-center relative pb-40 pt-7 px-7 w-full lg:pb-48 lg:pt-7 lg:px-28`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
                     intro={intro}
+                    link={link}
                     className='lg:max-w-3xl'
                 />
                 <div className='absolute bottom-0 h-1/2 right-0 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>

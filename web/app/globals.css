@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5 {
 }
 
 section:not(.chonky) h1:after {
-  background: #358faa;
+  background: /*#ff006c;*/#358faa;
   content: " ";
   display: block;
   height: 5px;
@@ -49,7 +49,7 @@ a {
 
 @layer utilities {
   .bg-button {
-    @apply transition-all duration-500 bg-[rgba(53,143,170,1)] lg:hover:bg-[rgba(238,182,0,1)];
+    @apply transition-all duration-500 bg-[rgba(53,143,170,1)] /*lg:hover:bg-[rgba(238,182,0,1)]*/;
   }
 
   .bg-panel {

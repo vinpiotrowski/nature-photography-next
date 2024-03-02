@@ -77,7 +77,13 @@ const pageHeading = {
         name: 'intro',
         title: 'Intro',
         type: 'text'  
-      },  
+      },
+      {
+        name: 'link',
+        title: 'Link',
+        description: 'Optional call-to-action that will appear below the intro',
+        type: 'link'
+      }
     ]
 }
 
