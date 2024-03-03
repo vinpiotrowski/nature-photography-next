@@ -78,7 +78,7 @@ const Gallery = ({galleryContent}) => {
             <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
                 <Container className='flex flex-col gap-7 items-center justify-center md:gap-20'>
                 
-                    <div className='flex flex-col gap-5 max-w-prose text-center md:gap-7'>
+                    <div className='flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
                         <Heading className='uppercase' variant='h2'>
                             {subtitle}
                         </Heading>

@@ -10,8 +10,8 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
             return (
                 <div className='flex justify-center'>
                     <NextLink href={href} className='np-button np-transition shadow-[1.4rem_1.4rem_0_rgba(33,33,33,1)] px-3 py-2 
-                            -skew-x-[14deg] z-10 lg:px-5 lg:py-4 hover:shadow-[1.4rem_1.4rem_0_rgba(255,0,108,1)]'>
-                        <span className=' block font-bold skew-x-[14deg] lg:text-xl $className'>{text}</span>
+                            -skew-x-[14deg] z-10 lg:px-4 lg:py-3 hover:shadow-[1.4rem_1.4rem_0_rgba(255,0,108,1)]'>
+                        <span className=' block font-bold skew-x-[14deg] lg:text-lg $className'>{text}</span>
                     </NextLink>
                 </div>
             )
@@ -33,6 +33,13 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                   </svg>
                 </button>
             )
+        case 'open':
+            return (
+                <button className='np-button np-transition shadow-[0.7rem_0.7rem_0_rgba(255,255,255,1)] px-3 py-2 
+                        text-white z-10 lg:px-3 lg:py-2.5 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]' onClick={onClick}>
+                    <span className='block font-bold text-sm text-white lg:text-base $className'>{text}</span>
+                </button>
+            )
         case 'previous':
             return (
                 <button className='np-button np-transition py-2 px-2 rounded-full text-xl text-white font-bold hover:np-hover' onClick={onClick}>
@@ -47,7 +54,7 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                 <div className='flex'>
                     <NextLink href={href} className='np-button np-transition shadow-[0.7rem_0.7rem_0_rgba(255,255,255,1)] px-3 py-2 
                              text-white z-10 lg:px-3 lg:py-2.5 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
-                        <span className='block font-bold  text-sm lg:text-base $className'>{text}</span>
+                        <span className='block font-bold text-sm lg:text-base $className'>{text}</span>
                     </NextLink>
                 </div>
           

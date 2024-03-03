@@ -8,7 +8,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-            <div className={`flex flex-col gap-3 max-w-xl text-center text-white lg:gap-7 ${className}`}>
+            <div className={`flex flex-col gap-3 max-w-screen-md text-center text-white lg:gap-7 ${className}`}>
                 {iconGroup && (
                     <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
@@ -31,7 +31,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     if( variant === 'chonky') {
         return (
-            <section className={`${variant} flex flex-col justify-center items-center relative pb-40 pt-7 px-7 w-full lg:pb-48 lg:pt-7 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-40 pt-7 px-7 w-full lg:pb-48 lg:pt-7 lg:px-28`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
@@ -63,7 +63,7 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else if (variant === 'pointy') {
         return (
-            <section className={`${variant} flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:px-28`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
@@ -83,7 +83,7 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else {
         return (
-            <section className={`${variant} text-white flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:pt-28 lg:px-28`}>
+            <section className={`${variant} np-heading text-white flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:pt-28 lg:px-28`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}

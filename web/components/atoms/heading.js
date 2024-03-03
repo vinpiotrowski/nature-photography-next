@@ -1,9 +1,9 @@
 const Heading1 = ({children, className = ''}) => {
-    return <h1 className={`text-4xl md:text-6xl lg:text-8xl ${className}`}>{children}</h1>
+    return <h1 className={`text-4xl md:text-5xl lg:text-7xl ${className}`}>{children}</h1>
 }
 
 const Heading2 = ({children, className = ''}) => {
-    return <h2 className={`text-xl md:text-2xl lg:text-4xl ${className}`}>{children}</h2>
+    return <h2 className={`text-xl md:text-2xl lg:text-3xl ${className}`}>{children}</h2>
 }
 
 const Heading3 = ({children, className = ''}) => {

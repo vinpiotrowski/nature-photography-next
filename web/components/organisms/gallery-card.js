@@ -30,7 +30,7 @@ const GalleryCard = ({galleryCardContent}) => {
                         />
                     }
                 </div>
-                <div className='basis-1/2 flex flex-col gap-5 items-center justify-center max-w-prose text-center md:items-start md:gap-7 md:text-left'>
+                <div className='basis-1/2 flex flex-col gap-5 items-center justify-center max-w-screen-md text-center md:items-start md:gap-7 md:text-left'>
                     <IconGroup iconGroupContent={gallery?.iconGroup} />
                     <Heading variant='h2' className='uppercase'>
                         {gallery?.title}
