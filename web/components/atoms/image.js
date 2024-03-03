@@ -11,6 +11,7 @@ const Image = ({
         imageContent,
         sizeSteps
     )
+
     return (
         <picture>
             {srcSets?.srcSets?.map((srcSetItem, idx) => {
@@ -19,6 +20,8 @@ const Image = ({
                         key={idx}
                         media={`(max-width: ${srcSetItem.maxWidth}px)`}
                         srcSet={srcSetItem.source}
+                        width={srcSetItem.width}
+                        height={srcSetItem.height}
                     />
                 )
             })}
@@ -27,6 +30,8 @@ const Image = ({
                 className={className}
                 loading='eager'
                 src={srcSets?.src}
+                width={srcSets?.width}
+                height={srcSets?.height}
                 {...props}
             />
         </picture>

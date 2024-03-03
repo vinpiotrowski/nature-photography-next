@@ -24,7 +24,7 @@ const getImageDimensions = (image) => {
     return {
         width,
         height,
-        aspectRation: width / height
+        aspectRatio: width / height
     }
 }
 
@@ -54,11 +54,15 @@ const generateSrcSets = (image, sizeSteps) => {
     const def = retinaSizes.at(-1) || { w: 1, h: 1 }
 
     return {
+        height: def.h ? def.h : def.w / imageDimensions?.aspectRatio,
+        width: def.w,
         src: def.h
             ? urlBuilder.width(def.w).height(def.h).url()
             : urlBuilder.width(def.w).url(),
         srcSets: retinaSizes.map((size) => {
             return {
+                height: size.h ? size.h : size.w / imageDimensions?.aspectRatio,
+                width: size.w,
                 maxWidth: size.w,
                 source: size.h
                     ? urlBuilder.width(size.w).height(size.h).url()
