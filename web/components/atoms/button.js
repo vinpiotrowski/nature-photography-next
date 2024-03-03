@@ -44,10 +44,10 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
             )
         default:
             return (
-                <div className='flex justify-center'>
-                    <NextLink href={href} className='np-button np-transition shadow-[1rem_1rem_0_rgba(33,33,33,1)] px-3 py-2 
-                            -skew-x-[14deg] z-10 lg:px-3 lg:py-2.5 hover:shadow-[1rem_1rem_0_rgba(255,0,108,0.5)]'>
-                        <span className='block skew-x-[14deg] text-sm lg:text-base $className'>{text}</span>
+                <div className='flex'>
+                    <NextLink href={href} className='np-button np-transition shadow-[0.7rem_0.7rem_0_rgba(255,255,255,1)] px-3 py-2 
+                             text-white z-10 lg:px-3 lg:py-2.5 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
+                        <span className='block font-bold  text-sm lg:text-base $className'>{text}</span>
                     </NextLink>
                 </div>
           

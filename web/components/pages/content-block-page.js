@@ -1,9 +1,10 @@
+import ContentBlocks from '../organisms/content-blocks'
 import Image from '../atoms/image'
 import PageHeading from '../organisms/page-heading'
 
 const ContentBlockPage = ({contentBlockPageContent}) => {
 
-    const {backgroundImage, pageHeading} = contentBlockPageContent
+    const {backgroundImage, contentBlocks, pageHeading} = contentBlockPageContent
 
     const BACKGROUND_IMAGE_SIZE_STEPS = [
         { w: 360, h: 480 }, // 3:4
@@ -26,6 +27,12 @@ const ContentBlockPage = ({contentBlockPageContent}) => {
             <PageHeading
                 pageHeadingContent={pageHeading}
             />
+
+            {contentBlocks && (
+                <ContentBlocks contentBlocksContent={contentBlocks} />
+            )
+
+            }
         </>
     )
 }

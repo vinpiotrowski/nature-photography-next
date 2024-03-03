@@ -23,18 +23,6 @@ export default async function Page(context) {
         {pageContent._type == 'gallery' && (
           <Gallery galleryContent={pageContent} />
         )}
-        <div className='relative z-1'>
-          <p>
-            <a href='/galleries/mountains'>Mountains Gallery</a>
-          </p>
-          <p>
-            <a href='/galleries/prairies'>Prairies Gallery</a>
-          </p>
-          <p>
-            <a href='/galleries/travel'>Travel Gallery</a>
-          </p>
-        </div>
-
       </main>
     </>
 

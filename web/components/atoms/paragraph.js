@@ -2,7 +2,7 @@ const Paragraph = ({ children, variant, className = ''}) => {
 
     if(variant == 'chonky') {
         return (
-            <p className={`text-base md:text-xl lg:text-2xl ${className}`}>
+            <p className={`text-base md:text-base lg:text-xl ${className}`}>
                 {children}
             </p>
         )

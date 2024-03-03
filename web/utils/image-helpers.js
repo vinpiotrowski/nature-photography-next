@@ -48,12 +48,7 @@ const generateSrcSets = (image, sizeSteps) => {
         new Set([
             ...baseSizes
         ])
-    ).filter((size => {
-        return (
-            imageDimensions && size.w <= imageDimensions.width * 1.1 &&
-            size.w <= maxDimensions.w
-        )
-    }))
+    )
 
     const def = retinaSizes.at(-1) || { w: 1, h: 1 }
 

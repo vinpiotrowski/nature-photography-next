@@ -1,5 +1,6 @@
 'use client'; // This is a client component
 import React, { useEffect, useState } from 'react'
+import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Modal from '../molecules/modal'
@@ -72,45 +73,45 @@ const Gallery = ({galleryContent}) => {
                 }}
             />
 
-            <section data-name='gallery' className='bg-white flex flex-col gap-7 items-center justify-center -mt-1 p-7 relative z-1 lg:gap-14 lg:p-14'>
-                <div className='flex flex-col gap-3 max-w-prose text-center lg:gap-7'>
-                    <Heading className='uppercase' variant='h2'>
-                        {subtitle}
-                    </Heading>
-                    <Paragraph>
-                        {longDescription}
-                    </Paragraph>
-                </div>
+            <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
+                <Container className='flex flex-col gap-7 items-center justify-center md:gap-20'>
+                
+                    <div className='flex flex-col gap-5 max-w-prose text-center md:gap-7'>
+                        <Heading className='uppercase' variant='h2'>
+                            {subtitle}
+                        </Heading>
+                        <Paragraph>
+                            {longDescription}
+                        </Paragraph>
+                    </div>
 
-                <div className='container flex flex-wrap justify-start'>
-                    {photographs.map((photo, index) => {
-                        return (
-                            <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>
-                                <button onClick={() => handleClick(photo, index)}>
-                                    <Image
-                                        alt={photo?.shortDescription}
-                                        imageContent={photo?.image}
-                                        sizeSteps={THUMBNAIL_SIZE_STEPS}
-                                    />
-                                </button>
+                    <div className='flex flex-wrap justify-start'>
+                        {photographs.map((photo, index) => {
+                            return (
+                                <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>
+                                    <button onClick={() => handleClick(photo, index)}>
+                                        <Image
+                                            alt={photo?.shortDescription}
+                                            imageContent={photo?.image}
+                                            sizeSteps={THUMBNAIL_SIZE_STEPS}
+                                        />
+                                    </button>
+                                </div>
+                            )
+                        })}
+                    </div>
 
-                            </div>
-
-                        )
-                    })}
-                </div>
-
-                {selectedImage && (
-                    <Modal
-                        images={images}
-                        selectedImage={selectedImage}
-                        onClose={handleCloseModal}
-                        onNext={handleNext}
-                        onPrev={handlePrev}
-                        selectedIndex={selectedIndex}
-                    />
-                )}
-
+                    {selectedImage && (
+                        <Modal
+                            images={images}
+                            selectedImage={selectedImage}
+                            onClose={handleCloseModal}
+                            onNext={handleNext}
+                            onPrev={handlePrev}
+                            selectedIndex={selectedIndex}
+                        />
+                    )}
+                </Container>
             </section>
         </>
     )

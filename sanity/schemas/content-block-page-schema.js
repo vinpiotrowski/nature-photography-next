@@ -46,6 +46,19 @@ const contentBlockPage = {
         name: 'pageHeading',
         title: 'Page Heading',
         type: 'pageHeading'
+      },
+      {
+        name: 'contentBlocks',
+        title: 'Content Blocks',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: [
+              {type: 'galleryCard'}
+            ]
+          }
+        ]
       }
     ]
 }

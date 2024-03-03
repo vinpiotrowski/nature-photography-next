@@ -1,5 +1,6 @@
 'use client'; // This is a client component
 import React, { useState } from 'react'
+import Container from '../atoms/container'
 
 const Navigation = ({navigationContent}) => {
 
@@ -10,7 +11,8 @@ const Navigation = ({navigationContent}) => {
     }
 
     return (
-        <nav className='flex flex-wrap items-center justify-center m-auto max-w-6xl p-5 text-white relative z-20 lg:p-7'>
+        <nav className='text-white relative z-20'>
+            <Container className='flex flex-wrap items-center justify-center'>
             <div className='flex items-center flex-shrink-0'>
                 <a href='/' className='flex items-center'>
                     <svg className='bg-white/50 mix-blend-multiply' width='43' height='49' style={{fill: 'rgba(53, 143, 170, 1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
@@ -50,6 +52,7 @@ const Navigation = ({navigationContent}) => {
                     </a>
                 </div>
             </div>
+            </Container>
         </nav>
     )
 }

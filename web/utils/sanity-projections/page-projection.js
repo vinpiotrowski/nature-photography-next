@@ -1,3 +1,4 @@
+import contentBlocksProjection from './content-blocks-projection'
 import iconGroupProjection from './icon-group-projection'
 import imageProjection from './image-projection'
 import pageHeadingProjection from './page-heading-projection'
@@ -9,7 +10,8 @@ const pageProjection = `{
         title,
         description,
         backgroundImage ${imageProjection},
-        pageHeading ${pageHeadingProjection}
+        pageHeading ${pageHeadingProjection},
+        contentBlocks[] -> ${contentBlocksProjection}
     },
     (_type == 'gallery') => {
         iconGroup[] ${iconGroupProjection},

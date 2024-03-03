@@ -10,7 +10,7 @@ const PageHeading = ({pageHeadingContent}) => {
         return (
             <div className={`flex flex-col gap-3 max-w-xl text-center text-white lg:gap-7 ${className}`}>
                 {iconGroup && (
-                    <IconGroup iconGroupContent={iconGroup} />
+                    <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
                 {headline && (
                     <Heading variant='h1' className='font-bold relative z-1'>
