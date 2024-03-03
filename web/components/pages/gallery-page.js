@@ -14,8 +14,10 @@ const Gallery = ({galleryContent}) => {
     const BACKGROUND_IMAGE_SIZE_STEPS = [
         { w: 360, h: 480 }, // 3:4
         { w: 414, h: 552 },
+        { w: 640, h: 854 },
         { w: 768, h: 1024 },
-        { w: 1366, h: 0 }, // honor aspect ratio
+        { w: 1024, h: 0 },
+        { w: 1280, h: 0 },
         { w: 1536, h: 0 },
         { w: 1920, h: 0 }
       ]
@@ -85,7 +87,7 @@ const Gallery = ({galleryContent}) => {
                         </Paragraph>
                     </div>
 
-                    <div className='flex flex-wrap justify-start'>
+                    <div className='flex flex-wrap justify-start w-full'>
                         {photographs.map((photo, index) => {
                             return (
                                 <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>

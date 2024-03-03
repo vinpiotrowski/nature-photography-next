@@ -15,7 +15,8 @@ const Modal = ({
 
   const PHOTOGRAPH_SIZE_STEPS = [
     { w: 768, h: 0 },
-    { w: 1366, h: 0 },
+    { w: 1024, h: 0 },
+    { w: 1280, h: 0 },
     { w: 1536, h: 0 },
     { w: 1920, h: 0 }
   ]

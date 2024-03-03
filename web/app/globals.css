@@ -55,7 +55,7 @@ a {
   }
 
   .np-button {
-    @apply bg-[rgba(53,143,170,1)];
+    @apply bg-[/*rgba(48,127,151,1)*/rgba(53,143,170,1)];
   }
 
   .np-hover {

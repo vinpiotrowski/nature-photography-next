@@ -9,8 +9,6 @@ const GalleryCard = ({galleryCardContent}) => {
     const {variant, textPlacement, image, gallery} = galleryCardContent
 
     const HALF_IMAGE_SIZE_STEPS = [
-        //{ w: 360, h: 360 }, 
-        //{ w: 414, h: 414 },
         { w: 640, h: 640 },
         { w: 768, h: 768 },
         { w: 1024, h: 1536 }, // 2:3 aspect ratio
