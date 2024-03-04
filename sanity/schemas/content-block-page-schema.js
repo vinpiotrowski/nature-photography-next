@@ -55,6 +55,7 @@ const contentBlockPage = {
           {
             type: 'reference',
             to: [
+              {type: 'columnedContent'},
               {type: 'featuredPhotographs'},
               {type: 'galleryCard'}
             ]
