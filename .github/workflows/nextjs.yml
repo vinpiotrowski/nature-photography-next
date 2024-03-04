@@ -24,15 +24,13 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
   
-defaults:
-  run:
-    working-directory: ./web
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     steps:
+      - working-directory: ./web
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
