@@ -12,6 +12,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
     const {headline, intro, photographs} = featuredPhotographsContent
 
     const THUMBNAIL_SIZE_STEPS = [
+        { w: 360, h: 360 }, 
         { w: 414, h: 414 }, 
     ]
 

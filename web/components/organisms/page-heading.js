@@ -23,7 +23,7 @@ const PageHeading = ({pageHeadingContent}) => {
                     </Paragraph>
                 )}
                 {link?.text && (
-                    <Button linkContent={link} buttonVariant={'chonky'} className=' font-bold ' />
+                    <Button linkContent={link} buttonVariant={'chonky'} />
                 )}
             </div>
         )
@@ -39,22 +39,22 @@ const PageHeading = ({pageHeadingContent}) => {
                     link={link}
                     className='lg:max-w-3xl'
                 />
-                <div className='absolute bottom-0 h-1/2 right-0 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,70 0,84 77,84' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,42 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,63 0,84' style={{fill: 'rgba(53, 143, 170, 1)', zIndex: 14}}></polygon>
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,84 0,100 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                     </svg>
