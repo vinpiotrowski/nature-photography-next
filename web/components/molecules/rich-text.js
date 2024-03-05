@@ -1,5 +1,6 @@
 import {PortableText} from '@portabletext/react'
 import Heading from '../atoms/heading'
+import IconGroup from '../molecules/icon-group'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
 
@@ -10,6 +11,15 @@ const RichText = ({richTextContent, className=''}) => {
 
     const components = {
         types: {
+            icon(props) {
+                const iconProps = [props.value]
+                return (
+                    <IconGroup 
+                        iconGroupContent={iconProps} 
+                        className='np-text' 
+                    />
+                )
+            },
             image(props) {
                 const imageProps = props.value
                 return (

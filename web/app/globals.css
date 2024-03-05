@@ -67,12 +67,6 @@ a {
     @apply transition-all ease-in-out duration-500;
   }
 
-  .np-breakout {
-    margin:1em -100%; /* old browsers fallback */
-    margin:1em calc(50% - 50vw)!important;
-    background-color:rgba(255,0,255,0.5)
-  }
-
   .np-button {
     @apply bg-[/*rgba(48,127,151,1)*/rgba(53,143,170,1)];
   }
@@ -83,6 +77,10 @@ a {
 
   .np-panel {
     @apply bg-[#212121]
+  }
+
+  .np-text {
+    @apply text-[rgba(53,143,170,1)];
   }
 }
 

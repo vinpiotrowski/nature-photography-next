@@ -1,3 +1,6 @@
+import { IconPicker } from '../components/icon-picker'
+import { IconMediaPreview } from '../components/icon-media-preview'
+
 const richText = {
     name: 'richText',
     type: 'array',
@@ -33,7 +36,35 @@ const richText = {
                     type: 'string',
                 }
             ]
-        }
+        },
+        {
+            name: 'icon',
+            title: 'Icon Item',
+            type: 'object',
+            fields: [
+                {
+                    name: 'icon',
+                    title: 'Icon',
+                    type: 'string',
+                    components: {
+                        input: IconPicker
+                    }
+                }
+            ],
+            preview: {
+                select: {
+                  icon: 'icon'
+                },
+                prepare(selection) {
+                  const {icon} = selection
+                  return {
+                    title: icon,
+                    media: IconMediaPreview(icon)
+                  }
+                }
+              }
+  
+        },
     ]
 }
 

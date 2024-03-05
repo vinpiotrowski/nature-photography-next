@@ -1,3 +1,4 @@
+import iconGroupProjection from './icon-group-projection'
 import imageProjection from './image-projection'
 
 const richTextProjection = `[]{
@@ -8,7 +9,9 @@ const richTextProjection = `[]{
         style,
         level
     },
-    _type == 'image' => ${imageProjection}
+    _type == 'image' => ${imageProjection},
+    _type == 'icon' => ${iconGroupProjection}
+
 }`
 
 export default richTextProjection
