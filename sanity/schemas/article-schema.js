@@ -43,6 +43,7 @@ const article = {
             type: 'reference',
             to: [
               {type: 'columnedContent'},
+              {type: 'fiftyFifty'}
             ]
           }
         ]

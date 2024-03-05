@@ -1,5 +1,6 @@
 import columnedContentProjection from './columned-content-projection'
 import featuredPhotographsProjection from './featured-photographs-projection'
+import fiftyFiftyProjection from './fifty-fifty-projection'
 import galleryCardProjection from './gallery-card-projection'
 
 const contentBlocksProjection = `{
@@ -7,6 +8,7 @@ const contentBlocksProjection = `{
     _type,
     _type == 'columnedContent' => ${columnedContentProjection},
     _type == 'featuredPhotographs' => ${featuredPhotographsProjection},
+    _type == 'fiftyFifty' => ${fiftyFiftyProjection},
     _type == 'galleryCard' => ${galleryCardProjection}
 }`
 

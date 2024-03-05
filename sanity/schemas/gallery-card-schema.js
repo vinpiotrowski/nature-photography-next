@@ -1,9 +1,9 @@
-import { BsPostcard } from 'react-icons/bs'
+import { LiaImage, LiaImages } from 'react-icons/lia'
 
 const galleryCard = {
     name: 'galleryCard',
     title: 'Gallery Card',
-    icon: BsPostcard,
+    icon: LiaImages,
     type: 'document',
     preview: {
         select: {

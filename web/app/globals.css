@@ -57,6 +57,15 @@ a {
   text-decoration: none;
 }
 
+hr {
+  background: #757575;
+  border: 0;
+  height: 1px;
+  margin: 28px auto 21px;
+  position: relative;
+  width: 60%;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -74,7 +83,7 @@ a {
   .np-hover {
     @apply bg-[rgba(255,0,108,1)]
   }
-
+  
   .np-panel {
     @apply bg-[#212121]
   }
