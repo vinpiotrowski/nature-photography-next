@@ -1,3 +1,4 @@
+import { RxDividerHorizontal } from 'react-icons/rx'
 import { IconPicker } from '../components/icon-picker'
 import { IconMediaPreview } from '../components/icon-media-preview'
 
@@ -23,6 +24,25 @@ const richText = {
 
                 ],
             },
+        },
+        {
+            name: 'divider',
+            title: 'Divider',
+            type: 'object',
+            icon: RxDividerHorizontal,
+            fields: [
+                {
+                    name: 'style',
+                    title: 'Style',
+                    type: 'string',
+                    options: {
+                        list: [
+                            {title: 'Horizontal', value: 'horizontal'}
+                        ]
+                    },
+                    initialValue: 'horizontal'
+                }
+            ]
         },
         {
             type: 'image',

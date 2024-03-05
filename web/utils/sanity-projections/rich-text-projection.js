@@ -9,6 +9,9 @@ const richTextProjection = `[]{
         style,
         level
     },
+    _type == 'divider' => {
+        style,
+    },
     _type == 'image' => ${imageProjection},
     _type == 'icon' => ${iconGroupProjection}
 

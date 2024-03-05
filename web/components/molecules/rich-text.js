@@ -11,6 +11,11 @@ const RichText = ({richTextContent, className=''}) => {
 
     const components = {
         types: {
+            divider(props) {
+                return (
+                    <hr className='bg-[#989898] h-[1px] m-auto w-2/3' />
+                )
+            },
             icon(props) {
                 const iconProps = [props.value]
                 return (

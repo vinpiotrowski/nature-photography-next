@@ -7,7 +7,7 @@ const fiftyFifty = {
     type: 'document',
     preview: {
         select: {
-            title: 'headline'
+            title: 'entryTitle'
         },
         prepare(selection) {
             const {title} = selection
@@ -18,6 +18,12 @@ const fiftyFifty = {
         }
     },
     fields: [
+        {
+            name: 'entryTitle',
+            title: 'Entry Title',
+            description: 'For CMS use only',
+            type: 'string'
+        },
         {
             name: 'textPlacement',
             title: 'Text Placement',
