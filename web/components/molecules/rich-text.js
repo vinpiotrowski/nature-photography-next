@@ -41,7 +41,7 @@ const RichText = ({richTextContent, className=''}) => {
         block: {
             normal(props) {
                 return (
-                    <Paragraph>{props.children}</Paragraph>
+                    <Paragraph className='max-w-prose'>{props.children}</Paragraph>
                 )
             },
             h1(props) {

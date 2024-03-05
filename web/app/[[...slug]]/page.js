@@ -1,4 +1,5 @@
 import {fetchPageBySlug, fetchAllPageSlugs} from '../../utils/sanity-queries'
+import Article from '@/components/pages/article'
 import ContentBlockPage from '../../components/pages/content-block-page'
 import Gallery from '../../components/pages/gallery-page'
 import Navigation from '../../components/organisms/navigation'
@@ -17,6 +18,9 @@ export default async function Page(context) {
     <>
       <Navigation />
       <main>
+        {pageContent._type == 'article' && (
+          <Article articleContent={pageContent} />
+        )}
         {pageContent._type == 'contentBlockPage' && (
           <ContentBlockPage contentBlockPageContent={pageContent} />
         )}

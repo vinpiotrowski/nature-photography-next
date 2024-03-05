@@ -6,6 +6,11 @@ import photographProjection from './photograph-projection'
 
 const pageProjection = `{
     _type,
+    (_type == 'article') => {
+        title,
+        description,
+        contentBlocks[] -> ${contentBlocksProjection}
+    },
     (_type == 'contentBlockPage') => {
         title,
         description,

@@ -71,7 +71,7 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
         }
     }
 
-    const baseClassnames = `flex flex-col gap-3 max-w-prose md:gap-5`
+    const baseClassnames = `flex flex-col gap-3 md:gap-5`
 
     return (
         <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
