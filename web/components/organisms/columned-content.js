@@ -4,13 +4,17 @@ import RichText from '../molecules/rich-text'
 const ColumnedContent = ({columnedContentContent, className=''}) => {
 
     const {
-        variant, 
+        variant,
+        columnOneHorizontalAlign,
         columnOneVerticalAlign, 
         columnOneBody,
+        columnTwoHorizontalAlign,
         columnTwoVerticalAlign, 
         columnTwoBody,
+        columnThreeHorizontalAlign,
         columnThreeVerticalAlign, 
         columnThreeBody,
+        columnFourHorizontalAlign,
         columnFourVerticalAlign, 
         columnFourBody,
     } = columnedContentContent
@@ -45,6 +49,17 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
         }
     }
 
+    function getHorizontalAlign(align) {
+        switch(align) {
+            case 'left':
+                return 'text-left'
+            case 'center':
+                return 'text-center items-center'
+            case 'right':
+                return 'text-right'
+        }
+    }
+
     function getVerticalAlign(align) {
         switch(align) {
             case 'top':
@@ -62,22 +77,34 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
         <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
             <Container className={`flex flex-col gap-7 md:flex-row ${getGap()}`}>
                 {columnOneBody &&  (
-                    <div className={`${baseClassnames} ${getVariantClassnames()} ${getVerticalAlign(columnOneVerticalAlign)}`}>
+                    <div className={`${baseClassnames} 
+                            ${getVariantClassnames()} 
+                            ${getHorizontalAlign(columnOneHorizontalAlign)} 
+                            ${getVerticalAlign(columnOneVerticalAlign)}`}>
                         <RichText richTextContent={columnOneBody}/>
                     </div>
                 )}
-                {columnTwoBody &&  (
-                    <div className={`${baseClassnames} ${getVariantClassnames()}  ${getVerticalAlign(columnTwoVerticalAlign)}`}>
+                {columnTwoBody && numColumns > 1 && (
+                    <div className={`${baseClassnames} 
+                            ${getVariantClassnames()} 
+                            ${getHorizontalAlign(columnTwoHorizontalAlign)} 
+                            ${getVerticalAlign(columnTwoVerticalAlign)}`}>
                         <RichText richTextContent={columnTwoBody}/>
                     </div>
                 )}
-                {columnThreeBody &&  (
-                    <div className={`${baseClassnames} ${getVariantClassnames()}  ${getVerticalAlign(columnThreeVerticalAlign)}`}>
+                {columnThreeBody && numColumns > 2 && (
+                    <div className={`${baseClassnames} 
+                            ${getVariantClassnames()} 
+                            ${getHorizontalAlign(columnThreeHorizontalAlign)} 
+                            ${getVerticalAlign(columnThreeVerticalAlign)}`}>
                         <RichText richTextContent={columnThreeBody}/>
                     </div>
                 )}
-                {columnFourBody &&  (
-                    <div className={`${baseClassnames} ${getVariantClassnames()}  ${getVerticalAlign(columnFourVerticalAlign)}`}>
+                {columnFourBody && numColumns > 3 && (
+                    <div className={`${baseClassnames} 
+                            ${getVariantClassnames()} 
+                            ${getHorizontalAlign(columnFourHorizontalAlign)} 
+                            ${getVerticalAlign(columnFourVerticalAlign)}`}>
                         <RichText richTextContent={columnFourBody}/>
                     </div>
                 )}

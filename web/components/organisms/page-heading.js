@@ -31,7 +31,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     if( variant === 'chonky') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-40 pt-7 px-7 w-full lg:pb-48 lg:pt-7 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-20 pt-7 px-7 w-full lg:pb-40 lg:pt-7 lg:px-28`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}

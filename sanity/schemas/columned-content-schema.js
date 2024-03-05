@@ -60,6 +60,21 @@ const columnedContent = {
             }
         },
         {
+            name: 'columnOneHorizontalAlign',
+            title: 'Column 01 Horizontal Align',
+            type: 'string',
+            options: {
+                list: [
+                    {title: 'Left', value: 'left'},
+                    {title: 'Center', value: 'center'},
+                    {title: 'Right', value: 'right'},
+                ], 
+                layout: 'radio'
+            },
+            initialValue: 'left',
+            fieldset: 'columnOne'
+        },
+        {
             name: 'columnOneVerticalAlign',
             title: 'Column 01 Vertical Align',
             type: 'string',
@@ -81,6 +96,21 @@ const columnedContent = {
             fieldset: 'columnOne'
         },
 
+        {
+            name: 'columnTwoHorizontalAlign',
+            title: 'Column 02 Horizontal Align',
+            type: 'string',
+            options: {
+                list: [
+                    {title: 'Left', value: 'left'},
+                    {title: 'Center', value: 'center'},
+                    {title: 'Right', value: 'right'},
+                ], 
+                layout: 'radio'
+            },
+            initialValue: 'left',
+            fieldset: 'columnTwo'
+        },
         {
             name: 'columnTwoVerticalAlign',
             title: 'Column 02 Vertical Align',
@@ -104,6 +134,21 @@ const columnedContent = {
         },
 
         {
+            name: 'columnThreeHorizontalAlign',
+            title: 'Column 03 Horizontal Align',
+            type: 'string',
+            options: {
+                list: [
+                    {title: 'Left', value: 'left'},
+                    {title: 'Center', value: 'center'},
+                    {title: 'Right', value: 'right'},
+                ], 
+                layout: 'radio'
+            },
+            initialValue: 'left',
+            fieldset: 'columnThree'
+        },
+        {
             name: 'columnThreeVerticalAlign',
             title: 'Column 03 Vertical Align',
             type: 'string',
@@ -125,6 +170,21 @@ const columnedContent = {
             fieldset: 'columnThree'
         },
 
+        {
+            name: 'columnFourHorizontalAlign',
+            title: 'Column 04 Horizontal Align',
+            type: 'string',
+            options: {
+                list: [
+                    {title: 'Left', value: 'left'},
+                    {title: 'Center', value: 'center'},
+                    {title: 'Right', value: 'right'},
+                ], 
+                layout: 'radio'
+            },
+            initialValue: 'left',
+            fieldset: 'columnFour'
+        },
         {
             name: 'columnFourVerticalAlign',
             title: 'Column 04 Vertical Align',
