@@ -1,14 +1,14 @@
 const Heading1 = ({children, className = ''}) => {
-    const size = children.length < 20 ? ' md:text-6xl lg:text-8xl' : 'md:text-5xl lg:text-7xl'
-    return <h1 className={`text-4xl ${size} ${className}`}>{children}</h1>
+    const size = children.length < 20 ? 'text-5xl md:text-8xl' : 'text-4xl md:text-7xl'
+    return <h1 className={`${size} ${className}`}>{children}</h1>
 }
 
 const Heading2 = ({children, className = ''}) => {
-    return <h2 className={`text-xl md:text-2xl lg:text-3xl ${className}`}>{children}</h2>
+    return <h2 className={`text-2xl md:text-3xl ${className}`}>{children}</h2>
 }
 
 const Heading3 = ({children, className = ''}) => {
-    return <h3 className={`text-lg md:text-xl lg:text-2xl ${className}`}>{children}</h3>
+    return <h3 className={`text-xl md:text-2xl ${className}`}>{children}</h3>
 }
 
 const Heading4 = ({children, className = ''}) => {

@@ -37,7 +37,6 @@ const PageHeading = ({pageHeadingContent}) => {
                     iconGroup={iconGroup}
                     intro={intro}
                     link={link}
-                    className='lg:max-w-3xl'
                 />
                 <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
