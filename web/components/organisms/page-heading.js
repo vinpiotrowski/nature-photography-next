@@ -88,6 +88,16 @@ const PageHeading = ({pageHeadingContent}) => {
                     iconGroup={iconGroup}
                     intro={intro}
                 />
+                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                    <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                        <polygon points='28,100 28,100 0,100 0,98' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
+                    </svg>
+                </div>
+                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                    <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                        <polygon points='28,100 28,100 100,100 100,91' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
+                    </svg>
+                </div>
             </section>
         )
     }

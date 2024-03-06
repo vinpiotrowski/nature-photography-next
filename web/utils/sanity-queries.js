@@ -17,6 +17,17 @@ const fetchMultiple = async (groq, groqArgs, isPreview) => {
     return response
 }
 
+const fetchPageMetadataBySlug = async (slug, isPreview) => {
+    return await fetchSingle(
+        `*[slug.current == $slug]{
+            title,
+            description
+        }`,
+        {slug},
+        isPreview
+    )
+}
+
 const fetchPageBySlug = async (slug, isPreview) => {
     return await fetchSingle(
         `*[slug.current == $slug]${pageProjection}`,
@@ -38,6 +49,7 @@ const fetchAllPageSlugs = async (isPreview) => {
 }
 
 export {
+    fetchPageMetadataBySlug,
     fetchPageBySlug,
     fetchAllPageSlugs
 }
