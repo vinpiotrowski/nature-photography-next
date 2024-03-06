@@ -1,6 +1,7 @@
 import {fetchPageBySlug, fetchAllPageSlugs} from '../../utils/sanity-queries'
 import Article from '@/components/pages/article'
 import ContentBlockPage from '../../components/pages/content-block-page'
+import Footer from '../../components/molecules/footer'
 import Gallery from '../../components/pages/gallery-page'
 import Navigation from '../../components/organisms/navigation'
 
@@ -28,6 +29,7 @@ export default async function Page(context) {
           <Gallery galleryContent={pageContent} />
         )}
       </main>
+      <Footer />
     </>
 
 

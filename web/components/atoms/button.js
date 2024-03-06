@@ -11,9 +11,18 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                 <div className='flex justify-center'>
                     <NextLink href={href} className='np-button np-transition shadow-[1.4rem_1.4rem_0_rgba(33,33,33,1)] px-3 py-2 
                             -skew-x-[14deg] z-10 lg:px-4 lg:py-3 hover:shadow-[1.4rem_1.4rem_0_rgba(255,0,108,1)]'>
-                        <span className=' block font-bold skew-x-[14deg] lg:text-lg $className'>{text}</span>
+                        <span className=' block font-bold skew-x-[14deg] lg:text-lg'>{text}</span>
                     </NextLink>
                 </div>
+            )
+        case 'navigation':
+            return (
+
+                    <NextLink href={href} className=''>
+                        <span className='block px-3 lg:inline-block'>{text}</span>
+                    </NextLink>
+
+          
             )
         case 'close':
             return (

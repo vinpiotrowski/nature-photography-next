@@ -74,8 +74,8 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
     const baseClassnames = `flex flex-col gap-3 md:gap-5`
 
     return (
-        <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
-            <Container className={`flex flex-col gap-7 md:flex-row ${getGap()}`}>
+        <section data-name='columnedContent' className='bg-white -mt-1 py-3 relative z-1'>
+            <Container className={`flex flex-col gap-7 w-full md:flex-row ${getGap()}`}>
                 {columnOneBody &&  (
                     <div className={`${baseClassnames} 
                             ${getVariantClassnames()} 
