@@ -91,7 +91,7 @@ const Gallery = ({galleryContent}) => {
                         {photographs.map((photo, index) => {
                             return (
                                 <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>
-                                    <button onClick={() => handleClick(photo, index)}>
+                                    <button onClick={() => handleClick(photo, index)} className='np-transition hover:shadow-[0.5rem_0.5rem_0_rgba(255,0,108,1)]'>
                                         <Image
                                             alt={photo?.shortDescription}
                                             imageContent={photo?.image}

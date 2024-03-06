@@ -34,10 +34,11 @@ const Callout = ({calloutContent}) => {
                 </svg>
             </div>
             <Container className={`flex flex-col gap-7 items-end relative md:gap-20 z-10`}>
-                <div className='flex flex-col gap-5 items-end justify-end pt-32 text-right text-white md:gap-7 md:pb-10 md:pt-20'>
+                <div className='flex flex-col gap-5 pb-7 pt-20 items-end justify-endr text-right
+                         text-white md:gap-7 md:pb-10 md:pt-20'>
                     {headline && (
                         <>
-                            <Heading variant='h2' className=''>
+                            <Heading variant='h3' className=''>
                                 {headline}
                             </Heading>
                             <Button linkContent={{internalRef: link?.slug?.current, text: linkText, variant: 'internal'}} />
