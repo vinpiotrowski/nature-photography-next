@@ -57,6 +57,7 @@ const contentBlockPage = {
             to: [
               {type: 'callout'},
               {type: 'columnedContent'},
+              {type: 'featuredArticle'},
               {type: 'featuredPhotographs'},
               {type: 'fiftyFifty'},
               {type: 'galleryCard'}

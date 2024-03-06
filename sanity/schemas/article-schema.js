@@ -19,6 +19,12 @@ const article = {
     type: 'document',
     fields: [
       {
+        name: 'date',
+        title: 'Date',
+        description: 'Format \'Dec 21, 2013\'',
+        type: 'string'
+      },
+      {
         name: 'title',
         title: 'Title',
         type: 'string'  

@@ -2,6 +2,7 @@ import article from './article-schema'
 import callout from './callout-schema'
 import columnedContent from './columned-content-schema'
 import contentBlockPage from './content-block-page-schema'
+import featuredArticle from './featured-article-schema'
 import featuredPhotographs from './featured-photographs-schema'
 import fiftyFifty from './fifty-fifty-schema'
 import gallery from './gallery-schema'
@@ -18,6 +19,7 @@ export const schemaTypes = [
     callout,
     columnedContent,
     contentBlockPage,
+    featuredArticle,
     featuredPhotographs,
     fiftyFifty,
     gallery,

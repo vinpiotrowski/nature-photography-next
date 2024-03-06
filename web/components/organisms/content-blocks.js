@@ -1,7 +1,8 @@
 import Callout from '../molecules/callout'
-import FiftyFifty from '../molecules/fifty-fifty'
 import ColumnedContent from './columned-content'
+import FeaturedArticle from './featured-article'
 import FeaturedPhotographs from './featured-photographs'
+import FiftyFifty from '../molecules/fifty-fifty'
 import GalleryCard from './gallery-card'
 
 const ContentBlocks = ({contentBlocksContent}) => {
@@ -14,6 +15,10 @@ const ContentBlocks = ({contentBlocksContent}) => {
             case 'columnedContent':
                 return (
                     <ColumnedContent columnedContentContent={contentBlock} key={contentBlock._id} />
+                )
+            case 'featuredArticle':
+                return (
+                    <FeaturedArticle featuredArticleContent={contentBlock} key={contentBlock._id} />
                 )
             case 'featuredPhotographs':
                 return (
