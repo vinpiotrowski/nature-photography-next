@@ -1,4 +1,5 @@
 import article from './article-schema'
+import articleListing from './article-listing-schema'
 import callout from './callout-schema'
 import columnedContent from './columned-content-schema'
 import contentBlockPage from './content-block-page-schema'
@@ -12,10 +13,9 @@ import pageHeading from './page-heading-schema'
 import photograph from './photograph-schema'
 import richText from './rich-text-schema'
 
-
-
 export const schemaTypes = [
     article,
+    articleListing,
     callout,
     columnedContent,
     contentBlockPage,

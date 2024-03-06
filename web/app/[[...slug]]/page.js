@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import {fetchPageBySlug, fetchAllPageSlugs, fetchPageMetadataBySlug} from '../../utils/sanity-queries'
-import Article from '@/components/pages/article'
+import Article from '../../components/pages/article'
+import ArticleListingPage from '../../components/pages/article-listing-page'
 import ContentBlockPage from '../../components/pages/content-block-page'
 import Footer from '../../components/molecules/footer'
 import Gallery from '../../components/pages/gallery-page'
@@ -32,6 +33,9 @@ export default async function Page(context) {
       <main>
         {pageContent._type == 'article' && (
           <Article articleContent={pageContent} />
+        )}
+        {pageContent._type == 'articleListing' && (
+          <ArticleListingPage articleListingPageContent={pageContent} />
         )}
         {pageContent._type == 'contentBlockPage' && (
           <ContentBlockPage contentBlockPageContent={pageContent} />

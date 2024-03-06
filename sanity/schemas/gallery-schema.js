@@ -9,12 +9,12 @@ const gallery = {
     type: 'document',
     preview: {
         select: {
-          title: 'title'
+          title: 'slug'
         },
         prepare(selection) {
           const {title} = selection
           return {
-            title: title,
+            title: title?.current,
             subtitle: 'Gallery',
           }
         }

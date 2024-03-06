@@ -11,6 +11,14 @@ const pageProjection = `{
         description,
         contentBlocks[] -> ${contentBlocksProjection}
     },
+    (_type == 'articleListing') => {
+        iconGroup[] ${iconGroupProjection},
+        title,
+        description,
+        backgroundImage ${imageProjection},
+        pageHeading ${pageHeadingProjection},
+        'articles': *[_type == 'article'] {contentBlocks[] -> ${contentBlocksProjection}} | order(title)
+    },
     (_type == 'contentBlockPage') => {
         title,
         description,

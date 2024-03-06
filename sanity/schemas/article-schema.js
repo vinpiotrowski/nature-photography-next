@@ -1,4 +1,5 @@
 import { IoDocumentTextOutline } from 'react-icons/io5'
+import { orderRankField } from '@sanity/orderable-document-list'
 
 const article = {
     name: 'article',
@@ -6,12 +7,12 @@ const article = {
     icon: IoDocumentTextOutline,
     preview: {
       select: {
-        title: 'title'
+        title: 'slug'
       },
       prepare(selection) {
         const {title} = selection
         return {
-          title: title,
+          title: title?.current,
           subtitle: 'Article Page',
         }
       }
@@ -53,7 +54,10 @@ const article = {
             ]
           }
         ]
-      }
+      },
+      orderRankField({
+        type: 'article',
+      })
     ]
 }
 
