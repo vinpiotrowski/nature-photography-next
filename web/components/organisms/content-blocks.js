@@ -1,3 +1,4 @@
+import Callout from '../molecules/callout'
 import FiftyFifty from '../molecules/fifty-fifty'
 import ColumnedContent from './columned-content'
 import FeaturedPhotographs from './featured-photographs'
@@ -6,6 +7,10 @@ import GalleryCard from './gallery-card'
 const ContentBlocks = ({contentBlocksContent}) => {
     return contentBlocksContent.map((contentBlock, index) => {
         switch(contentBlock?._type) {
+            case 'callout':
+                return (
+                    <Callout calloutContent={contentBlock} key={contentBlock._id} />
+                )
             case 'columnedContent':
                 return (
                     <ColumnedContent columnedContentContent={contentBlock} key={contentBlock._id} />

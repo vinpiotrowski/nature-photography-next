@@ -1,4 +1,5 @@
 import article from './article-schema'
+import callout from './callout-schema'
 import columnedContent from './columned-content-schema'
 import contentBlockPage from './content-block-page-schema'
 import featuredPhotographs from './featured-photographs-schema'
@@ -14,6 +15,7 @@ import richText from './rich-text-schema'
 
 export const schemaTypes = [
     article,
+    callout,
     columnedContent,
     contentBlockPage,
     featuredPhotographs,

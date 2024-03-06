@@ -13,8 +13,8 @@ const Footer = ({footerContent}) => {
                     </span>
                 </div>
                 <div className='block flex flex-grow justify-end'>
-                    <a href='//www.instagram.com/mostly_carbon/' className='flex items-center gap-1 md:text-lg'>
-                    <em className='icon-instagram' /><span>Instagram</span>
+                    <a href='//www.instagram.com/mostly_carbon/' className='flex items-center gap-1 text-[#989898] md:text-lg'>
+                        <em className='icon-instagram text-2xl' /><span>Instagram</span>
                     </a>
                 </div>
 
