@@ -25,11 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-bird-circle:before {
+  content: "\e900";
+}
+.icon-outdoors:before {
+  content: "\e902";
+}
 .icon-hiking:before {
   content: "\e901";
-}
-.icon-compass:before {
-  content: "\e902";
 }
 .icon-bird:before {
   content: "\e903";
@@ -76,23 +80,11 @@
 .icon-quotes-right:before {
   content: "\e978";
 }
-.icon-help-circle:before {
-  content: "\e905";
-}
-.icon-menu:before {
-  content: "\e900";
-}
 .icon-angle-left:before {
   content: "\f104";
 }
 .icon-angle-right:before {
   content: "\f105";
-}
-.icon-chevron-circle-left:before {
-  content: "\f137";
-}
-.icon-chevron-circle-right:before {
-  content: "\f138";
 }
 .icon-instagram:before {
   content: "\f16d";

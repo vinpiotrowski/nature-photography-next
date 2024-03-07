@@ -12,6 +12,10 @@ export const Icons = [
         path: '/static/icons/bird.svg'
     },
     {
+        value: 'bird-circle',
+        path: '/static/icons/bird-circle.svg'
+    },
+    {
         value: 'camera',
         path: '/static/icons/camera.svg'
     },
@@ -42,6 +46,10 @@ export const Icons = [
     {
         value: 'ocean',
         path: '/static/icons/ocean.svg'
+    },
+    {
+        value: 'outdoors',
+        path: '/static/icons/outdoors.svg'
     },
     {
         value: 'prairies',
