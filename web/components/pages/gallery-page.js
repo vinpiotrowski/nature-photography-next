@@ -37,6 +37,16 @@ const Gallery = ({galleryContent}) => {
     const handleClick = (image, index) => {
         setSelectedImage(image),
         setSelectedIndex(index)
+        setTimeout( () => document.getElementById('photo-modal')?.classList?.remove('opacity-0'), 0)
+        
+    }
+
+    const handleCloseModal = () => {
+        document.getElementById('photo-modal')?.classList?.add('opacity-0')
+        setTimeout( () => {
+            setSelectedImage(null),
+            setSelectedIndex(0)
+        }, 500)
     }
 
     const handleNext = () => {
@@ -52,11 +62,6 @@ const Gallery = ({galleryContent}) => {
         setSelectedImage(images[prevIndex]);
         setSelectedIndex(prevIndex);
     };
-
-    const handleCloseModal = () => {
-        setSelectedImage(null),
-        setSelectedIndex(0)
-    }
 
     return (
         <>

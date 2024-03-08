@@ -25,7 +25,7 @@ const Modal = ({
     selectedImage && (
       <div className='fixed inset-0 flex justify-center items-center z-50'>
 
-        <div className='bg-white bg-opacity-95 h-full w-full'>
+        <div id='photo-modal' className='np-transition bg-white bg-opacity-95 h-full w-full opacity-full opacity-0'>
           
           <div className='flex justify-center p-3'>
             <Heading variant='h3' >
