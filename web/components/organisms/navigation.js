@@ -13,7 +13,7 @@ const Navigation = ({navigationContent}) => {
 
     return (
         <nav className='text-white relative z-20'>
-            <Container className='flex flex-wrap items-center justify-center px-7 py-3 md:py-7'>
+            <Container variant={'nav'} className='flex flex-wrap items-center justify-center'>
             <div className='flex items-center flex-shrink-0'>
                 <a href='/' className='flex items-center'>
                     <svg className='max-w-7 md:max-w-9 lg:max-w-14' width='43' height='49' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>

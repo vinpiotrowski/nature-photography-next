@@ -50,7 +50,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
     return (
         <section data-name='featured-photographs' className='py-3 relative z-1'>
-            <Container className='flex flex-col gap-7 items-center justify-center pb-0 md:gap-14'>
+            <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
                     <Heading className='uppercase' variant='h2'>
                         {headline}
@@ -60,36 +60,36 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                     </Paragraph>
                 </div>
             </Container>
-            <Container variant='breakout' className='flex flex-col gap-7 items-center justify-center md:gap-14'>
+            <Container variant='breakout' className='flex flex-col gap-7 items-center justify-center  md:gap-7'>
                 <div className='flex gap-7 overflow-x-scroll px-7 w-full md:overflow-x-auto md:px-0 lg:gap-14 lg:px-0 hide-scroll-bar'>
                     {photographs.map((photo, index) => {
                         return(
                             <div className='basis-1/3 flex-grow bg-white self-stretch' key={`featured-photograph-${index}`}>
-                            <div className='w-64 md:w-auto'>
-                                <Image 
-                                    alt={''}
-                                    imageContent={photo.image}
-                                    sizeSteps={THUMBNAIL_SIZE_STEPS}
-                                />
-                                <div className='flex flex-col gap-3 text-center p-3 py-7'>
-                                    <Paragraph>
-                                        <strong>{photo.location}</strong>
-                                    </Paragraph>
-                                    <Heading variant={'h3'}>
-                                        {photo.title}
-                                    </Heading>
-                                    <Paragraph>
-                                        {photo.shortDescription}
-                                    </Paragraph>
-                                    <div>
-                                        <Button 
-                                            buttonVariant='open' 
-                                            linkContent={{text: 'View Photo'}} 
-                                            onClick={() => handleClick(photo, index)} 
-                                        />
+                                <div className='w-64 md:w-auto'>
+                                    <Image 
+                                        alt={''}
+                                        imageContent={photo.image}
+                                        sizeSteps={THUMBNAIL_SIZE_STEPS}
+                                    />
+                                    <div className='flex flex-col gap-3 text-center p-3 py-7'>
+                                        <Paragraph>
+                                            <strong>{photo.location}</strong>
+                                        </Paragraph>
+                                        <Heading variant={'h3'}>
+                                            {photo.title}
+                                        </Heading>
+                                        <Paragraph>
+                                            {photo.shortDescription}
+                                        </Paragraph>
+                                        <div>
+                                            <Button 
+                                                buttonVariant='open' 
+                                                linkContent={{text: 'View Photo'}} 
+                                                onClick={() => handleClick(photo, index)} 
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         )
                     })}

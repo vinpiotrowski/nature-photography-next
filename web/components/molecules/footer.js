@@ -4,7 +4,7 @@ const Footer = ({footerContent}) => {
 
     return (
         <footer className='text-white relative z-20'>
-            <Container className='flex flex-wrap items-center justify-center'>
+            <Container variant={'footer'} className='flex flex-wrap items-center justify-center'>
                 <div className='flex self-start flex-shrink-0'>
                     <span className='flex self-start'>
                         <svg className='max-w-10 md:max-w-12 lg:max-w-14' width='86' height='98' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
@@ -13,11 +13,10 @@ const Footer = ({footerContent}) => {
                     </span>
                 </div>
                 <div className='block flex flex-grow justify-end'>
-                    <a href='//www.instagram.com/mostly_carbon/' className='flex items-center gap-2 text-[#989898] md:text-lg'>
-                        <em className='icon-instagram text-2xl' /><span>Instagram</span>
+                    <a href='//www.instagram.com/mostly_carbon/' className='flex items-center gap-1 text-[#989898] md:text-lg'>
+                        <span className='mr-2'>Follow me on </span><em className='icon-instagram text-2xl' /><span>Instagram</span>
                     </a>
                 </div>
-
             </Container>
         </footer>
     )

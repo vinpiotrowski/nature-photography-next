@@ -21,7 +21,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
 
     return (
         <section data-name='featured-article' className='bg-white py-3 relative z-1'>
-            <Container className='flex flex-col gap-7 items-center justify-center py-7 md:py-20 md:gap-7'>
+            <Container className='flex flex-col gap-7 items-center justify-center md:gap-7'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
                     <Heading className='uppercase' variant='h2'>
                         {headline}
