@@ -1,4 +1,5 @@
 import generateSrcSets from '../../utils/image-helpers'
+import NextImage from 'next/image'
 
 const Image = ({
     className,
