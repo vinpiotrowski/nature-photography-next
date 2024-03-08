@@ -35,9 +35,6 @@ const ArticleListingPage = ({articleListingPageContent}) => {
                 return (
                     <article key={`article-${index}`}>
                         <Article articleContent={article}  />
-                        <Container  className={`bg-white flex flex-col items-center`}>
-                            <hr className='h-[1px]' />
-                        </Container>
                     </article>
                 )
             })} 

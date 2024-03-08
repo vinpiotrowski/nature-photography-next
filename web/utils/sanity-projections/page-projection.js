@@ -33,7 +33,8 @@ const pageProjection = `{
         shortDescription,
         longDescription,
         backgroundImage ${imageProjection},
-        'photographs': *[ _type == 'photograph' && references(^._id) ] ${photographProjection} | order(orderRank)
+        'photographs': *[ _type == 'photograph' && references(^._id) ] ${photographProjection} | order(orderRank),
+        contentBlocks[] -> ${contentBlocksProjection}
     },
 }`
 

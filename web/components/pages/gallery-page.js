@@ -1,6 +1,7 @@
 'use client'; // This is a client component
 import React, { useEffect, useState } from 'react'
 import Container from '../atoms/container'
+import ContentBlocks from '../organisms/content-blocks';
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Modal from '../molecules/modal'
@@ -9,7 +10,7 @@ import Paragraph from '../atoms/paragraph'
 
 const Gallery = ({galleryContent}) => {
 
-    const {backgroundImage, iconGroup, longDescription, photographs, subtitle, title,} = galleryContent
+    const {backgroundImage, iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
 
     const BACKGROUND_IMAGE_SIZE_STEPS = [
         { w: 375, h: 500 }, // 3:4
@@ -80,7 +81,7 @@ const Gallery = ({galleryContent}) => {
                 }}
             />
 
-            <section data-name='gallery' className='bg-white -mt-1 py-3 relative z-1'>
+            <section data-name='gallery' className='bg-white -mt-1 relative z-1'>
                 <Container className='flex flex-col gap-7 items-center justify-center md:gap-20'>
                 
                     <div className='flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
@@ -118,7 +119,12 @@ const Gallery = ({galleryContent}) => {
                             selectedIndex={selectedIndex}
                         />
                     )}
+                    
                 </Container>
+                
+                {contentBlocks && (
+                    <ContentBlocks contentBlocksContent={contentBlocks} />
+                )}
             </section>
         </>
     )

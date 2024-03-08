@@ -89,6 +89,24 @@ const gallery = {
           hotspot: true,
         },
       },
+      {
+        name: 'contentBlocks',
+        title: 'Content Blocks',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: [
+              {type: 'callout'},
+              {type: 'columnedContent'},
+              {type: 'featuredArticle'},
+              {type: 'featuredPhotographs'},
+              {type: 'fiftyFifty'},
+              {type: 'galleryCard'}
+            ]
+          }
+        ]
+      }
     ],
   }
   

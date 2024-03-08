@@ -1,3 +1,4 @@
+import Container from '../atoms/container'
 import ContentBlocks from '../organisms/content-blocks'
 
 const Article = ({articleContent}) => {
@@ -7,7 +8,9 @@ const Article = ({articleContent}) => {
     return (
         <>
             {contentBlocks && (
-                <ContentBlocks contentBlocksContent={contentBlocks} />
+                <>
+                    <ContentBlocks contentBlocksContent={contentBlocks} />
+                </>
             )
 
             }
