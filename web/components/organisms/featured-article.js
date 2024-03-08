@@ -51,7 +51,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                             </Paragraph>
                             <Button linkContent={{
                                 internalRef: article?.slug?.current,
-                                text: 'Read More',
+                                text: 'Read Article',
                                 variant: 'internal'
                             }} />
                     </div>
