@@ -6,7 +6,7 @@ export const sanityClient = (isPreview) =>
         apiVersion: '2022-03-07',
         dataset: 'production',
         projectId: 'w2in3wfr',
-        useCdn: true,
+        useCdn: false,
         perspective: isPreview ? 'previewDrafts' : 'published',
     })
 
