@@ -5,7 +5,7 @@ import IconGroup from '../molecules/icon-group'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
 
-const GalleryCard = ({galleryCardContent}) => {
+const GalleryCard = ({galleryCardContent, position}) => {
     const {variant, textPlacement, image, gallery} = galleryCardContent
 
     const HALF_IMAGE_SIZE_STEPS = [
@@ -19,10 +19,11 @@ const GalleryCard = ({galleryCardContent}) => {
 
     const linkContent = {internalRef: gallery?.slug?.current, text: 'View Gallery', variant: 'internal'}
     const flexDirection = textPlacement == 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
+    const pullUp = position == 0 ? '-mt-28' : ''
 
     return (
         <section data-name='galleryCard' className='bg-white -mt-1 py-3 relative z-1'>
-            <Container className={`flex flex-col gap-7 items-center ${flexDirection} md:gap-20 md:-mt-20`}>
+            <Container className={`flex flex-col gap-7 items-center ${flexDirection} ${pullUp} md:gap-20`}>
                 <div className='basis-1/2 max-w-96'>
                     {Image && 
                         <Image

@@ -22,7 +22,7 @@ const ContentBlocks = ({contentBlocksContent}) => {
                 )
             case 'featuredPhotographs':
                 return (
-                    <FeaturedPhotographs featuredPhotographsContent={contentBlock} key={index} />
+                    <FeaturedPhotographs featuredPhotographsContent={contentBlock} key={contentBlock._id} />
                 )
             case 'fiftyFifty':
                 return (
@@ -30,7 +30,7 @@ const ContentBlocks = ({contentBlocksContent}) => {
                 )
             case 'galleryCard':
                 return (
-                    <GalleryCard galleryCardContent={contentBlock} key={index} />
+                    <GalleryCard galleryCardContent={contentBlock} position={index} key={contentBlock._id} />
                 )
         }
     })
