@@ -7,12 +7,12 @@ const article = {
     icon: IoDocumentTextOutline,
     preview: {
       select: {
-        title: 'slug'
+        title: 'title'
       },
       prepare(selection) {
         const {title} = selection
         return {
-          title: title?.current,
+          title: title,
           subtitle: 'Article Page',
         }
       }

@@ -6,12 +6,12 @@ const contentBlockPage = {
     icon: IoDocumentOutline,
     preview: {
       select: {
-        title: 'slug'
+        title: 'title'
       },
       prepare(selection) {
         const {title} = selection
         return {
-          title: title?.current,
+          title: title,
           subtitle: 'Content Block Page',
         }
       }
