@@ -8,7 +8,7 @@ const ContentBlockPage = ({contentBlockPageContent}) => {
 
     const BACKGROUND_IMAGE_SIZE_STEPS = [
         { w: 375, h: 500 }, // 3:4
-        { w: 412, h: 551 },
+        { w: 414, h: 552 },
         { w: 640, h: 854 },
         { w: 768, h: 1024 },
         { w: 1024, h: 0 },
@@ -21,7 +21,7 @@ const ContentBlockPage = ({contentBlockPageContent}) => {
         <>
             <Image
                 alt={''}
-                className={'absolute top-0 z-0'}
+                className={'absolute max-w-100 top-0 z-0'}
                 imageContent={backgroundImage}
                 sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
             />
