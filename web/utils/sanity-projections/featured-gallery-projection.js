@@ -1,7 +1,7 @@
 import iconGroupProjection from './icon-group-projection'
 import imageProjection from './image-projection'
 
-const galleryCardProjection = `{
+const featuredGalleryProjection = `{
     _type,
     variant,
     textPlacement,
@@ -14,4 +14,4 @@ const galleryCardProjection = `{
     }
 }`
 
-export default galleryCardProjection
+export default featuredGalleryProjection

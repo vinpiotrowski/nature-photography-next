@@ -38,7 +38,7 @@ const Callout = ({calloutContent}) => {
                          text-white md:gap-7 md:pb-14 md:pt-28'>
                     {headline && (
                         <>
-                            <Heading variant='h3' className=''>
+                            <Heading variant='h3' className='font-bold'>
                                 {headline}
                             </Heading>
                             <Button linkContent={{internalRef: link?.slug?.current, text: linkText, variant: 'internal'}} />

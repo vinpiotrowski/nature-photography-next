@@ -1,8 +1,8 @@
 import { LiaImage, LiaImages } from 'react-icons/lia'
 
-const galleryCard = {
+const featuredGallery = {
     name: 'galleryCard',
-    title: 'Gallery Card',
+    title: 'Featured Gallery',
     icon: LiaImages,
     type: 'document',
     preview: {
@@ -13,7 +13,7 @@ const galleryCard = {
             const {gallery} = selection
             return {
                 title: gallery,
-                subtitle: 'Gallery Card'
+                subtitle: 'Featured Gallery'
             }
         }
     },
@@ -61,4 +61,4 @@ const galleryCard = {
     ]
 }
 
-export default galleryCard
+export default featuredGallery

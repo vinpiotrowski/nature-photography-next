@@ -7,7 +7,7 @@ import featuredArticle from './featured-article-schema'
 import featuredPhotographs from './featured-photographs-schema'
 import fiftyFifty from './fifty-fifty-schema'
 import gallery from './gallery-schema'
-import galleryCard from './gallery-card-schema'
+import featuredGallery from './featured-gallery-schema'
 import link from './link-schema'
 import pageHeading from './page-heading-schema'
 import photograph from './photograph-schema'
@@ -20,10 +20,10 @@ export const schemaTypes = [
     columnedContent,
     contentBlockPage,
     featuredArticle,
+    featuredGallery,
     featuredPhotographs,
     fiftyFifty,
     gallery,
-    galleryCard,
     link,
     pageHeading,
     photograph,

@@ -3,7 +3,7 @@ import ColumnedContent from './columned-content'
 import FeaturedArticle from './featured-article'
 import FeaturedPhotographs from './featured-photographs'
 import FiftyFifty from '../molecules/fifty-fifty'
-import GalleryCard from './gallery-card'
+import FeaturedGallery from './featured-gallery'
 
 const ContentBlocks = ({contentBlocksContent}) => {
     return contentBlocksContent.map((contentBlock, index) => {
@@ -30,7 +30,7 @@ const ContentBlocks = ({contentBlocksContent}) => {
                 )
             case 'galleryCard':
                 return (
-                    <GalleryCard galleryCardContent={contentBlock} position={index} key={contentBlock._id} />
+                    <FeaturedGallery featuredGalleryContent={contentBlock} position={index} key={contentBlock._id} />
                 )
         }
     })
