@@ -37,7 +37,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
         return (
             <section data-name='featured-gallery' className='bg-white -mt-1 py-3 relative z-1'>
                 <Container className={`flex flex-col gap-3 items-center ${flexDirection} ${pullUp} md:gap-5 lg:gap-14 lg:px-24 xl:px-40`}>
-                    <div className='basis-1/2 max-w-sm'>
+                    <div className='basis-1/2'>
                         {Image && 
                             <Image
                                 alt={''}
