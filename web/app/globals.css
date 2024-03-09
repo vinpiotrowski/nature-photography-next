@@ -102,7 +102,11 @@ hr {
 
 @layer utilities {
   .np-transition {
-    @apply transition-all ease-in-out duration-[0.3s];
+    @apply transition-all ease-in-out duration-[0.5s];
+  }
+
+  .np-transition-slow {
+    @apply transition-all ease-in-out duration-[1s];
   }
 
   .np-button {

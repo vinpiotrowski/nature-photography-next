@@ -27,7 +27,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
     const handleClick = (image, index) => {
         setSelectedImage(image),
         setSelectedIndex(index)
-        setTimeout( () => document.getElementById('photo-modal')?.classList?.remove('opacity-0'), 0)
+        setTimeout( () => document.getElementById('photo-modal')?.classList?.remove('opacity-0'), 250)
         
     }
 
