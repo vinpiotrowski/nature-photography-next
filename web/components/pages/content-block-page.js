@@ -7,8 +7,6 @@ const ContentBlockPage = ({contentBlockPageContent}) => {
     const {backgroundImage, contentBlocks, pageHeading} = contentBlockPageContent
 
     const BACKGROUND_IMAGE_SIZE_STEPS = [
-        // { w: 375, h: 500 }, 
-        // { w: 414, h: 552 },
         { w: 640, h: 854 }, // 3:4
         { w: 768, h: 1024 },
         { w: 1024, h: 0 },

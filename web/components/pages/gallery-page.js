@@ -13,9 +13,7 @@ const Gallery = ({galleryContent}) => {
     const {backgroundImage, iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
 
     const BACKGROUND_IMAGE_SIZE_STEPS = [
-        { w: 375, h: 500 }, // 3:4
-        { w: 414, h: 552 },
-        { w: 640, h: 854 },
+        { w: 640, h: 854 },// 3:4
         { w: 768, h: 1024 },
         { w: 1024, h: 0 },
         { w: 1280, h: 0 },

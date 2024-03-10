@@ -60,12 +60,6 @@ a {
   text-decoration: none;
 }
 
-nav a,
-footer a {
-  padding-bottom: 0.5rem;
-  position: relative;
-}
-
 nav a:before,
 footer a:before {
   content: '';
