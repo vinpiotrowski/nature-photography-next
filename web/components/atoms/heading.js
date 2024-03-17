@@ -1,6 +1,6 @@
 const Heading1 = ({children, className = ''}) => {
     const size = children.length < 20 ? 'text-5xl md:text-8xl' : 'text-4xl md:text-7xl'
-    return <h1 className={`${size} ${className}`}>{children}</h1>
+    return <h1 className={`np-outline-text ${size} ${className}`}>{children}</h1>
 }
 
 const Heading2 = ({children, className = ''}) => {

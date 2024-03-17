@@ -17,9 +17,12 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
             )
         case 'navigation':
             return (
-                <NextLink href={href} className='relative py-1'>
-                    <span className='block px-3 lg:inline-block'>{text}</span>
-                </NextLink>
+                <span className='block flex flex-grow justify-end'>
+                    <NextLink href={href} className='relative py-1'>
+                        <span className='block px-3 lg:inline-block'>{text}</span>
+                    </NextLink>
+                </span>
+
             )
         case 'close':
             return (
