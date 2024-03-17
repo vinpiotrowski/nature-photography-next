@@ -2,6 +2,7 @@ import {PortableText} from '@portabletext/react'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
 import Image from '../atoms/image'
+import NextLink from 'next/link'
 import Paragraph from '../atoms/paragraph'
 
 const RichText = ({richTextContent, className=''}) => {
@@ -11,11 +12,6 @@ const RichText = ({richTextContent, className=''}) => {
 
     const components = {
         types: {
-            divider(props) {
-                return (
-                    <hr className='bg-[#989898] h-[1px] m-auto w-2/3' />
-                )
-            },
             icon(props) {
                 const iconProps = [props.value]
                 return (
@@ -36,37 +32,46 @@ const RichText = ({richTextContent, className=''}) => {
             }
         },
         marks: {
+            link: ({children, value}) => {
+                return (
+                    <div class="block flex flex-grow justify-start">
+                    <NextLink href={value.href} className='inline-link flex items-center gap-1 py-1 relative'>
+                      <span className='inline-block'>{children}</span><em className='icon-angle-right'></em>
+                    </NextLink>
+                    </div>
+                )
+            },
             strong(props) {
                 return <strong>{props.children}</strong>
             },
             em(props) {
                 return <em>{props.children}</em>
-            }
+            },
         },
         block: {
             normal(props) {
                 return (
-                    <Paragraph className='max-w-prose'>{props.children}</Paragraph>
+                    <Paragraph className='max-w-screen-md'>{props.children}</Paragraph>
                 )
             },
             h1(props) {
                 return (
-                    <Heading variant='h1'>{props.children}</Heading>
+                    <Heading variant='h1' className='max-w-screen-md'>{props.children}</Heading>
                 )
             },
             h2(props) {
                 return (
-                    <Heading variant='h2'>{props.children}</Heading>
+                    <Heading variant='h2' className='max-w-screen-md'>{props.children}</Heading>
                 )
             },
             h3(props) {
                 return (
-                    <Heading variant='h3'>{props.children}</Heading>
+                    <Heading variant='h3' className='max-w-screen-md'>{props.children}</Heading>
                 )
             },
             h4(props) {
                 return (
-                    <Heading variant='h4'>{props.children}</Heading>
+                    <Heading variant='h4' className='max-w-screen-sm'>{props.children}</Heading>
                 )
             },
             blockquote(props) {

@@ -12,7 +12,7 @@ const Heading3 = ({children, className = ''}) => {
 }
 
 const Heading4 = ({children, className = ''}) => {
-    return <h4 className={`${className}`}>{children}</h4>
+    return <h4 className={`text-lg md:text-xl ${className}`}>{children}</h4>
 }
 
 const Heading = ({ children, variant, className = ''}) => {

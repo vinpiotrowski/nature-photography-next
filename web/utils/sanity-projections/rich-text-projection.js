@@ -6,15 +6,17 @@ const richTextProjection = `[]{
     _type == 'block' => {
         _type,
         children,
+        markDefs[] {
+            _key,
+            _type,
+            href
+        },
         style,
-        level
-    },
-    _type == 'divider' => {
-        style,
+        level,
+
     },
     _type == 'image' => ${imageProjection},
-    _type == 'icon' => ${iconGroupProjection}
-
+    _type == 'icon' => ${iconGroupProjection},
 }`
 
 export default richTextProjection

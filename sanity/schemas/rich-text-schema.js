@@ -20,29 +20,27 @@ const richText = {
             marks: {
                 decorators: [
                     {title: 'Strong', value: 'strong'},
-                    {title: 'Emphasis', value: 'em'}
-
+                    {title: 'Emphasis', value: 'em'},
                 ],
+                annotations: [
+                    {
+                        name: 'link',
+                        type: 'object',
+                        title: 'Link',
+                        fields: [
+                          {
+                            name: 'href',
+                            type: 'url',
+                            validation: (Rule) =>
+                              Rule.uri({
+                                allowRelative: false,
+                                scheme: ['http', 'https', 'mailto', 'tel'],
+                              }),
+                          },
+                        ],
+                      },
+                ]
             },
-        },
-        {
-            name: 'divider',
-            title: 'Divider',
-            type: 'object',
-            icon: RxDividerHorizontal,
-            fields: [
-                {
-                    name: 'style',
-                    title: 'Style',
-                    type: 'string',
-                    options: {
-                        list: [
-                            {title: 'Horizontal', value: 'horizontal'}
-                        ]
-                    },
-                    initialValue: 'horizontal'
-                }
-            ]
         },
         {
             type: 'image',

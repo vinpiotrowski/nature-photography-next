@@ -5,6 +5,9 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
 
     const {
         variant,
+        useNoneBackground,
+        eliminateTopPadding,
+        eliminateBottomPadding,
         columnOneHorizontalAlign,
         columnOneVerticalAlign, 
         columnOneBody,
@@ -34,12 +37,28 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
         }
     }
 
-    function getVariantClassnames() {
+    function getVariantClassnames(columnIndex) {
         switch(variant) {
             case '1a':
                 return 'md:w-full md:basis-full'
             case '2a':
                 return 'md:w-1/2 md:basis-1/2'
+            case '2b':
+                if(columnIndex == 1) {
+                    return 'md:w-1/3 md:basis-1/3'
+                } 
+                if(columnIndex == 2) {
+                    return 'md:w-2/3 md:basis-2/3'
+                }
+                return ''
+            case '2c':
+                if(columnIndex == 1) {
+                    return 'md:w-2/3 md:basis-2/3'
+                } 
+                if(columnIndex == 2) {
+                    return 'md:w-1/3 md:basis-1/3'
+                }
+                return '' 
             case '3a':
                 return 'md:w-1/3 md:basis-1/3'
             case '4a':
@@ -71,14 +90,25 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
         }
     }
 
+    function getVerticalPadding() {
+        let paddingClassname = ''
+        if(eliminateTopPadding) {
+            paddingClassname = 'pt-2 md:pt-3 lg:pt-3'
+        }
+        if(eliminateBottomPadding) {
+            paddingClassname += ' pb-2 md:pb-3 lg:pb-3'
+        }
+        return paddingClassname
+    }
+
     const baseClassnames = `flex flex-col gap-3 md:gap-5`
 
     return (
-        <section data-name='columnedContent' className='bg-white -mt-1 py-3 relative z-1'>
-            <Container className={`flex flex-col gap-7 w-full md:flex-row ${getGap()}`}>
+        <section data-name='columnedContent' className={`${useNoneBackground ? 'text-gray-300' : 'bg-white'} -mt-1 py-3 relative z-1`}>
+            <Container className={`flex flex-col gap-7 w-full md:flex-row ${getGap()} ${getVerticalPadding()}`}>
                 {columnOneBody &&  (
                     <div className={`${baseClassnames} 
-                            ${getVariantClassnames()} 
+                            ${getVariantClassnames(1)} 
                             ${getHorizontalAlign(columnOneHorizontalAlign)} 
                             ${getVerticalAlign(columnOneVerticalAlign)}`}>
                         <RichText richTextContent={columnOneBody}/>
@@ -86,7 +116,7 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
                 )}
                 {columnTwoBody && numColumns > 1 && (
                     <div className={`${baseClassnames} 
-                            ${getVariantClassnames()} 
+                            ${getVariantClassnames(2)} 
                             ${getHorizontalAlign(columnTwoHorizontalAlign)} 
                             ${getVerticalAlign(columnTwoVerticalAlign)}`}>
                         <RichText richTextContent={columnTwoBody}/>
@@ -94,7 +124,7 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
                 )}
                 {columnThreeBody && numColumns > 2 && (
                     <div className={`${baseClassnames} 
-                            ${getVariantClassnames()} 
+                            ${getVariantClassnames(3)} 
                             ${getHorizontalAlign(columnThreeHorizontalAlign)} 
                             ${getVerticalAlign(columnThreeVerticalAlign)}`}>
                         <RichText richTextContent={columnThreeBody}/>
@@ -102,7 +132,7 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
                 )}
                 {columnFourBody && numColumns > 3 && (
                     <div className={`${baseClassnames} 
-                            ${getVariantClassnames()} 
+                            ${getVariantClassnames(4)} 
                             ${getHorizontalAlign(columnFourHorizontalAlign)} 
                             ${getVerticalAlign(columnFourVerticalAlign)}`}>
                         <RichText richTextContent={columnFourBody}/>

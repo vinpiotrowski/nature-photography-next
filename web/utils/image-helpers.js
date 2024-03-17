@@ -38,9 +38,9 @@ const generateSrcSets = (image, sizeSteps) => {
         return {}
     }
 
-    const maxDimensions = {w: LARGEST_VIEWPORT, h: 0}
-
     const imageDimensions = getImageDimensions(image)
+
+    const maxDimensions = {w: Math.min(LARGEST_VIEWPORT, imageDimensions.width), h: 0}
 
     const urlBuilder = sanityImageUrlBuilder().image(image).auto('format')
 
@@ -50,7 +50,9 @@ const generateSrcSets = (image, sizeSteps) => {
         new Set([
             ...baseSizes
         ])
-    )
+    )/*.filter((size) => {
+        return (imageDimensions && size.w <= imageDimensions.width * 1.1 && size.w <= maxDimensions.w) // do not upscale
+    })*/
 
     const def = retinaSizes.at(-1) || { w: 1, h: 1 }
 

@@ -52,12 +52,29 @@ const columnedContent = {
             options: {
                 list: [
                     {title: 'One', value: '1a'},
-                    {title: 'Two', value: '2a'},
+                    {title: 'Two (50/50)', value: '2a'},
+                    {title: 'Two (33/66)', value: '2b'},
+                    {title: 'Two (66/33)', value: '2c'},
                     {title: 'Three', value: '3a'},
                     {title: 'Four', value: '4a'}
                 ], 
                 layout: 'radio'
             }
+        },
+        {
+            name: 'useNoneBackground',
+            title: 'Use Transparent Background?',
+            type: 'boolean'
+        },
+        {
+            name: 'eliminateTopPadding',
+            title: 'Eliminate Top Padding?',
+            type: 'boolean'
+        },
+        {
+            name: 'eliminateBottomPadding',
+            title: 'Eliminate Bottom Padding?',
+            type: 'boolean'
         },
         {
             name: 'columnOneHorizontalAlign',

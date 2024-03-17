@@ -47,6 +47,10 @@ h1 {
   width: 140px;
 }
 
+.np-outline-text {
+  text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+}
+
 .hide-scroll-bar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -60,6 +64,7 @@ a {
   text-decoration: none;
 }
 
+a.inline-link:before,
 nav a:before,
 footer a:before {
   content: '';
@@ -74,6 +79,7 @@ footer a:before {
   transition: transform .3s ease-in-out;
 }
 
+a.inline-link:hover:before,
 nav a:hover:before,
 footer a:hover:before {
   transform-origin: left;
