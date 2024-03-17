@@ -32,13 +32,14 @@ const RichText = ({richTextContent, className=''}) => {
             }
         },
         marks: {
-            link: ({children, value}) => {
+            link: (props) => {
+                const href = props?.value?.href
                 return (
-                    <div class="block flex flex-grow justify-start">
-                    <NextLink href={value.href} className='inline-link flex items-center gap-1 py-1 relative'>
-                      <span className='inline-block'>{children}</span><em className='icon-angle-right'></em>
-                    </NextLink>
-                    </div>
+                    <span className='block flex flex-grow justify-start'>
+                        <NextLink href={href} className='inline-link flex items-center gap-1 py-1 relative'>
+                            <span className='inline-block'>{props.children}</span><em className='icon-angle-right'></em>
+                        </NextLink>
+                    </span>
                 )
             },
             strong(props) {
