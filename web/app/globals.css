@@ -47,9 +47,9 @@ h1 {
   width: 140px;
 }
 
-.np-outline-text {
+/*.np-outline-text {
   text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
-}
+}*/
 
 .hide-scroll-bar {
   -ms-overflow-style: none;

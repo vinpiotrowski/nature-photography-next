@@ -1,4 +1,5 @@
 import {PortableText} from '@portabletext/react'
+import Button from '../atoms/button'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
 import Image from '../atoms/image'
@@ -34,6 +35,16 @@ const RichText = ({richTextContent, className=''}) => {
         marks: {
             link: (props) => {
                 const href = props?.value?.href
+                /*return (
+                    <span>
+                        <Button linkContent={{
+                            internalRef: href,
+                            text: props?.children,
+                            variant: 'internal'
+                        }} />
+                    </span>
+
+                )*/
                 return (
                     <span className='block flex flex-grow justify-start'>
                         <NextLink href={href} className='inline-link flex items-center gap-1 py-1 relative'>
