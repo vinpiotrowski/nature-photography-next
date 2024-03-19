@@ -57,7 +57,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
         <section data-name='featured-photographs' className='py-3 relative z-1'>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
-                    <Heading className='uppercase' variant='h3'>
+                    <Heading className='uppercase' variant='h2' styleAs='h3'>
                         {headline}
                     </Heading>
                     <Paragraph variant='chonky'>

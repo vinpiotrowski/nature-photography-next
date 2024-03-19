@@ -82,7 +82,7 @@ const Gallery = ({galleryContent}) => {
                 <Container className='flex flex-col gap-7 items-center justify-center md:gap-20'>
                 
                     <div className='flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
-                        <Heading className='uppercase' variant='h3'>
+                        <Heading className='uppercase' variant='h2' styleAs='h3'>
                             {subtitle}
                         </Heading>
                         <Paragraph>

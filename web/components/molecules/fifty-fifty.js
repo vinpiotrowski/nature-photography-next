@@ -47,7 +47,7 @@ const FiftyFifty = ({fiftyFiftyContent}) => {
                 <div className='basis-1/2 flex flex-col gap-5 justify-center md:gap-7'>
                     {headline && (
                         <div className='np-heading'>
-                            <Heading variant='h3' className='uppercase text-center'>
+                            <Heading variant='h2' styleAs='h3' className='uppercase text-center'>
                                 {headline}
                             </Heading>
                         </div>
