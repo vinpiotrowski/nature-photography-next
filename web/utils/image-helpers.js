@@ -3,9 +3,9 @@ import { sanityImageUrlBuilder } from '../sanity-client'
 const LARGEST_VIEWPORT = 1920
 
 export const DEFAULT_SIZE_STEPS = [
-    { w: 360, h: 0 },
+    /*{ w: 360, h: 0 },
     { w: 414, h: 0 },
-    { w: 640, h: 0 },
+    { w: 640, h: 0 },*/
     { w: 768, h: 0 },
     { w: 1024, h: 0 },
     { w: 1280, h: 0 },
