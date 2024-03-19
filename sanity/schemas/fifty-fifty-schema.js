@@ -25,6 +25,21 @@ const fiftyFifty = {
             type: 'string'
         },
         {
+            name: 'useNoneBackground',
+            title: 'Use Transparent Background?',
+            type: 'boolean'
+        },
+        {
+            name: 'eliminateTopPadding',
+            title: 'Eliminate Top Padding?',
+            type: 'boolean'
+        },
+        {
+            name: 'eliminateBottomPadding',
+            title: 'Eliminate Bottom Padding?',
+            type: 'boolean'
+        },
+        {
             name: 'textPlacement',
             title: 'Text Placement',
             type: 'string',

@@ -4,7 +4,14 @@ import Image from '../atoms/image'
 import RichText from '../molecules/rich-text'
 
 const FiftyFifty = ({fiftyFiftyContent}) => {
-    const {textPlacement, headline, body, image} = fiftyFiftyContent
+    const {
+        useNoneBackground,
+        eliminateTopPadding,
+        eliminateBottomPadding,
+        textPlacement, 
+        headline, 
+        body, 
+        image} = fiftyFiftyContent
     const flexDirection = textPlacement == 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
 
     const FIFTY_FIFTY_SIZE_STEPS = [
@@ -14,9 +21,20 @@ const FiftyFifty = ({fiftyFiftyContent}) => {
         { w: 768, h: 0 }
     ]
 
+    function getVerticalPadding() {
+        let paddingClassname = ''
+        if(eliminateTopPadding) {
+            paddingClassname = 'pt-2 md:pt-3 lg:pt-3'
+        }
+        if(eliminateBottomPadding) {
+            paddingClassname += ' pb-2 md:pb-3 lg:pb-3'
+        }
+        return paddingClassname
+    }
+
     return (
-        <section data-name='fiftyFifty' className='bg-white -mt-1 py-3 relative z-1'>
-            <Container className={`flex flex-col gap-7 items-center ${flexDirection} md:gap-20`}>
+        <section data-name='fiftyFifty' className={`${useNoneBackground ? 'text-gray-300' : 'bg-white'} -mt-1 py-3 relative z-1`}>
+            <Container className={`flex flex-col gap-7 items-center ${flexDirection} ${getVerticalPadding()} md:gap-20`}>
                 <div className='basis-1/2'>
                     {Image && 
                         <Image
@@ -29,7 +47,7 @@ const FiftyFifty = ({fiftyFiftyContent}) => {
                 <div className='basis-1/2 flex flex-col gap-5 justify-center md:gap-7'>
                     {headline && (
                         <div className='np-heading'>
-                            <Heading variant='h2' className='uppercase text-center'>
+                            <Heading variant='h3' className='uppercase text-center'>
                                 {headline}
                             </Heading>
                         </div>

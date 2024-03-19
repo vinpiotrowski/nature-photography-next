@@ -4,15 +4,15 @@ const Heading1 = ({children, className = ''}) => {
 }
 
 const Heading2 = ({children, className = ''}) => {
-    return <h2 className={`text-2xl md:text-3xl font-bold ${className}`}>{children}</h2>
+    return <h2 className={`text-3xl md:text-6xl ${className}`}>{children}</h2>
 }
 
 const Heading3 = ({children, className = ''}) => {
-    return <h3 className={`text-xl md:text-2xl ${className}`}>{children}</h3>
+    return <h3 className={`text-2xl md:text-4xl ${className}`}>{children}</h3>
 }
 
 const Heading4 = ({children, className = ''}) => {
-    return <h4 className={`text-lg md:text-xl ${className}`}>{children}</h4>
+    return <h4 className={`text-xl md:text-2xl ${className}`}>{children}</h4>
 }
 
 const Heading = ({ children, variant, className = ''}) => {

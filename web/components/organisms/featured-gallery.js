@@ -49,7 +49,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                     <div className='basis-1/2 flex flex-col gap-3 items-center justify-center  
                             p-3 text-center lg:items-start md:gap-5 lg:text-left '>
                         <IconGroup iconGroupContent={gallery?.iconGroup} />
-                        <Heading variant='h2' className='uppercase'>
+                        <Heading variant='h3' className='uppercase'>
                             {gallery?.title}
                         </Heading>
                         <Paragraph>
@@ -78,7 +78,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                         p-7 text-center w-full lg:items-start lg:items-start lg:text-left
                         lg:max-w-prose lg:absolute lg:py-10 lg:px-14 lg:translate-y-7 ${textPanel}`}>
                             <IconGroup iconGroupContent={gallery?.iconGroup} className='np-light-text' />
-                            <Heading variant='h2' className='np-light-text uppercase'>
+                            <Heading variant='h3' className='np-light-text uppercase'>
                                 {gallery?.title}
                             </Heading>
                             <Paragraph className='np-light-text'>

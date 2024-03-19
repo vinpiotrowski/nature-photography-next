@@ -23,7 +23,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
         <section data-name='featured-article' className='bg-white py-3 relative z-1'>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-7'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
-                    <Heading className='uppercase' variant='h2'>
+                    <Heading className='uppercase' variant='h3'>
                         {headline}
                     </Heading>
                     <Paragraph variant='chonky'>
@@ -38,15 +38,15 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                         alt={''}
                         sizeSteps={IMAGE_SIZE_STEPS} 
                     />
-                    <div className='np-panel bottom-0 left-0 flex flex-col gap-3 justify-center p-7 w-full
+                    <div className='np-panel bottom-0 left-0 flex flex-col gap-3 items-center justify-center p-7 text-[#989898] text-center w-full
                         lg:max-w-prose lg:absolute lg:py-10 lg:px-14 lg:translate-x-[7vw] lg:translate-y-7'>
-                            <Paragraph className='text-[#989898]'>
+                            <Paragraph className=''>
                                 <strong>{article?.date}</strong>
                             </Paragraph>
-                            <Heading variant='h3' className='font-bold text-white'>
+                            <Heading variant='h4' className=''>
                                 {article?.title}
                             </Heading>
-                            <Paragraph className='text-[#989898]'>
+                            <Paragraph className=''>
                                 {article?.description}
                             </Paragraph>
                             <Button linkContent={{

@@ -13,7 +13,7 @@ body {
 body {
   background: #212121;
   color: #757575;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-size: 1rem;
   font-weight: 400;
@@ -33,12 +33,13 @@ h1, h2, h3, h4, h5 {
   font-style: normal;
 }
 
-h1 {
+h1, h2 {
   font-family: "Josefin Sans", sans-serif;
 }
 
 .np-heading:not(.chonky) h1:after,
-.np-heading:not(.chonky) h2:after {
+.np-heading:not(.chonky) h2:after,
+.np-heading:not(.chonky) h3:after {
   background: /*#ff006c;*/#358faa;
   content: " ";
   display: block;

@@ -28,7 +28,7 @@ const Modal = ({
         <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 h-full w-full opacity-full opacity-0'>
           
           <div className='flex justify-center p-3'>
-            <Heading variant='h3' >
+            <Heading variant='h4' className='' >
                 {selectedImage.title}
             </Heading>
             <Button buttonVariant='close' onClick={onClose} />
@@ -36,8 +36,8 @@ const Modal = ({
 
           <div className='flex justify-center items-center relative'>
             <div className='absolute bottom-0 left-0 flex flex-col gap-3 justify-center p-7 
-                  translate-y-full w-full lg:np-panel lg:overflow-y-auto lg:max-h-[35vh] lg:max-w-prose 
-                  lg:py-10 lg:px-14 lg:translate-x-[7vw] lg:translate-y-3/4'>
+                  translate-y-full w-full lg:np-panel lg:overflow-y-auto lg:max-h-[32vh] lg:max-w-prose 
+                  lg:pb-7 lg:pt-6 lg:px-9 lg:translate-x-[7vw] lg:translate-y-[84%]'>
               <div className='flex gap-3 items-center'>
                 <Button buttonVariant='previous' onClick={onPrev} />
                 <Button buttonVariant='next' onClick={onNext} />
