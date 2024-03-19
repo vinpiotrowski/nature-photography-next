@@ -19,7 +19,7 @@ const ArticleListingPage = ({articleListingPageContent}) => {
         <>
             <Image
                 alt={''}
-                className={'absolute top-0 z-0'}
+                className={'absolute max-w-100 opacity-75 top-0 z-0 md:opacity-100'}
                 imageContent={backgroundImage}
                 sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
             />
