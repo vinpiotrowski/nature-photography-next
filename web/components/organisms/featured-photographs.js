@@ -80,7 +80,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                                         <Paragraph>
                                             <strong>{photo.location}</strong>
                                         </Paragraph>
-                                        <Heading variant={'h4'}>
+                                        <Heading variant='h3' styleAs='h4'>
                                             {photo.title}
                                         </Heading>
                                         <Paragraph>

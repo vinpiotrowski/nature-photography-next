@@ -43,7 +43,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                             <Paragraph className=''>
                                 <strong>{article?.date}</strong>
                             </Paragraph>
-                            <Heading variant='h4' className=''>
+                            <Heading variant='h3' styleAs='h4' className=''>
                                 {article?.title}
                             </Heading>
                             <Paragraph className=''>

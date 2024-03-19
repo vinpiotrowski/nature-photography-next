@@ -66,24 +66,19 @@ const RichText = ({richTextContent, className=''}) => {
                     <Paragraph className='max-w-screen-md'>{props.children}</Paragraph>
                 )
             },
-            h1(props) {
-                return (
-                    <Heading variant='h1' className='max-w-screen-md'>{props.children}</Heading>
-                )
-            },
             h2(props) {
                 return (
-                    <Heading variant='h2' className='max-w-screen-md'>{props.children}</Heading>
+                    <Heading variant='h1' styleAs='h2' className='max-w-screen-md'>{props.children}</Heading>
                 )
             },
             h3(props) {
                 return (
-                    <Heading variant='h3' className='max-w-screen-md'>{props.children}</Heading>
+                    <Heading variant='h2' styleAs='h3' className='max-w-screen-md'>{props.children}</Heading>
                 )
             },
             h4(props) {
                 return (
-                    <Heading variant='h4' className='max-w-screen-sm'>{props.children}</Heading>
+                    <Heading variant='h3' styleAs='h4' className='max-w-screen-sm'>{props.children}</Heading>
                 )
             },
             blockquote(props) {
