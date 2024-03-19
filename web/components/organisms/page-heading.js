@@ -80,7 +80,7 @@ const PageHeading = ({pageHeadingContent}) => {
                 </div>
             </section>
         )
-    } else {
+    } else if (variant === 'reg') {
         return (
             <section className={`${variant} np-heading text-white flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:pt-28 lg:px-28`}>
                 <HeadingContentBlock 
@@ -108,6 +108,16 @@ const PageHeading = ({pageHeadingContent}) => {
                         <polygon points='28,98 28,100 100,100 100,91' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
                     </svg>
                 </div>
+            </section>
+        )
+    } else  {
+        return (
+            <section className={`${variant} np-heading text-white flex flex-col justify-center items-center relative py-14 px-7 text-white w-full lg:p-28`}>
+                <HeadingContentBlock 
+                    headline={headline}
+                    iconGroup={iconGroup}
+                    intro={intro}
+                />
             </section>
         )
     }

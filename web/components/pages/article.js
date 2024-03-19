@@ -6,15 +6,11 @@ const Article = ({articleContent}) => {
     const {contentBlocks} = articleContent
 
     return (
-        <>
+        <Container>
             {contentBlocks && (
-                <>
-                    <ContentBlocks contentBlocksContent={contentBlocks} />
-                </>
-            )
-
-            }
-        </>
+                <ContentBlocks contentBlocksContent={contentBlocks} />
+            )}
+        </Container>
     )
 }
 

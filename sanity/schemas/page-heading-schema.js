@@ -29,6 +29,7 @@ const pageHeading = {
             {title: 'Regular', value: 'reg'},
             {title: 'Chonky', value: 'chonky'},
             {title: 'Pointy', value: 'pointy'},
+            {title: 'Simple', value: 'simple'}
           ], 
           layout: 'radio'
         }
