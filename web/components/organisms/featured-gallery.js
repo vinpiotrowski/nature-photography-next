@@ -41,6 +41,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                         {Image && 
                             <Image
                                 alt={''}
+                                className='px-7 lg:px-0'
                                 imageContent={image}
                                 sizeSteps={HALF_IMAGE_SIZE_STEPS}
                             />
@@ -68,15 +69,15 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>
                     {Image && (
                         <Image
-                            className=''
+                            className='px-7 lg:px-0'
                             imageContent={image} 
                             alt={''}
                             sizeSteps={FULL_IMAGE_SIZE_STEPS} 
                         />
                     )}
-                    <div className={`np-panel bottom-0 left-0 flex flex-col gap-3 items-center justify-center 
-                        p-7 text-center w-full lg:items-start lg:items-start lg:text-left
-                        lg:max-w-prose lg:absolute lg:py-10 lg:px-14 lg:translate-y-7 ${textPanel}`}>
+                    <div className={`bottom-0 left-0 flex flex-col gap-3 items-center justify-center max-w-prose 
+                        p-3 text-center w-full lg:np-panel lg:items-start lg:items-start lg:text-left
+                        lg:absolute lg:py-10 lg:px-14 lg:translate-y-7 ${textPanel}`}>
                             <IconGroup iconGroupContent={gallery?.iconGroup} className='np-light-text' />
                             <Heading variant='h3' className='np-light-text uppercase'>
                                 {gallery?.title}
