@@ -19,7 +19,7 @@ const ContentBlockPage = ({contentBlockPageContent}) => {
         <>
             <Image
                 alt={''}
-                className={'absolute max-w-100 opacity-65 top-0 z-0 md:opacity-85'}
+                className={'absolute max-w-100 opacity-65 top-0 w-full z-0 md:opacity-85'}
                 imageContent={backgroundImage}
                 sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
             />
