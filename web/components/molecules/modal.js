@@ -26,9 +26,10 @@ const Modal = ({
     selectedImage && (
       <div className='fixed inset-0 flex justify-center items-center z-50'>
 
-        <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 h-full w-full opacity-full opacity-0'>
+        <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 overflow-y-auto 
+          h-full w-full opacity-full opacity-0'>
           
-          <div className='flex justify-center p-3'>
+          <div className='flex justify-center p-2'>
             <Heading variant='h4' className='' >
                 {selectedImage.title}
             </Heading>
@@ -43,7 +44,7 @@ const Modal = ({
               sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
             />
             <Container className='flex flex-col gap-3 items-start justify-center
-                  lg:gap-7 md:flex-row-reverse md:py-5'>
+                  lg:gap-7 md:flex-row-reverse md:pt-5 md:pb-0'>
               <div className='flex gap-2 items-center'>
                 <Button buttonVariant='previous' onClick={onPrev} />
                 <Button buttonVariant='next' onClick={onNext} />
