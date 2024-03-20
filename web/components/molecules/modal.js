@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../atoms/button'
+import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
@@ -34,29 +35,28 @@ const Modal = ({
             <Button buttonVariant='close' onClick={onClose} />
           </div>
 
-          <div className='flex justify-center items-center relative'>
-            <div className='absolute bottom-0 left-0 flex flex-col gap-3 justify-center p-7 
-                  translate-y-full w-full lg:np-panel lg:overflow-y-auto lg:max-h-[32vh] lg:max-w-prose 
-                  lg:pb-7 lg:pt-6 lg:px-9 lg:translate-x-[7vw] lg:translate-y-[84%]'>
-              <div className='flex gap-3 items-center'>
+          <div className='flex flex-col justify-center items-center relative'>
+            <Image
+              className='max-h-[56vh] lg:max-h-[77vh]'
+              imageContent={selectedImage.image} 
+              alt={selectedImage.shortDescription}
+              sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
+            />
+            <Container className='flex flex-col gap-3 items-start justify-center
+                  lg:gap-7 md:flex-row-reverse md:py-5'>
+              <div className='flex gap-2 items-center'>
                 <Button buttonVariant='previous' onClick={onPrev} />
                 <Button buttonVariant='next' onClick={onNext} />
-                <strong className='lg:text-white'>
+                <strong>
                   {('0' + (selectedIndex + 1)).slice(-2)} 
                   &nbsp;/&nbsp; 
                   {('0' + images.length).slice(-2)}
                 </strong>
               </div>
-              <Paragraph className='lg:text-[#989898]'>
+              <Paragraph variant='snug' className='max-w-prose'>
                 <strong>{selectedImage.location}</strong> — {selectedImage.longDescription}
               </Paragraph>
-            </div>
-            <Image
-              className='max-h-[56vh] lg:max-h-[70vh]'
-              imageContent={selectedImage.image} 
-              alt={selectedImage.shortDescription}
-              sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
-            />
+            </Container>
           </div>
         </div>
       </div>
