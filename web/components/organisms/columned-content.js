@@ -104,7 +104,7 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
     const baseClassnames = `flex flex-col gap-3 md:gap-5`
 
     return (
-        <section data-name='columnedContent' className={`${useNoneBackground ? 'text-gray-300' : 'bg-white'} -mt-1 py-3 relative z-1`}>
+        <section data-name='columnedContent' className={`${useNoneBackground ? 'np-light-text' : 'bg-white'} -mt-1 py-3 relative z-1`}>
             <Container className={`flex flex-col gap-7 w-full md:flex-row ${getGap()} ${getVerticalPadding()}`}>
                 {columnOneBody &&  (
                     <div className={`${baseClassnames} 

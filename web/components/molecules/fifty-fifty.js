@@ -33,7 +33,7 @@ const FiftyFifty = ({fiftyFiftyContent}) => {
     }
 
     return (
-        <section data-name='fiftyFifty' className={`${useNoneBackground ? 'text-gray-300' : 'bg-white'} -mt-1 py-3 relative z-1`}>
+        <section data-name='fiftyFifty' className={`${useNoneBackground ? 'np-light-text' : 'bg-white'} -mt-1 py-3 relative z-1`}>
             <Container className={`flex flex-col gap-7 items-center ${flexDirection} ${getVerticalPadding()} md:gap-20`}>
                 <div className='basis-1/2'>
                     {Image && 

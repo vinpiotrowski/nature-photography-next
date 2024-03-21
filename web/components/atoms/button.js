@@ -22,7 +22,6 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                         <span className='block px-3 lg:inline-block'>{text}</span>
                     </NextLink>
                 </span>
-
             )
         case 'close':
             return (
@@ -32,6 +31,15 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                         <path d="M16.707,8.707,13.414,12l3.293,3.293a1,1,0,1,1-1.414,1.414L12,13.414,8.707,16.707a1,1,0,1,1-1.414-1.414L10.586,12,7.293,8.707A1,1,0,1,1,8.707,7.293L12,10.586l3.293-3.293a1,1,0,1,1,1.414,1.414Z"/>
                     </svg>
                 </button>
+            )
+        case 'loadMore':
+            return (
+                <div className='flex justify-center'>
+                    <button onClick={onClick} className='np-button np-transition px-3 py-2 
+                            -skew-x-[14deg] z-10 lg:px-4 lg:py-3 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
+                        <span className=' block font-bold skew-x-[14deg] lg:text-lg'>{text}</span>
+                    </button>
+                </div>
             )
         case 'next':
             return (

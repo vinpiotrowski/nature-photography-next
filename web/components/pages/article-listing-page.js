@@ -1,4 +1,9 @@
+'use client'; // This is a client component
+import React, { useEffect, useState } from 'react'
 import Article from './article'
+import Button from '../atoms/button'
+import Container from '../atoms/container'
+import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import PageHeading from '../organisms/page-heading'
 
@@ -15,6 +20,18 @@ const ArticleListingPage = ({articleListingPageContent}) => {
         { w: 1920, h: 0 }
       ]
 
+    const [numArticlesToShow, setNumArticlesToShow] = useState(3);
+    const [allArticles, setAllArticles] = useState([]);
+
+    useEffect(() => {
+        setAllArticles(articles);
+    }, [articles]);
+
+    const handleLoadMore = () => {
+        const newNumArticlesToShow = numArticlesToShow + 3;
+        setNumArticlesToShow(newNumArticlesToShow);
+    };
+
     return (
         <>
             <Image
@@ -28,13 +45,29 @@ const ArticleListingPage = ({articleListingPageContent}) => {
                 pageHeadingContent={pageHeading}
             />
 
-            {articles.map((article, index) => {
-                return (
-                    <article key={`article-${index}`}>
-                        <Article articleContent={article}  />
-                    </article>
-                )
+            {allArticles.map((article, index) => {
+                if(index < numArticlesToShow) {
+                    return (
+                        <article key={`article-${index}`}>
+                            <Article articleContent={article}  />
+                        </article>
+                    )
+                }
             })} 
+
+
+                {numArticlesToShow < allArticles?.length && (
+                    <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-20'>
+                        <Heading variant='h2' styleAs='h3'>
+                            Enjoying the Words So Far?
+                        </Heading>
+                        <Button 
+                            buttonVariant='loadMore' 
+                            linkContent={{text:'Load More Words'}} 
+                            onClick={handleLoadMore} 
+                        />
+                    </Container>
+                )}
 
         </>
     )
