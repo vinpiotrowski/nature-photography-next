@@ -17,7 +17,7 @@ const pageProjection = `{
         description,
         backgroundImage ${imageProjection},
         pageHeading ${pageHeadingProjection},
-        'articles': *[_type == 'article'] {contentBlocks[] -> ${contentBlocksProjection}} | order(title)
+        'articles': *[_type == 'article'] {contentBlocks[] -> ${contentBlocksProjection}, orderRank} | order(orderRank)
     },
     (_type == 'contentBlockPage') => {
         title,
