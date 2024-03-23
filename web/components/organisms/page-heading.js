@@ -8,7 +8,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-            <div className={`flex flex-col gap-3 max-w-screen-md text-center text-white lg:gap-7 ${className}`}>
+            <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-3 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
                 {iconGroup && (
                     <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
@@ -31,29 +31,29 @@ const PageHeading = ({pageHeadingContent}) => {
 
     if( variant === 'chonky') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-14 pt-7 px-7 w-full lg:pb-28 lg:pt-7 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-start items-center relative w-full min-h-[280px] md:min-h-[360px] lg:min-h-[400px]`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
                     intro={intro}
                     link={link}
                 />
-                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,70 0,84 77,84' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,42 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,63 0,84' style={{fill: 'rgba(53, 143, 170, 1)', zIndex: 14}}></polygon>
                     </svg>
                 </div>
-                <div className='absolute bottom-0 h-1/2 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,84 0,100 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                     </svg>
@@ -62,7 +62,7 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else if (variant === 'pointy') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[560px] lg:min-h-[600px]`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
@@ -82,7 +82,7 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else if (variant === 'reg') {
         return (
-            <section className={`${variant} np-heading text-white flex flex-col justify-center items-center relative pb-40 pt-14 px-7 text-white w-full lg:pb-56 lg:pt-28 lg:px-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}
@@ -112,7 +112,7 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else  {
         return (
-            <section className={`${variant} np-heading text-white flex flex-col justify-center items-center relative py-14 px-7 text-white w-full lg:p-28`}>
+            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[400px] lg:min-h-[440px]`}>
                 <HeadingContentBlock 
                     headline={headline}
                     iconGroup={iconGroup}

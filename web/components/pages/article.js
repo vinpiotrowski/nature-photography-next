@@ -6,7 +6,7 @@ const Article = ({articleContent}) => {
     const {contentBlocks} = articleContent
 
     return (
-        <Container>
+        <Container className='px-0'>
             {contentBlocks && (
                 <ContentBlocks contentBlocksContent={contentBlocks} />
             )}

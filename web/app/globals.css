@@ -96,6 +96,12 @@ hr {
   width: 60%;
 }
 
+[data-name='columnedContent']:not(.bg-white) strong,
+[data-name='columnedContent']:not(.bg-white) h1,
+[data-name='columnedContent']:not(.bg-white) h2 {
+  color: #FFFFFF;
+}
+
 
 @tailwind base;
 @tailwind components;
