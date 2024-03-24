@@ -1,9 +1,14 @@
+'use client'; // This is a client component
+import FadeInWhenVisible from './animations'
+
 const Container = ({children, variant, className}) => {
     if(variant == 'breakout') {
         return (
-            <div className={`max-w-screen-xl mx-auto pb-7 md:px-14 md:pb-14 ${className}`}>
-                {children}
-            </div>
+            <FadeInWhenVisible>
+                <div className={`max-w-screen-xl mx-auto pb-7 md:px-14 md:pb-14 ${className}`}>
+                    {children}
+                </div>
+            </FadeInWhenVisible>
         )
     }
 
@@ -24,9 +29,11 @@ const Container = ({children, variant, className}) => {
     }
 
     return (
-        <div className={`max-w-screen-xl mx-auto p-7 md:p-14 ${className}`}>
-            {children}
-        </div>
+        <FadeInWhenVisible>
+            <div className={`max-w-screen-xl mx-auto p-7 md:p-14 ${className}`}>
+                {children}
+            </div>
+        </FadeInWhenVisible>
     )
 }
 
