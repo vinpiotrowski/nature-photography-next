@@ -1,6 +1,7 @@
 'use client'; // This is a client component
 import {motion} from 'framer-motion'
 import Button from '../atoms/button'
+import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
 import Paragraph from '../atoms/paragraph'
@@ -8,22 +9,14 @@ import Paragraph from '../atoms/paragraph'
 const PageHeading = ({pageHeadingContent}) => {
     const {headline, iconGroup, intro, link, variant} = pageHeadingContent
 
-    const ScaleInAnimation = ({children}) => {
-        return (
-            <motion.div 
-                    animate={{ opacity: 1 }} 
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 2.1 }}>
-                {children}
-            </motion.div>
-        )
-    }
-
-    const LightRayAnimation = ({children, delay, duration}) => {
+    const LightRayAnimation = ({children, delay, duration, className}) => {
         return (
             <motion.div
-                    animate={{ opacity: [1, 0.5, 1]}}
-                    transition={{repeat: Infinity, duration: duration, repeatDelay: delay }}>
+                    animate={{ opacity: [1, 0.42, 1]}}
+                    transition={{repeat: Infinity, timing: [0.2, 0.6, 0.2], duration: duration, repeatDelay: delay }}
+                    className={className}
+                    role='presentation' 
+                    aria-hidden>
                 {children}
             </motion.div>
         )
@@ -31,13 +24,11 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-            <ScaleInAnimation>
             <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-3 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
                 {iconGroup && (
                     <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
                 {headline && (
-
                     <Heading variant='h1' className='font-bold relative z-1'>
                         {headline}
                     </Heading>
@@ -51,65 +42,58 @@ const PageHeading = ({pageHeadingContent}) => {
                     <Button linkContent={link} buttonVariant={'chonky'} />
                 )}
             </div>
-            </ScaleInAnimation>
         )
     }
 
     if( variant === 'chonky') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-start items-center relative w-full min-h-[280px] md:min-h-[360px] lg:min-h-[400px]`}>
-                <HeadingContentBlock 
-                    headline={headline}
-                    iconGroup={iconGroup}
-                    intro={intro}
-                    link={link}
-                />
-                <LightRayAnimation delay={0} duration={4.2}>
-                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+            <section className='relative'>
+                <Container variant='pageHeading' className={`${variant} min-h-[280px] md:min-h-[360px] lg:min-h-[400px]`}>
+                    <HeadingContentBlock 
+                        headline={headline}
+                        iconGroup={iconGroup}
+                        intro={intro}
+                        link={link}
+                    />
+                </Container>
+                <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,70 0,84 77,84' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                     </svg>
-                </div>
                 </LightRayAnimation>
-
-                <LightRayAnimation delay={0.21} duration={5.6}>
-                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <LightRayAnimation delay={0.21} duration={3.85} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,42 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                     </svg>
-                </div>
                 </LightRayAnimation>
-
-                <LightRayAnimation delay={0.28} duration={4.9}>
-                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='100,84 100,63 0,84' style={{fill: 'rgba(53, 143, 170, 1)', zIndex: 14}}></polygon>
+                        <polygon points='100,84 100,63 0,84' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
-                </div>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.35} duration={3.5}>
-                <div className='absolute bottom-0 h-3/4 right-0 translate-y-7 w-full z-0 md:translate-y-14 lg:h-3/4' role='presentation' aria-hidden>
+                <LightRayAnimation delay={0.35} duration={3.5} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,84 0,100 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                     </svg>
-                </div>
                 </LightRayAnimation>
             </section>
         )
     } else if (variant === 'pointy') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[560px] lg:min-h-[600px]`}>
-                <HeadingContentBlock 
-                    headline={headline}
-                    iconGroup={iconGroup}
-                    intro={intro}
-                />
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+            <section className='relative'>
+                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[560px] lg:min-h-[600px]`}>
+                    <HeadingContentBlock 
+                        headline={headline}
+                        iconGroup={iconGroup}
+                        intro={intro}
+                    />
+                </Container>
+                <LightRayAnimation delay={3.5} duration={4.9} className='absolute bottom-0 h-3/4 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,100 77,100 0,77' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
-                </div>
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                </LightRayAnimation>
+                <div className='absolute bottom-0 h-full w-[120%] z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,98 0,100 100,100 100,77' style={{fill: 'rgba(255, 255, 255, 1)'}}></polygon>
                     </svg>
@@ -118,34 +102,30 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else if (variant === 'reg') {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
-                <HeadingContentBlock 
-                    headline={headline}
-                    iconGroup={iconGroup}
-                    intro={intro}
-                />
-                <LightRayAnimation delay={0} duration={4.2}>
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+            <section className='relative'>
+                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
+                    <HeadingContentBlock 
+                        headline={headline}
+                        iconGroup={iconGroup}
+                        intro={intro}
+                    />
+                </Container>
+                <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='28,98 28,100 0,100 0,91' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
                     </svg>
-                </div>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.21} duration={5.6}>
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                <LightRayAnimation delay={0.21} duration={5.6} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='28,98 28,100 0,100 0,96' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
                     </svg>
-                </div>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.28} duration={4.9}>
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='28,98 28,100 100,100 100,84' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
                     </svg>
-                </div>
                 </LightRayAnimation>
-                <div className='absolute bottom-0 h-full right-0 w-full z-0' role='presentation' aria-hidden>
+                <div className='absolute bottom-0 h-full w-[120%] z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='28,98 28,100 100,100 100,91' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
                     </svg>
@@ -155,12 +135,14 @@ const PageHeading = ({pageHeadingContent}) => {
         )
     } else  {
         return (
-            <section className={`${variant} np-heading flex flex-col justify-start items-center pt-7 relative text-white w-full min-h-[360px] md:min-h-[400px] lg:min-h-[440px]`}>
-                <HeadingContentBlock 
-                    headline={headline}
-                    iconGroup={iconGroup}
-                    intro={intro}
-                />
+            <section>
+                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[400px] lg:min-h-[440px]`}>
+                    <HeadingContentBlock 
+                        headline={headline}
+                        iconGroup={iconGroup}
+                        intro={intro}
+                    />
+                </Container>
             </section>
         )
     }
