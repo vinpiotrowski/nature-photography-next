@@ -24,7 +24,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-            <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-3 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
+            <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-10 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
                 {iconGroup && (
                     <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
