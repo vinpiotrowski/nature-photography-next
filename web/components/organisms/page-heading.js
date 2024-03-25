@@ -49,7 +49,8 @@ const PageHeading = ({pageHeadingContent}) => {
         return (
             <section className='relative'>
                 <Container variant='pageHeading' className={`${variant} min-h-[280px] md:min-h-[360px] lg:min-h-[400px]`}>
-                    <HeadingContentBlock 
+                    <HeadingContentBlock
+                        className={'pt-3'}
                         headline={headline}
                         iconGroup={iconGroup}
                         intro={intro}
