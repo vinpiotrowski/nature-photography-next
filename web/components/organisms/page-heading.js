@@ -24,7 +24,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-            <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-10 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
+            <div className={`flex flex-col gap-3 max-w-screen-md pb-14 pt-3 px-5 text-center text-white mb:pb-20 md:pt-5 lg:pb-40 lg:pt-10 md:gap-5 lg:gap-7 ${className}`}>
                 {iconGroup && (
                     <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
                 )}
@@ -48,9 +48,8 @@ const PageHeading = ({pageHeadingContent}) => {
     if( variant === 'chonky') {
         return (
             <section className='relative'>
-                <Container variant='pageHeading' className={`${variant} min-h-[280px] md:min-h-[360px] lg:min-h-[400px]`}>
+                <Container variant='pageHeading' className={`${variant} min-h-[280px] md:min-h-[380px] lg:min-h-[400px]`}>
                     <HeadingContentBlock
-                        className={'pt-3'}
                         headline={headline}
                         iconGroup={iconGroup}
                         intro={intro}
@@ -82,7 +81,7 @@ const PageHeading = ({pageHeadingContent}) => {
     } else if (variant === 'pointy') {
         return (
             <section className='relative'>
-                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[560px] lg:min-h-[600px]`}>
+                <Container variant='pageHeading' className={`${variant} justify-center min-h-[360px] md:min-h-[560px] lg:min-h-[600px]`}>
                     <HeadingContentBlock 
                         headline={headline}
                         iconGroup={iconGroup}
@@ -104,7 +103,7 @@ const PageHeading = ({pageHeadingContent}) => {
     } else if (variant === 'reg') {
         return (
             <section className='relative'>
-                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
+                <Container variant='pageHeading' className={`${variant} justify-center min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
                     <HeadingContentBlock 
                         headline={headline}
                         iconGroup={iconGroup}
@@ -137,7 +136,7 @@ const PageHeading = ({pageHeadingContent}) => {
     } else  {
         return (
             <section>
-                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[400px] lg:min-h-[440px]`}>
+                <Container variant='pageHeading' className={`${variant} justify-center min-h-[360px] md:min-h-[400px] lg:min-h-[440px]`}>
                     <HeadingContentBlock 
                         headline={headline}
                         iconGroup={iconGroup}
