@@ -1,11 +1,13 @@
 'use client'; // This is a client component
 import React, { useEffect, useState } from 'react'
+import NextLink from 'next/link'
 import Article from './article'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import PageHeading from '../organisms/page-heading'
+import Paragraph from '../atoms/paragraph'
 
 const ArticleListingPage = ({articleListingPageContent}) => {
 
@@ -45,6 +47,7 @@ const ArticleListingPage = ({articleListingPageContent}) => {
                 pageHeadingContent={pageHeading}
             />
 
+            {/*Articles*/}
             {allArticles.map((article, index) => {
                 if(index < numArticlesToShow) {
                     return (
@@ -55,19 +58,19 @@ const ArticleListingPage = ({articleListingPageContent}) => {
                 }
             })} 
 
-
-                {numArticlesToShow < allArticles?.length && (
-                    <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-20'>
-                        <Heading variant='h2' styleAs='h3'>
-                            Enjoying the Words So Far?
-                        </Heading>
-                        <Button 
-                            buttonVariant='loadMore' 
-                            linkContent={{text:'Load More Words'}} 
-                            onClick={handleLoadMore} 
-                        />
-                    </Container>
-                )}
+            {/*Pagination Controls*/}
+            {numArticlesToShow < allArticles?.length && (
+                <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-28'>
+                    <Heading variant='h3' styleAs='h4'>
+                        Enjoying the Words So Far?
+                    </Heading>
+                    <Button 
+                        buttonVariant='loadMore' 
+                        linkContent={{text:'Load More Words'}} 
+                        onClick={handleLoadMore} 
+                    />
+                </Container>
+            )}
 
         </>
     )

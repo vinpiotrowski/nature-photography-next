@@ -88,12 +88,16 @@ footer a:hover:before {
 }
 
 hr {
-  background: #757575;
   border: 0;
-  height: 1px;
-  margin: 28px auto 21px;
   position: relative;
-  width: 60%;
+  background: repeating-linear-gradient(90deg,   #358faa,
+  #358faa 2px,
+  transparent 2px,
+  transparent 8px);
+  height: 14px!important;
+  margin: 14px auto!important;
+  max-height: none;
+  width: 100%;
 }
 
 [data-name='columnedContent']:not(.bg-white) strong,
@@ -101,6 +105,7 @@ hr {
 [data-name='columnedContent']:not(.bg-white) h2 {
   color: #FFFFFF;
 }
+
 
 
 @tailwind base;

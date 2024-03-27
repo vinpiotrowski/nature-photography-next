@@ -35,9 +35,9 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
         case 'loadMore':
             return (
                 <div className='flex justify-center'>
-                    <button onClick={onClick} className='np-button np-transition px-3 py-2 
-                            -skew-x-[14deg] z-10 lg:px-4 lg:py-3 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
-                        <span className=' block font-bold skew-x-[14deg] lg:text-lg'>{text}</span>
+                    <button className='np-button np-transition px-3 py-2 
+                            text-white z-10 lg:px-3 lg:py-2.5 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]' onClick={onClick}>
+                        <span className='block font-bold text-sm text-white lg:text-base $className'>{text}</span>
                     </button>
                 </div>
             )
