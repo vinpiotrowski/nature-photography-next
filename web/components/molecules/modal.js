@@ -43,8 +43,8 @@ const Modal = ({
               alt={selectedImage.shortDescription}
               sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
             />
-            <Container className='flex flex-col gap-3 items-start justify-center
-                  lg:gap-7 md:flex-row-reverse md:pt-5 md:pb-0'>
+            <Container className='flex flex-col gap-3 items-start justify-center pt-1
+                   md:flex-row-reverse md:pt-5 md:pb-0 lg:gap-7 lg:pb-0 lg:pt-5'>
               <div className='flex gap-2 items-center'>
                 <Button buttonVariant='previous' onClick={onPrev} />
                 <Button buttonVariant='next' onClick={onNext} />
