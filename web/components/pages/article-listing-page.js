@@ -64,7 +64,7 @@ const ArticleListingPage = ({articleListingPageContent}) => {
 
             {/*Pagination Controls*/}
             {numArticlesToShow < allArticles?.length && (
-                <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-28'>
+                <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-28 lg:pb-32'>
                     <Heading variant='h3' styleAs='h4'>
                         Enjoying the Words So Far?
                     </Heading>

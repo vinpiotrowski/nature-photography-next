@@ -26,14 +26,14 @@ const TableOfContents = ({articles}) => {
 
 
 
-            <div class='np-transition bg-[#212121] border-4 border-[#358faa] bg-opacity-35 group flex flex-col p-3 m-auto m-w-100 rounded-lg md:max-w-screen-sm' tabindex='1'>
-                <div class='flex cursor-pointer items-center justify-between' onClick={() => handleClick()}>
+            <div className='np-transition bg-[#212121] border-4 border-[#358faa] bg-opacity-35 group flex flex-col p-3 m-auto m-w-100 rounded-lg md:max-w-screen-sm' tabindex='1'>
+                <div className='flex cursor-pointer items-center justify-between' onClick={() => handleClick()}>
                     <Paragraph><strong className='text-white'>In This Issue</strong></Paragraph>
-                    <svg class={`w-5 h-5 shrink-0 ${isOpen ? 'rotate-0' : 'rotate-180'}`} xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
+                    <svg className={`w-5 h-5 shrink-0 ${isOpen ? 'rotate-0' : 'rotate-180'}`} xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
                         <path stroke='#FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5 5 1 1 5'/>
                     </svg>
                 </div>
-                <div id='table-of-contents' class='invisible h-auto max-h-0 items-center opacity-0 transition-all'>
+                <div id='table-of-contents' className='invisible h-auto max-h-0 items-center opacity-0 transition-all'>
                     <ol className='flex flex-wrap m-auto mt-5'>
                         {articles.map((article, index) => {
                             return (
