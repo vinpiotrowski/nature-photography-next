@@ -89,6 +89,7 @@ footer a:hover:before {
 
 hr {
   border: 0;
+  display: block;
   position: relative;
   background: repeating-linear-gradient(90deg,   #358faa,
   #358faa 2px,
@@ -113,6 +114,11 @@ hr {
 @tailwind utilities;
 
 @layer utilities {
+
+  .accordion-open {
+    @apply visible max-h-[1000px] opacity-100
+  }
+
   .np-transition {
     @apply transition-all ease-in-out duration-[0.5s];
   }

@@ -4,8 +4,8 @@ import FadeInWhenVisible from './animations'
 const Container = ({children, variant, className}) => {
     if(variant == 'breakout') {
         return (
-            <FadeInWhenVisible>
-                <div className={`max-w-screen-xl mx-auto pb-7 md:px-14 md:pb-14 ${className}`}>
+            <FadeInWhenVisible delay={0.35}>
+                <div className={`max-w-screen-xl mx-auto pb-7 lg:px-14 lg:pb-14 ${className}`}>
                     {children}
                 </div>
             </FadeInWhenVisible>
@@ -14,7 +14,7 @@ const Container = ({children, variant, className}) => {
 
     if(variant == 'nav') {
         return (
-            <div className={`max-w-screen-xl mx-auto px-7 py-2 md:px-14 md:py-5 ${className}`}>
+            <div className={`max-w-screen-xl mx-auto px-7 py-2 lg:px-14 lg:py-5 ${className}`}>
                 {children}
             </div>
         )
@@ -32,15 +32,15 @@ const Container = ({children, variant, className}) => {
 
     if(variant == 'footer') {
         return (
-            <div className={`max-w-screen-xl mx-auto px-7 py-1 md:px-14 md:py-2 ${className}`}>
+            <div className={`max-w-screen-xl mx-auto px-7 py-1 lg:px-14 lg:py-2 ${className}`}>
                 {children}
             </div>
         )
     }
 
     return (
-        <FadeInWhenVisible>
-            <div className={`max-w-screen-xl mx-auto p-7 md:p-14 ${className}`}>
+        <FadeInWhenVisible delay={0.35}>
+            <div className={`max-w-screen-xl mx-auto p-7 lg:p-14 ${className}`}>
                 {children}
             </div>
         </FadeInWhenVisible>

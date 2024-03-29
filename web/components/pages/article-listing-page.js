@@ -1,13 +1,13 @@
 'use client'; // This is a client component
 import React, { useEffect, useState } from 'react'
-import NextLink from 'next/link'
 import Article from './article'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import PageHeading from '../organisms/page-heading'
-import Paragraph from '../atoms/paragraph'
+import TableOfContents from '../organisms/table-of-contents';
+
 
 const ArticleListingPage = ({articleListingPageContent}) => {
 
@@ -45,6 +45,10 @@ const ArticleListingPage = ({articleListingPageContent}) => {
 
             <PageHeading
                 pageHeadingContent={pageHeading}
+            />
+
+            <TableOfContents
+                articles={articles}
             />
 
             {/*Articles*/}

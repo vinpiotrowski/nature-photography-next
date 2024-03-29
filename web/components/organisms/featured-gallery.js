@@ -41,7 +41,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                         {Image && 
                             <Image
                                 alt={''}
-                                className='px-7 lg:px-0'
+                                className='px-7 md:px-0'
                                 imageContent={image}
                                 sizeSteps={HALF_IMAGE_SIZE_STEPS}
                             />
@@ -69,7 +69,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>
                     {Image && (
                         <Image
-                            className='px-7 lg:px-0'
+                            className='px-7 md:px-0'
                             imageContent={image} 
                             alt={''}
                             sizeSteps={FULL_IMAGE_SIZE_STEPS} 

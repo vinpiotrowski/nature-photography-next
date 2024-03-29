@@ -1,12 +1,12 @@
 import {motion} from 'framer-motion'
 
-const FadeInWhenVisible = ({ children }) => {
+const FadeInWhenVisible = ({ children, delay=0 }) => {
     return (
       <motion.div
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true }}
-        transition={{ delay: 0, duration: 0.7 }}
+        transition={{ delay: delay, duration: 1.4 }}
         variants={{
           visible: { opacity: 1 },
           hidden: { opacity: 0 }

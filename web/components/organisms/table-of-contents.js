@@ -1,60 +1,58 @@
+'use client'; // This is a client component
+import React, { useEffect, useState } from 'react'
 import NextLink from 'next/link'
 import Container from '../atoms/container'
-import Heading from '../atoms/heading'
 import Paragraph from '../atoms/paragraph'
 
-const TableOfContents = ({allArticles}) => {
+const TableOfContents = ({articles}) => {
 
     const numTocToShow = 4;
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        const willOpen = !isOpen
+        setIsOpen(willOpen)
+        if(willOpen) {
+            setTimeout( () => document.getElementById('table-of-contents')?.classList?.add('accordion-open'), 0)
+        } else {
+            setTimeout( () => document.getElementById('table-of-contents')?.classList?.remove('accordion-open'), 0)
+        }
+    }
+
     return (
         <Container className='toc np-light-text flex flex-col gap-7 relative z-10'>
-            <Heading variant='h3' className='text-center text-white'>IN THIS ISSUE</Heading>
-            <hr />
 
-            <ol className='flex flex-col flex-wrap m-auto max-w-fit lg:h-[280px] lg:max-h-fit'>
-                {allArticles.map((article, index) => {
-                    if(index < numTocToShow) { return (
-                        <li className='flex max-w-prose p-3 lg:w-1/2' key={`toc-item-${index}`}>
-                            <span className='p-3 text-[#358faa] text-xl'><strong>0{index + 1}</strong></span>
-                            <div>
-                                <Paragraph className='block flex flex-grow justify-start'>
-                                <NextLink href={article?.slug?.current} className='inline-link flex items-center gap-1 py-1 relative'>
-                                    <strong>{article.title}</strong><em className='icon-angle-right'></em>
-                                    </NextLink>
-                                </Paragraph>
-                                <Paragraph variant='snug'>{article.description}</Paragraph>
-                            </div>
-                        </li>
-                    )}
-                })}
 
-            </ol>
 
-            <div class='np-transition group border-2 border-[#777777] flex flex-col p-3 hover:border-[#ff006c]' tabindex='1'>
-                <div class='flex cursor-pointer items-center justify-between'>
-                    <Paragraph><strong>Table of Contents</strong></Paragraph>
-                    <svg data-accordion-icon class='w-5 h-5 rotate-180 group-focus:rotate-0 shrink-0' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
-                        <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5 5 1 1 5'/>
+
+            <div class='np-transition bg-[#212121] border-4 border-[#358faa] bg-opacity-35 group flex flex-col p-3 m-auto m-w-100 rounded-lg md:max-w-screen-sm' tabindex='1'>
+                <div class='flex cursor-pointer items-center justify-between' onClick={() => handleClick()}>
+                    <Paragraph><strong className='text-white'>In This Issue</strong></Paragraph>
+                    <svg class={`w-5 h-5 shrink-0 ${isOpen ? 'rotate-0' : 'rotate-180'}`} xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
+                        <path stroke='#FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5 5 1 1 5'/>
                     </svg>
                 </div>
-                <div class='invisible h-auto max-h-0 items-center opacity-0 transition-all focus-within:visible focus-within:max-h-screen focus-within:opacity-100  group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000'>
-                    <ol className='flex flex-col flex-wrap m-auto justify-start items-start'>
-                        {allArticles.map((article, index) => {
-                            if(index >= numTocToShow) { return (
-                                <li className='flex items-center max-w-prose w-screen lg:max-w-full' key={`toc-item-${index}`}>
-                                    <span className='px-3 text-[#358faa] text-xl'><strong>0{index + 1}</strong></span>
+                <div id='table-of-contents' class='invisible h-auto max-h-0 items-center opacity-0 transition-all'>
+                    <ol className='flex flex-wrap m-auto mt-5'>
+                        {articles.map((article, index) => {
+                            return (
+                                <li className='flex max-w-prose py-3' key={`toc-item-${index}`}>
+                                    <span className='py-1 pr-2 text-[#358faa] text-xl md:px-5'><strong>0{index + 1}</strong></span>
                                     <div>
                                         <Paragraph className='block flex flex-grow justify-start'>
-                                            <NextLink href={article?.slug?.current} className='inline-link flex items-center gap-1 py-1 relative'>
-                                                <strong>{article.title}</strong><em className='icon-angle-right'></em>
+                                        <NextLink href={article?.slug?.current} className='inline-link flex items-center gap-1 py-1 relative'>
+                                            <strong>{article.title}</strong><em className='icon-angle-right'></em>
                                             </NextLink>
                                         </Paragraph>
+                                        {index < numTocToShow && (
+                                            <Paragraph variant='snug'>{article.description}</Paragraph>
+                                        )}
+
                                     </div>
                                 </li>
-                            )}
+                            )
                         })}
-
                     </ol>
                 </div>
             </div>
