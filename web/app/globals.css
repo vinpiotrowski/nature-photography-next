@@ -101,6 +101,11 @@ hr {
   width: 100%;
 }
 
+blockquote em {
+  display: inline-block;
+  padding-top: 1rem;
+}
+
 [data-name='columnedContent']:not(.bg-white) strong,
 [data-name='columnedContent']:not(.bg-white) h1,
 [data-name='columnedContent']:not(.bg-white) h2 {
