@@ -1,5 +1,5 @@
-import { IoDocumentOutline, IoImageOutline, IoImagesOutline, IoNewspaperOutline } from 'react-icons/io5'
-import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+import {IoDocumentOutline, IoImageOutline, IoImagesOutline, IoNewspaperOutline} from 'react-icons/io5'
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 export const deskStructure = (S, context) => {
 
