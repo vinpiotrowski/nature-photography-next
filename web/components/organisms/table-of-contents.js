@@ -34,15 +34,15 @@ const TableOfContents = ({articles}) => {
                     </svg>
                 </div>
                 <div id='table-of-contents' className='invisible h-auto max-h-0 items-center opacity-0 transition-all'>
-                    <ol className='flex flex-wrap m-auto mt-5'>
+                    <ol className='flex flex-col m-auto mt-5'>
                         {articles.map((article, index) => {
                             return (
                                 <li className='flex max-w-prose py-3' key={`toc-item-${index}`}>
                                     <span className='py-1 pr-2 text-[#358faa] text-xl md:px-5'><strong>0{index + 1}</strong></span>
                                     <div>
-                                        <Paragraph className='block flex flex-grow justify-start'>
-                                        <NextLink href={article?.slug?.current} className='inline-link flex items-center gap-1 py-1 relative'>
-                                            <strong>{article.title}</strong><em className='icon-angle-right'></em>
+                                        <Paragraph className='block flex justify-start'>
+                                            <NextLink href={article?.slug?.current} className='inline-link py-1 relative'>
+                                                <strong>{article.title}</strong> <em className='icon-angle-right'></em>
                                             </NextLink>
                                         </Paragraph>
                                         {index < numTocToShow && (

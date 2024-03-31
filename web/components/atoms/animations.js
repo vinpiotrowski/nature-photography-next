@@ -6,7 +6,7 @@ const FadeInWhenVisible = ({ children, delay=0 }) => {
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true }}
-        transition={{ delay: delay, duration: 1.4 }}
+        transition={{ delay: delay, duration: 0.7 }}
         variants={{
           visible: { opacity: 1 },
           hidden: { opacity: 0 }
