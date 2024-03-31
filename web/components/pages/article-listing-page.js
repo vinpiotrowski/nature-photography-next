@@ -23,11 +23,6 @@ const ArticleListingPage = ({articleListingPageContent}) => {
       ]
 
     const [numArticlesToShow, setNumArticlesToShow] = useState(3);
-    const [allArticles, setAllArticles] = useState([]);
-
-    useEffect(() => {
-        setAllArticles(articles);
-    }, [articles]);
 
     const handleLoadMore = () => {
         const newNumArticlesToShow = numArticlesToShow + 3;
@@ -52,7 +47,7 @@ const ArticleListingPage = ({articleListingPageContent}) => {
             />
 
             {/*Articles*/}
-            {allArticles.map((article, index) => {
+            {articles.map((article, index) => {
                 if(index < numArticlesToShow) {
                     return (
                         <article key={`article-${index}`}>
@@ -63,7 +58,7 @@ const ArticleListingPage = ({articleListingPageContent}) => {
             })} 
 
             {/*Pagination Controls*/}
-            {numArticlesToShow < allArticles?.length && (
+            {numArticlesToShow < articles?.length && (
                 <Container className='flex flex-col gap-3 pb-20 text-center text-white md:gap-5 md:pb-28 lg:pb-32'>
                     <Heading variant='h3' styleAs='h4'>
                         Enjoying the Words So Far?
