@@ -88,11 +88,11 @@ const PageHeading = ({pageHeadingContent}) => {
                         intro={intro}
                     />
                 </Container>
-                <LightRayAnimation delay={3.5} duration={4.9} className='absolute bottom-0 h-3/4 w-[120%] z-0'>
+                <div className='absolute bottom-0 h-3/4 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,100 77,100 0,77' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
-                </LightRayAnimation>
+                </div>
                 <div className='absolute bottom-0 h-full w-[120%] z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,98 0,100 100,100 100,77' style={{fill: 'rgba(255, 255, 255, 1)'}}></polygon>
