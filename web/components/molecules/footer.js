@@ -12,9 +12,12 @@ const Footer = ({footerContent}) => {
                         </svg>
                     </span>
                 </div>
-                <div className='block flex flex-grow justify-end'>
+                <div className='block flex flex-grow gap-5 justify-end md:gap-7'>
+                    <a href='//naturephotography.123guestbook.com/' className='np-light-text flex items-center gap-1 py-1 relative md:text-lg'>
+                        <em className='icon-comment-o text-2xl' /><span>Guestbook</span>
+                    </a>
                     <a href='//www.instagram.com/mostly_carbon/' className='np-light-text flex items-center gap-1 py-1 relative md:text-lg'>
-                        <span className='mr-2'>Follow me on </span><em className='icon-instagram text-2xl' /><span>Instagram</span>
+                        <em className='icon-instagram text-2xl' /><span>Instagram</span>
                     </a>
                 </div>
             </Container>

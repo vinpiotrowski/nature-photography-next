@@ -25,7 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-bird-circle:before {
   content: "\e900";
 }
@@ -79,6 +78,9 @@
 }
 .icon-quotes-right:before {
   content: "\e978";
+}
+.icon-comment-o:before {
+  content: "\f0e5";
 }
 .icon-angle-left:before {
   content: "\f104";
