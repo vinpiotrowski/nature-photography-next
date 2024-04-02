@@ -56,22 +56,22 @@ const PageHeading = ({pageHeadingContent}) => {
                         link={link}
                     />
                 </Container>
-                <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
+                <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0 lg:h-full lg:translate-y-14'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,70 0,84 77,84' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                     </svg>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.21} duration={3.85} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
+                <LightRayAnimation delay={0.21} duration={3.85} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0 lg:h-full lg:translate-y-14'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,42 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                     </svg>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
+                <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0 lg:h-full lg:translate-y-14'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='100,84 100,63 0,84' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.35} duration={3.5} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0'>
+                <LightRayAnimation delay={0.35} duration={3.5} className='absolute bottom-0 h-3/4 translate-y-7 w-[120%] z-0 lg:h-full lg:translate-y-14'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,84 0,100 35,84' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                     </svg>
@@ -88,6 +88,11 @@ const PageHeading = ({pageHeadingContent}) => {
                         intro={intro}
                     />
                 </Container>
+                <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-full w-[120%] z-0'>
+                    <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                        <polygon points='0,100 56,100 0,74' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
+                    </svg>
+                </LightRayAnimation>
                 <div className='absolute bottom-0 h-3/4 w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='0,100 77,100 0,77' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
@@ -112,22 +117,22 @@ const PageHeading = ({pageHeadingContent}) => {
                 </Container>
                 <LightRayAnimation delay={0} duration={4.2} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,98 28,100 0,100 0,91' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
+                        <polygon points='28,96 28,100 0,100 0,89' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
                     </svg>
                 </LightRayAnimation>
                 <LightRayAnimation delay={0.21} duration={5.6} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,98 28,100 0,100 0,96' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
+                        <polygon points='28,96 28,100 0,100 0,94' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
                     </svg>
                 </LightRayAnimation>
                 <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,98 28,100 100,100 100,84' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
+                        <polygon points='28,96 28,100 100,100 100,82' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
                     </svg>
                 </LightRayAnimation>
                 <div className='absolute bottom-0 h-full w-[120%] z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,98 28,100 100,100 100,91' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
+                        <polygon points='28,96 28,100 100,100 100,89' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
                     </svg>
                 </div>
 
