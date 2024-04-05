@@ -43,15 +43,15 @@ const Modal = ({
               alt={selectedImage.shortDescription}
               sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
             />
-            <Container className='flex flex-col gap-3 items-start justify-center pt-1
+            <Container className='flex flex-col gap-2 items-start justify-center pt-2
                    md:flex-row-reverse md:pt-5 md:pb-0 lg:gap-7 lg:pb-0 lg:pt-5'>
-              <div className='flex gap-2 items-center'>
+              <div className='flex gap-3 items-center'>
                 <Button buttonVariant='previous' onClick={onPrev} />
                 <Button buttonVariant='next' onClick={onNext} />
-                <strong>
-                  {('0' + (selectedIndex + 1)).slice(-2)} 
-                  &nbsp;/&nbsp; 
-                  {('0' + images.length).slice(-2)}
+                <strong className='flex gap-1 items-center'>
+                  <span>{('0' + (selectedIndex + 1)).slice(-2)}</span> 
+                  <span className='text-2xl'>/</span>
+                  <span>{('0' + images.length).slice(-2)}</span>
                 </strong>
               </div>
               <Paragraph variant='snug' className='max-w-prose'>
