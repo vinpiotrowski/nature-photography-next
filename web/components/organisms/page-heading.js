@@ -108,7 +108,7 @@ const PageHeading = ({pageHeadingContent}) => {
     } else if (variant === 'reg') {
         return (
             <section className='relative'>
-                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[440px] lg:min-h-[480px]`}>
+                <Container variant='pageHeading' className={`${variant} min-h-[360px] md:min-h-[480px] lg:min-h-[520px]`}>
                     <HeadingContentBlock 
                         headline={headline}
                         iconGroup={iconGroup}
@@ -120,11 +120,11 @@ const PageHeading = ({pageHeadingContent}) => {
                         <polygon points='28,96 28,100 0,100 0,89' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
                     </svg>
                 </LightRayAnimation>
-                <LightRayAnimation delay={0.21} duration={5.6} className='absolute bottom-0 h-full w-[120%] z-0'>
+                <div className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,96 28,100 0,100 0,94' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
+                        <polygon points='28,96 28,100 0,100 0,94' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
-                </LightRayAnimation>
+                </div>
                 <LightRayAnimation delay={0.28} duration={4.9} className='absolute bottom-0 h-full w-[120%] z-0'>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                         <polygon points='28,96 28,100 100,100 100,82' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>
@@ -132,7 +132,7 @@ const PageHeading = ({pageHeadingContent}) => {
                 </LightRayAnimation>
                 <div className='absolute bottom-0 h-full w-[120%] z-0' role='presentation' aria-hidden>
                     <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                        <polygon points='28,96 28,100 100,100 100,89' style={{fill: 'rgba(53, 143, 170, 0.98)'}}></polygon>
+                        <polygon points='27,96 27,100 100,100 100,89' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                     </svg>
                 </div>
 

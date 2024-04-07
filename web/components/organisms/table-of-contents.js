@@ -22,11 +22,7 @@ const TableOfContents = ({articles}) => {
 
     return (
         <Container className='toc np-light-text flex flex-col gap-7 relative z-10'>
-
-
-
-
-            <div className='np-transition-slow bg-[#212121] border-4 border-[#358faa] bg-opacity-35 group flex flex-col p-3 m-auto m-w-100 rounded-lg md:max-w-screen-sm' tabIndex='1'>
+            <div className='np-transition-slow bg-[#212121] border-4 border-[#358faa] bg-opacity-35 group flex flex-col mb-10 p-3 m-auto m-w-100 rounded-lg md:max-w-screen-sm' tabIndex='1'>
                 <div className='flex cursor-pointer items-center justify-between' onClick={() => handleClick()}>
                     <Paragraph><strong className='text-white'>In This Issue</strong></Paragraph>
                     <svg className={`w-5 h-5 shrink-0 ${isOpen ? 'rotate-0' : 'rotate-180'}`} xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
