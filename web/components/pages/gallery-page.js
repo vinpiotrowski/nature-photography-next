@@ -10,16 +10,7 @@ import Paragraph from '../atoms/paragraph'
 
 const Gallery = ({galleryContent}) => {
 
-    const {backgroundImage, iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
-
-    const BACKGROUND_IMAGE_SIZE_STEPS = [
-        { w: 640, h: 854 },// 3:4
-        { w: 768, h: 1024 },
-        { w: 1024, h: 0 },
-        { w: 1280, h: 0 },
-        { w: 1536, h: 0 },
-        { w: 1920, h: 0 }
-      ]
+    const {iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
 
     const THUMBNAIL_SIZE_STEPS = [
         { w: 224, h: 224 }, 
@@ -63,13 +54,6 @@ const Gallery = ({galleryContent}) => {
 
     return (
         <>
-            <Image
-                alt={''}
-                className={'absolute max-w-100 opacity-75 top-0 w-full z-0 md:opacity-90'}
-                imageContent={backgroundImage}
-                sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
-            />
-
             <PageHeading
                 pageHeadingContent={{
                     headline: title,

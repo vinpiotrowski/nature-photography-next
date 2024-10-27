@@ -1,11 +1,11 @@
 import generateSrcSets from '../../utils/image-helpers'
-import NextImage from 'next/image'
 
 const Image = ({
     className,
     imageContent,
     sizeSteps,
     altText,
+    loading='lazy',
     ...props
 }) => {
     const srcSets = generateSrcSets(
@@ -29,7 +29,7 @@ const Image = ({
             <img
                 alt={altText || imageContent?.alt || ''}
                 className={className}
-                loading='eager'
+                loading={loading}
                 src={srcSets?.src}
                 width={srcSets?.width}
                 height={srcSets?.height}

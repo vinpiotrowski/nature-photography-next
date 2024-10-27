@@ -1,5 +1,5 @@
 'use client'; // This is a client component
-import FadeInWhenVisible from './animations'
+import { FadeInWhenVisible } from './animations'
 
 const Container = ({children, variant, className}) => {
     if(variant == 'breakout') {
@@ -22,11 +22,9 @@ const Container = ({children, variant, className}) => {
 
     if(variant == 'pageHeading') {
         return (
-            <FadeInWhenVisible>
-                <div className={`np-heading flex flex-col justify-start items-center relative w-full ${className}`}>
+                <div className={`np-heading flex flex-col items-center w-full ${className}`}>
                     {children}
                 </div>
-            </FadeInWhenVisible>
         )
     }
 

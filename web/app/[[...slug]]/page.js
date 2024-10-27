@@ -6,6 +6,7 @@ import ContentBlockPage from '../../components/pages/content-block-page'
 import Footer from '../../components/molecules/footer'
 import Gallery from '../../components/pages/gallery-page'
 import Navigation from '../../components/organisms/navigation'
+import PageBackgroundImage from '../../components/molecules/page-background-image'
 
 export async function generateMetadata({params, searchParams}) {
   const slug = '/' + (params?.slug ? params.slug.join('/') : '')
@@ -27,8 +28,12 @@ export default async function Page(context) {
   if (!pageContent) {
 		return notFound()
 	}
+
   return (
     <>
+      {pageContent.backgroundImage && (
+        <PageBackgroundImage pageBackgroundImageContent={pageContent} />
+      )}
       <Navigation />
       <main>
         {pageContent._type == 'article' && (

@@ -12,7 +12,7 @@ const Navigation = ({navigationContent}) => {
     }
 
     return (
-        <nav className='text-white relative z-20'>
+        <nav className='relative text-white w-full z-20'>
             <Container variant={'nav'} className='flex flex-wrap items-center justify-center'>
             <div className='flex items-center flex-shrink-0'>
                 <a href='/' className='flex items-center relative'>
