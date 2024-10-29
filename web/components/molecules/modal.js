@@ -29,8 +29,8 @@ const Modal = ({
         <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 overflow-y-auto 
           h-full w-full opacity-full opacity-0'>
           
-          <div className='flex justify-center p-2'>
-            <Heading variant='h4' className='' >
+          <div className='flex justify-center p-5'>
+            <Heading variant='h2' className='absolute font-bold left-[5vw] mix-blend-difference text-[#8A8A8A] z-10 md:top-2' >
                 {selectedImage.title}
             </Heading>
             <Button buttonVariant='close' onClick={onClose} />

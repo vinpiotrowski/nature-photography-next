@@ -25,7 +25,7 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
             )
         case 'close':
             return (
-                <button className='absolute np-button np-transition py-0.5 px-0.5 right-3 rounded-full text-xl text-white font-bold hover:np-hover' onClick={onClick}>
+                <button className='absolute np-button np-transition py-0.5 px-0.5 right-3 rounded-full text-xl text-white font-bold z-20 hover:np-hover' onClick={onClick}>
                     <svg className='fill-current h-6 w-6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                         <title>Close Modal</title>  
                         <path d="M16.707,8.707,13.414,12l3.293,3.293a1,1,0,1,1-1.414,1.414L12,13.414,8.707,16.707a1,1,0,1,1-1.414-1.414L10.586,12,7.293,8.707A1,1,0,1,1,8.707,7.293L12,10.586l3.293-3.293a1,1,0,1,1,1.414,1.414Z"/>
