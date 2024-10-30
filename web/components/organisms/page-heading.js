@@ -10,7 +10,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-                <div className={`flex flex-col gap-3 h-full justify-center max-w-screen-md px-5 text-center text-white md:gap-5 lg:gap-7 ${className}`}>
+                <div className={`flex flex-col gap-5 h-full justify-center max-w-screen-md px-5 text-center text-white lg:gap-7 ${className}`}>
                     {iconGroup && (
                         <HeadlineAnimation delay={0}>
                             <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>

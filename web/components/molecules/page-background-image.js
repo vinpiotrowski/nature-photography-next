@@ -2,6 +2,7 @@
 import {forwardRef} from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import Image from '../atoms/image'
+import {BrightenImageAnimation} from '../atoms/animations'
 
 let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroundImageContent},ref) {
     const {backgroundImage} = pageBackgroundImageContent;
@@ -18,17 +19,17 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
     const y = useTransform(scrollYProgress, [0, 1], [1, 1000]);
 
     return (
-        <div  ref={ref}>
+        <BrightenImageAnimation  ref={ref}>
             <motion.div style={{y}}>
                 <Image
                     alt={''}
-                    className={'absolute max-w-100 opacity-70 w-full z-0'}
+                    className={'absolute max-w-100 w-full z-0'}
                     imageContent={backgroundImage}
                     sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
                     loading='eager'
                 />
             </motion.div>
-        </div>
+        </BrightenImageAnimation>
     )
 })
 
