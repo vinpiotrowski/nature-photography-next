@@ -21,13 +21,13 @@ const Heading = ({ children, variant, styleAs, className = ''}) => {
     switch (styleAs ? styleAs : variant) {
         case 'h1':
             const size = children?.length < 20 ? 'text-5xl md:text-8xl' : 'text-4xl md:text-7xl'
-            styles = `${size} ${className}`
+            styles = `${size} tracking-tight sm:tracking-tighter ${className}`
             break
         case 'h2':
-            styles = `text-3xl md:text-6xl ${className}`
+            styles = `font-bold text-3xl md:text-6xl ${className}`
             break
         case 'h3':
-            styles = `text-2xl md:text-4xl ${className}`
+            styles = `font-bold text-2xl md:text-5xl ${className}`
             break
         case 'h4':
             styles = `text-xl md:text-2xl ${className}`

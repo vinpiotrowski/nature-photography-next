@@ -8,9 +8,9 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
     switch (buttonVariant) {
         case 'chonky':
             return (
-                <div className='flex justify-center'>
-                    <NextLink href={href} className='np-button np-transition px-3 py-2 
-                            -skew-x-[14deg] z-10 sm:px-4 sm:py-3 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
+                <div className='flex justify-center pt-2.5'>
+                    <NextLink href={href} className='np-button np-transition px-4 py-2.5 
+                            -skew-x-[14deg] z-10 sm:px-5 sm:py-3 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
                         <span className=' block font-bold skew-x-[14deg] sm:text-lg'>{text}</span>
                     </NextLink>
                 </div>

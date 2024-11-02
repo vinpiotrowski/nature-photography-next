@@ -10,7 +10,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     const HeadingContentBlock = ({headline, iconGroup, intro, link, className}) => {
         return (
-                <div className={`flex flex-col gap-5 h-full justify-center max-w-screen-md px-5 text-center text-white lg:gap-7 ${className}`}>
+                <div className={`flex flex-col gap-3 h-full justify-center max-w-screen-md px-5 text-center text-white lg:gap-7 ${className}`}>
                     {iconGroup && (
                         <HeadlineAnimation delay={0}>
                             <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
@@ -51,24 +51,24 @@ const PageHeading = ({pageHeadingContent}) => {
                     />
                 </Container>
                 <div className='h-[175px] pointer-events-none relative w-full z-50 lg:h-[245px]' role='presentation' aria-hidden>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[120%] z-0' index={0}>
+                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={0}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                            <polygon points='0,49 0,77 77,77' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
+                            <polygon points='0,42 0,70 77,70' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                         </svg>
                     </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[120%] z-0' index={1}>
+                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={1}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                            <polygon points='100,77 100,7 35,77' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
+                            <polygon points='100,70 100,0 35,70' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                         </svg>
                     </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[120%] z-0' index={2}>
+                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={2}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                            <polygon points='100,77 100,49 0,77 0,79' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
+                            <polygon points='100,70 100,42 0,70 0,72' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                         </svg>
                     </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[120%] z-0' index={3}>
+                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={3}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                            <polygon points='0,77 0,100 35,77' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
+                            <polygon points='0,70 0,93 35,70' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                         </svg>
                     </LightRaysAnimation>
                 </div>
