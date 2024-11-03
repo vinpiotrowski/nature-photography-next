@@ -16,7 +16,7 @@ const Navigation = ({navigationContent}) => {
             <Container variant={'nav'} className='flex flex-wrap items-center justify-center'>
             <div className='flex items-center flex-shrink-0'>
                 <a href='/' className='flex items-center relative'>
-                    <svg className='max-w-9 md:max-w-none' width='43.13' height='49' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
+                    <svg className='bg-black bg-opacity-30 scale-90 lg:scale-100' width='43.13' height='49' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
                         <path d='M0,0v142h125V0H0ZM30.76,122.27l-4.03-8.03,7.19-14.48,3.85,7.82-7.01,14.7ZM20.06,63.28l-5.27,11.06h-7.64l12.74-26.98,27.94,55.59,27.59-55.74,4.01,7.69-31.55,63.74-27.82-55.35ZM82.04,104.71l-4.19-7h28.47l-32.42-62.45-27.63,55.6-3.96-7.82,31.41-63.32,44.12,84.98h-35.81Z'/>
                     </svg>
                     <span className='ml-2 text-2xl lg:text-3xl'>
