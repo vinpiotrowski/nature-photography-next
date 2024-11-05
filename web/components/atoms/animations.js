@@ -66,10 +66,11 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
       whileInView='visible'
       viewport={{ once: true }}
       animate={{
-        opacity: [0.3, 1, 0.7],
+        opacity: [0.35, 0.84, 0.7],
       }}
       transition={{
-        duration: 2,
+        delay: 1.05,
+        duration: 3.5,
       }}
     >
       {children}
