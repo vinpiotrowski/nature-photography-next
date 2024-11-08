@@ -5,11 +5,12 @@ import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Modal from '../molecules/modal'
+import ModalWithCarousel from '../molecules/modal-with-carousel';
 import Paragraph from '../atoms/paragraph'
 
 const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
-    const {headline, intro, photographs} = featuredPhotographsContent
+    const {_id, headline, intro, photographs} = featuredPhotographsContent
 
     const THUMBNAIL_SIZE_STEPS = [
         { w: 360, h: 360 }, 
@@ -101,7 +102,8 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                 </div>
                 
                 {selectedImage && (
-                    <Modal
+                    <ModalWithCarousel
+                        id={_id}
                         images={images}
                         selectedImage={selectedImage}
                         onClose={handleCloseModal}

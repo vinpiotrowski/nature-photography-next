@@ -5,6 +5,7 @@ import pageHeadingProjection from './page-heading-projection'
 import photographProjection from './photograph-projection'
 
 const pageProjection = `{
+    _id,
     _type,
     (_type == 'article') => {
         title,

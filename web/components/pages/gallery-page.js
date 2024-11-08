@@ -5,12 +5,13 @@ import ContentBlocks from '../organisms/content-blocks';
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Modal from '../molecules/modal'
+import ModalWithCarousel from '../molecules/modal-with-carousel';
 import PageHeading from '../organisms/page-heading'
 import Paragraph from '../atoms/paragraph'
 
 const Gallery = ({galleryContent}) => {
 
-    const {iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
+    const {_id, iconGroup, longDescription, photographs, subtitle, title, contentBlocks} = galleryContent
 
     const THUMBNAIL_SIZE_STEPS = [
         { w: 224, h: 224 }, 
@@ -91,7 +92,8 @@ const Gallery = ({galleryContent}) => {
                     </div>
 
                     {selectedImage && (
-                        <Modal
+                        <ModalWithCarousel
+                            id={_id}
                             images={images}
                             selectedImage={selectedImage}
                             onClose={handleCloseModal}

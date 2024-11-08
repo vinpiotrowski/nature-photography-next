@@ -24,7 +24,7 @@ const Heading = ({ children, variant, styleAs, className = ''}) => {
             styles = `${size} tracking-tight sm:tracking-tighter ${className}`
             break
         case 'h2':
-            styles = `font-bold text-3xl md:text-6xl ${className}`
+            styles = `font-bold text-4xl md:text-6xl ${className}`
             break
         case 'h3':
             styles = `font-bold text-2xl md:text-5xl ${className}`
