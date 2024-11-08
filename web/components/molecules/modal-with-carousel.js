@@ -47,6 +47,11 @@ const ModalWithCarousel = ({
             enabled: true
         };
 
+        const lazy = {
+            loadPrevNext: true, 
+            loadPrevNextAmount: 2
+        };
+
         const loop = true;
 
         const mousewheel = {
@@ -77,6 +82,7 @@ const ModalWithCarousel = ({
             breakpoints,
             initialSlide,
             keyboard,
+            lazy,
             loop,
             mousewheel,
             navigation,
