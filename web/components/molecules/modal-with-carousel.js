@@ -47,11 +47,6 @@ const ModalWithCarousel = ({
             enabled: true
         };
 
-        const lazy = {
-            loadPrevNext: true, 
-            loadPrevNextAmount: 2
-        };
-
         const loop = true;
 
         const mousewheel = {
@@ -82,7 +77,6 @@ const ModalWithCarousel = ({
             breakpoints,
             initialSlide,
             keyboard,
-            lazy,
             loop,
             mousewheel,
             navigation,
@@ -96,7 +90,7 @@ const ModalWithCarousel = ({
     return (
         <div className='fixed inset-0 flex justify-center items-center z-50'>
             <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 overflow-y-auto h-full w-full opacity-full opacity-0'>
-                <div className='flex gap-3 justify-end m-auto max-w-screen-md z-10 lg:max-w-screen-lg'>
+                <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-3 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
                 <swiper-container ref={swiperRef} init='false' effect='slide'>
@@ -110,6 +104,7 @@ const ModalWithCarousel = ({
                             <div className='flex flex-col justify-center items-center px-2 relative md:px-5'>
                                 <Image
                                     className='cursor-grab max-h-[56vh] lg:max-h-[77vh]'
+                                    loading='eager'
                                     imageContent={image.image} 
                                     alt={image.shortDescription}
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
@@ -124,7 +119,7 @@ const ModalWithCarousel = ({
                     ))}
                 </swiper-container>
             </div>
-            <div className='absolute bottom-0 flex gap-3 items-center justify-center p-1 w-full z-20'>
+            <div className='absolute bottom-0 flex gap-3 items-center justify-center pb-3 w-full z-20'>
                     <Button buttonVariant='previous' className={`button-prev-${id}`} />
                     <div className={`pagination-${id} z-30`} ></div>
                     <Button buttonVariant='next' className={`button-next-${id}`} />
