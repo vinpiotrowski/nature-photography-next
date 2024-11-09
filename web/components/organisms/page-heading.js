@@ -50,7 +50,7 @@ const PageHeading = ({pageHeadingContent}) => {
                         link={link}
                     />
                 </Container>
-                <div className='h-[175px] pointer-events-none relative w-full z-50 lg:h-[245px]' role='presentation' aria-hidden>
+                <div className='h-[140px] pointer-events-none relative w-full z-50 lg:h-[245px]' role='presentation' aria-hidden>
                     <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={0}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='0,42 0,70 77,70' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />

@@ -20,10 +20,10 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
 
     return (
         <BrightenImageAnimation  ref={ref}>
-            <motion.div style={{y}}>
+            <motion.div style={{y}} className='absolute'>
                 <Image
                     alt={''}
-                    className={'absolute max-w-100 w-full z-0'}
+                    className={'max-w-100 w-full z-0'}
                     imageContent={backgroundImage}
                     sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
                     loading='eager'
