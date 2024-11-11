@@ -30,8 +30,7 @@ const ModalWithCarousel = ({
     ]
 
     useEffect(() => {
-        const numberOfSlides = images.length;
-
+        
         const breakpoints = {
             300: {
                 slidesPerView: 1.05
@@ -61,17 +60,7 @@ const ModalWithCarousel = ({
         let pagination = {
             type: 'fraction',
             el: `.pagination-${id}`,
-            /*renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + 'vince.' + '</span>';
-            }*/
         }
-
-        /*if(numberOfSlides > 10) {
-            pagination = {
-                el: `.pagination-${id}`,
-                dynamicBullets: true
-            }
-        }*/
 
         const swiperParams = {
             breakpoints,
@@ -86,6 +75,25 @@ const ModalWithCarousel = ({
         Object.assign(swiperRef.current, swiperParams);
         swiperRef.current.initialize();
     }, [id, images, selectedIndex]);
+
+    useEffect(() => {
+        let swiper = swiperRef.current;
+
+        const preloadNext = (n, activeIndex) => {
+            const slides = [...swiper.querySelectorAll('swiper-slide')];
+            slides.slice(activeIndex, activeIndex + n + 1)
+                .map(slide => slide.querySelector('img'))
+                .forEach(s => s.setAttribute('loading', 'eager'));
+        };
+
+        swiper.addEventListener('swiperslidechange', (e) => {
+            preloadNext(1, e.detail[0].realIndex);
+        });
+
+        return () => {
+            swiper.removeEventListener('swiperslidechange', () => {})
+        }
+    }, [])
 
     return (
         <div className='fixed inset-0 flex justify-center items-center z-50'>
@@ -104,7 +112,6 @@ const ModalWithCarousel = ({
                             <div className='flex flex-col justify-center items-center pl-2 relative md:px-5'>
                                 <Image
                                     className='cursor-grab max-h-[56vh] lg:max-h-[77vh]'
-                                    loading='eager'
                                     imageContent={image.image} 
                                     alt={image.shortDescription}
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
