@@ -34,7 +34,7 @@ const ModalWithCarousel = ({
 
         const breakpoints = {
             300: {
-                slidesPerView: 1.1
+                slidesPerView: 1.05
             },
             640: {
                 slidesPerView: 1.0
@@ -89,7 +89,7 @@ const ModalWithCarousel = ({
 
     return (
         <div className='fixed inset-0 flex justify-center items-center z-50'>
-            <div id='photo-modal' className='np-transition-slow bg-white bg-opacity-98 overflow-y-auto h-full w-full opacity-full opacity-0'>
+            <div id='photo-modal' className='np-transition-slow bg-white overflow-y-auto h-full w-full opacity-full opacity-0'>
                 <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-3 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
@@ -101,7 +101,7 @@ const ModalWithCarousel = ({
                                     {image.title}
                                 </Heading>
                             </div>
-                            <div className='flex flex-col justify-center items-center px-2 relative md:px-5'>
+                            <div className='flex flex-col justify-center items-center pl-2 relative md:px-5'>
                                 <Image
                                     className='cursor-grab max-h-[56vh] lg:max-h-[77vh]'
                                     loading='eager'
@@ -110,7 +110,7 @@ const ModalWithCarousel = ({
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
                                 />
                                 <div className='flex justify-end max-w-screen-md w-full lg:max-w-screen-lg'>
-                                    <Paragraph variant='snug' className='bg-white max-w-prose p-5 pb-0 md:p10 md:-mt-7'>
+                                    <Paragraph variant='snug' className='bg-white max-w-[91%] p-5 pb-0 -mt-2.5 md:max-w-prose md:p-7 md:pb-0 md:-mt-7'>
                                         <strong>{image.location}</strong> — {image.longDescription}
                                     </Paragraph>
                                 </div>
@@ -119,7 +119,7 @@ const ModalWithCarousel = ({
                     ))}
                 </swiper-container>
             </div>
-            <div className='absolute bottom-0 flex gap-3 items-center justify-center pb-3 w-full z-20'>
+            <div className='absolute bottom-0 flex gap-3 items-center justify-center pb-5 w-full z-20'>
                     <Button buttonVariant='previous' className={`button-prev-${id}`} />
                     <div className={`pagination-${id} z-30`} ></div>
                     <Button buttonVariant='next' className={`button-next-${id}`} />
