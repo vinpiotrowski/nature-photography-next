@@ -10,7 +10,7 @@ const Paragraph = ({ children, variant, className = ''}) => {
 
     if(variant == 'snug') {
         return (
-            <p className={`leading-normal text-xs md:leading-normal lg:text-base ${className}`}>
+            <p className={`leading-normal text-xs md:leading-normal lg:text-sm ${className}`}>
                 {children}
             </p>
         )

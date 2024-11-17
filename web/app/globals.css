@@ -132,6 +132,10 @@ blockquote em {
     @apply transition-all ease-in-out duration-[1s];
   }
 
+  .np-dot {
+    @apply np-transition bg-np-blue group-hover:shadow-[0.1rem_0.1rem_0_rgba(255,0,108,1)] h-1 rounded-full w-1;
+  }
+
   .np-button {
     @apply bg-[rgba(53,143,170,1)] bg-[rgba(48,127,151,1)];
   }

@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         'np-blue': '#358faa',
+        'np-grey-dark': '#212121',
         'np-grey': '#757575',
+        'np-grey-lightest': '#F5F5F7',
         'np-pink': '#ff006c',
       },
     }
