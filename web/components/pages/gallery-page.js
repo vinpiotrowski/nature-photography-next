@@ -1,10 +1,10 @@
 'use client'; // This is a client component
 import React, { useEffect, useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import Container from '../atoms/container'
 import ContentBlocks from '../organisms/content-blocks';
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
-import Modal from '../molecules/modal'
 import ModalWithCarousel from '../molecules/modal-with-carousel';
 import PageHeading from '../organisms/page-heading'
 import Paragraph from '../atoms/paragraph'
@@ -17,41 +17,20 @@ const Gallery = ({galleryContent}) => {
         { w: 224, h: 224 }, 
     ]
 
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(-1);
     const [images, setImages] = useState([]);
 
     useEffect(() => {
         setImages(photographs);
     }, [photographs]);
 
-    const handleClick = (image, index) => {
-        setSelectedImage(image),
+    const handleClick = (index) => {
         setSelectedIndex(index)
-        setTimeout( () => document.getElementById('photo-modal')?.classList?.remove('opacity-0'), 250)
     }
 
     const handleCloseModal = () => {
-        document.getElementById('photo-modal')?.classList?.add('opacity-0')
-        setTimeout( () => {
-            setSelectedImage(null),
-            setSelectedIndex(0)
-        }, 500)
+        setSelectedIndex(-1)
     }
-
-    const handleNext = () => {
-        const nextIndex =
-            selectedIndex === images.length - 1 ? 0 : selectedIndex + 1;
-        setSelectedImage(images[nextIndex]);
-        setSelectedIndex(nextIndex);
-    };
-
-    const handlePrev = () => {
-        const prevIndex =
-            selectedIndex === 0 ? images.length - 1 : selectedIndex - 1;
-        setSelectedImage(images[prevIndex]);
-        setSelectedIndex(prevIndex);
-    };
 
     return (
         <>
@@ -79,7 +58,7 @@ const Gallery = ({galleryContent}) => {
                         {photographs.map((photo, index) => {
                             return (
                                 <div className='basis-1/3 flex-shrink p-2 sm:basis-1/4 lg:basis-1/6' key={index}>
-                                    <button onClick={() => handleClick(photo, index)} className='np-transition hover:shadow-[0.5rem_0.5rem_0_rgba(255,0,108,1)]'>
+                                    <button onClick={() => handleClick(index)} className='np-transition hover:shadow-[0.5rem_0.5rem_0_rgba(255,0,108,1)]'>
                                         <Image
                                             alt={photo?.shortDescription}
                                             imageContent={photo?.image}
@@ -91,17 +70,20 @@ const Gallery = ({galleryContent}) => {
                         })}
                     </div>
 
-                    {selectedImage && (
-                        <ModalWithCarousel
-                            id={_id}
-                            images={images}
-                            selectedImage={selectedImage}
-                            onClose={handleCloseModal}
-                            onNext={handleNext}
-                            onPrev={handlePrev}
-                            selectedIndex={selectedIndex}
-                        />
-                    )}
+                    <AnimatePresence
+                        initial={false}
+                        mode={'wait'}
+                        onExitComplete={() => null}
+                    >
+                        {selectedIndex > -1 && (
+                            <ModalWithCarousel
+                                id={_id}
+                                images={images}
+                                onClose={handleCloseModal}
+                                selectedIndex={selectedIndex}
+                            />
+                        )}
+                    </AnimatePresence>
                     
                 </Container>
                 

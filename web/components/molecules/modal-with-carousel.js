@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useRef} from 'react'
 import { register } from 'swiper/element/bundle'
+import { motion } from 'framer-motion'
 import Button from '../atoms/button'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
@@ -12,10 +13,7 @@ register();
 const ModalWithCarousel = ({
   id,
   images,
-  selectedImage,
   onClose,
-  onNext,
-  onPrev,
   selectedIndex,
 }) => {
 
@@ -99,8 +97,14 @@ const ModalWithCarousel = ({
     }, [])
 
     return (
-        <div className='fixed inset-0 flex flex-col justify-center items-center z-50'>
-            <div id='photo-modal' className='np-transition-slow bg-gradient-to-b from-white to-np-grey-lightest overflow-y-auto h-full w-full opacity-full opacity-0'>
+        <motion.div
+            className='fixed inset-0 flex flex-col justify-center items-center z-50'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            exit={{ opacity: 0 }}
+        >
+            <div id='photo-modal' className='np-transition-slow bg-gradient-to-b from-white to-np-grey-lightest overflow-y-auto h-full w-full'>
                 <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-3 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
@@ -129,11 +133,11 @@ const ModalWithCarousel = ({
                     ))}
                 </swiper-container>
             </div>
-            <div className='absolute bottom-0 flex gap-0 items-center justify-end pr-10 w-full z-20'>
-                    <div className={`pagination-${id} -mr-5 z-30`} ></div>
-                    <Button buttonVariant='next-fancy' className={`button-next-${id}`} />
-                </div>
-        </div>
+            <div className='absolute bottom-0 flex gap-0 items-center justify-end pb-10 pr-10 w-full z-20 lg:mb-0'>
+                <div className={`pagination-${id} -mr-5 z-30`} ></div>
+                <Button buttonVariant='next-fancy' className={`button-next-${id}`} />
+            </div>
+        </motion.div>
     );
 };
 
