@@ -89,7 +89,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                     >
                         {photographs.map((photo, index) => {
                             return(
-                                <SwiperSlide className='!h-auto pb-10' key={`featured-photograph-${index}`}>
+                                <SwiperSlide className='!h-auto pb-10 relative z-20' key={`featured-photograph-${index}`}>
                                     <ScaleInWhenViewAnimation isInView={isInView} delay={0.35 * index} className='flex flex-col h-full w-full'>
                                             <Image 
                                                 alt={''}

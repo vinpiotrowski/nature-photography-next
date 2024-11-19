@@ -15,15 +15,15 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
         { w: 1920, h: 0 }
     ]
 
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useTransform(scrollYProgress, [0, 1], [1, 1280]);
+    const { scrollYProgress, scrollY } = useScroll();
+    const y = useTransform(scrollY, [0, 2100], [0, 1400]);
 
     return (
-        <BrightenImageAnimation  ref={ref}>
-            <motion.div style={{y}} className='absolute'>
+        <BrightenImageAnimation>
+            <motion.div style={{y}}>
                 <Image
                     alt={''}
-                    className={'max-w-100 w-full z-0'}
+                    className={'absolute max-w-100 w-full z-0'}
                     imageContent={backgroundImage}
                     sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
                     loading='eager'
