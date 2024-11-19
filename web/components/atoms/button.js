@@ -58,32 +58,32 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                    <div class='flex gap-0.5 translate-x-[5px]'>
+                    <div className='flex gap-0.5 translate-x-[5px]'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                    <div class='flex gap-0.5 translate-x-[10px]'>
+                    <div className='flex gap-0.5 translate-x-[10px]'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                        <div class='flex gap-0.5 translate-x-[15px]'>
+                        <div className='flex gap-0.5 translate-x-[15px]'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                        <div class='flex gap-0.5 translate-x-[10px]'>
+                        <div className='flex gap-0.5 translate-x-[10px]'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                        <div class='flex gap-0.5 translate-x-[5px]'>
+                        <div className='flex gap-0.5 translate-x-[5px]'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                     </div>
-                        <div class='flex gap-0.5'>
+                        <div className='flex gap-0.5'>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>
                         <div className='np-dot'></div>

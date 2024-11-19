@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'np-blue': '#358faa',
-        'np-grey-dark': '#212121',
-        'np-grey': '#757575',
+        'np-blue': 'var(--primary-brand)',
+        'np-grey-dark': 'var(--neutral-dark)',
+        'np-grey': 'var(--neutral-med)',
         'np-grey-lightest': '#F5F5F7',
-        'np-pink': '#ff006c',
+        'np-pink': 'var(--alert)',
       },
     }
   },

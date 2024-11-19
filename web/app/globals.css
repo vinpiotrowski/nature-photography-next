@@ -1,3 +1,11 @@
+:root {
+  --primary-brand: #358faa;
+  --alert: #FF006C;
+  --neutral-dark: #212121;
+  --neutral-med: #757575;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,8 +19,8 @@ body {
 }
 
 body {
-  background: #212121;
-  color: #757575;
+  background: var(--neutral-dark);
+  color: var(--neutral-med);
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-size: 1rem;
@@ -40,7 +48,7 @@ h1, h2 {
 .np-heading:not(.chonky) h1:after,
 .np-heading:not(.chonky) h2:after,
 .np-heading:not(.chonky) h3:after {
-  background: /*#ff006c;*/#358faa;
+  background: var(--primary-brand);
   content: " ";
   display: block;
   height: 5px;
@@ -72,7 +80,7 @@ footer a:before {
   position: absolute;
   width: 100%;
   height: 5px;
-  background-color: rgba(255,0,108,1);
+  background-color: var(--alert);
   bottom: 0;
   left: 0;
   transform-origin: right;
@@ -91,10 +99,7 @@ hr {
   border: 0;
   display: block;
   position: relative;
-  background: repeating-linear-gradient(90deg,   #358faa,
-  #358faa 2px,
-  transparent 2px,
-  transparent 8px);
+  background: repeating-linear-gradient(90deg, var(--primary-brand) 0, var(--primary-brand) 2px, transparent 2px, transparent 8px);
   height: 14px!important;
   margin: 14px auto!important;
   max-height: none;
@@ -113,6 +118,7 @@ blockquote em {
 }
 
 
+/** Slider **/
 
 @tailwind base;
 @tailwind components;

@@ -1,5 +1,6 @@
 'use client'; // This is a client component
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { AnimatePresence } from 'framer-motion'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
@@ -7,6 +8,7 @@ import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import ModalWithCarousel from '../molecules/modal-with-carousel';
 import Paragraph from '../atoms/paragraph'
+
 
 const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
@@ -32,6 +34,8 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
         setSelectedIndex(-1)
     }
 
+
+
     return (
         <section data-name='featured-photographs' className='py-3 relative z-1'>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
@@ -44,12 +48,39 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                     </Paragraph>
                 </div>
             </Container>
-            <Container variant='breakout' className='flex flex-col gap-7 items-center justify-center  md:gap-7'>
-                <div className='flex gap-7 overflow-x-scroll px-7 w-full md:overflow-x-auto md:px-0 lg:gap-14 lg:px-0 hide-scroll-bar'>
+            <Container className='flex flex-col gap-7 items-center justify-center overflow-visible !pt-0 md:gap-7'>
+                <Swiper 
+                    slidesPerView={1}
+                    spaceBetween={35}
+                    breakpoints={{
+                        300: {
+                            slidesPerView: 1.2
+                        },
+                        414: {
+                            slidesPerView: 1.4
+                        },
+                        660: {
+                            slidesPerView: 2.2
+                        },
+                        1025: {
+                            slidesPerView: 3
+                        }
+                    }}
+                    scrollbar={{
+                        draggable: true
+                    }}
+                    style={{
+                        '--swiper-scrollbar-size': '7px',
+                        '--swiper-scrollbar-drag-bg-color': 'var(--primary-brand)',
+                        '--swiper-scrollbar-bg-color': 'var(--neutral-med)',
+                      }}
+                    className='w-full !overflow-visible'
+                >
                     {photographs.map((photo, index) => {
                         return(
-                            <div className='basis-1/3 flex-grow bg-white self-stretch' key={`featured-photograph-${index}`}>
-                                <div className='w-64 md:w-auto'>
+                            <SwiperSlide className='!h-auto pb-10' key={`featured-photograph-${index}`}>
+                            <div className='bg-white h-full w-full'>
+                                <div>
                                     <Image 
                                         alt={''}
                                         imageContent={photo.image}
@@ -75,9 +106,11 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                                     </div>
                                 </div>
                             </div>
+                            </SwiperSlide>
+
                         )
                     })}
-                </div>
+                </Swiper>
                 
                 <AnimatePresence
                     initial={false}

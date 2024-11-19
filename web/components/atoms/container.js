@@ -2,16 +2,6 @@
 import { FadeInWhenVisible } from './animations'
 
 const Container = ({children, variant, className}) => {
-    if(variant == 'breakout') {
-        return (
-            <FadeInWhenVisible delay={0.35}>
-                <div className={`max-w-screen-xl mx-auto pb-7 lg:px-14 lg:pb-14 ${className}`}>
-                    {children}
-                </div>
-            </FadeInWhenVisible>
-        )
-    }
-
     if(variant == 'nav') {
         return (
             <div className={`max-w-screen-xl mx-auto px-7 py-2 lg:px-14 lg:py-5 ${className}`}>
