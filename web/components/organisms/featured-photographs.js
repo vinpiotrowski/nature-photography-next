@@ -48,17 +48,18 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                     </Paragraph>
                 </div>
             </Container>
+
+            <motion.div
+                className='absolute w-full h-[35px] z-0'
+                whileInView={() => {
+                    if(!isInView) {
+                        setIsInView(true);
+                    }
+                    return {};
+                }}
+                viewport={{ once: true, amount: 1 }}
+            ></motion.div>
             <Container className='flex flex-col gap-7 items-center justify-center overflow-visible !pt-0 md:gap-7'>
-                <motion.div
-                    whileInView={() => {
-                        if(!isInView) {
-                            setIsInView(true);
-                        }
-                        return {};
-                    }}
-                    viewport={{ once: true }}
-                ></motion.div>
-                
                     <Swiper 
                         slidesPerView={1}
                         spaceBetween={35}
