@@ -1,4 +1,4 @@
-import { LightRaysAnimation, HeadlineAnimation } from '../atoms/animations'
+import { LightRaysAnimation, ScaleInAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
@@ -12,28 +12,28 @@ const PageHeading = ({pageHeadingContent}) => {
         return (
                 <div className={`flex flex-col gap-3 h-full justify-center max-w-screen-md px-5 text-center text-white lg:gap-7 ${className}`}>
                     {iconGroup && (
-                        <HeadlineAnimation delay={0}>
+                        <ScaleInAnimation delay={0}>
                             <IconGroup iconGroupContent={iconGroup} className={'justify-center'}/>
-                        </HeadlineAnimation>
+                        </ScaleInAnimation>
                     )}
                     {headline && (
-                        <HeadlineAnimation delay={0.35}>
+                        <ScaleInAnimation delay={0.35}>
                             <Heading variant='h1' className='font-bold relative z-1'>
                                 {headline}
                             </Heading>
-                        </HeadlineAnimation>
+                        </ScaleInAnimation>
                     )}
                     {intro && (
-                        <HeadlineAnimation delay={0.7}>
+                        <ScaleInAnimation delay={0.7}>
                             <Paragraph variant='chonky' className='relative z-1'>
                                 {intro}
                             </Paragraph>
-                        </HeadlineAnimation>
+                        </ScaleInAnimation>
                     )}
                     {link?.text && (
-                        <HeadlineAnimation delay={intro ? 1.05 : 0.7}>
+                        <ScaleInAnimation delay={intro ? 1.05 : 0.7}>
                             <Button linkContent={link} buttonVariant={'chonky'} />
-                        </HeadlineAnimation>
+                        </ScaleInAnimation>
                     )}
                 </div>
         )

@@ -1,7 +1,8 @@
 'use client'; // This is a client component
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ScaleInAnimation, ScaleInWhenViewAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
@@ -21,6 +22,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [images, setImages] = useState([]);
+    const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
         setImages(photographs);
@@ -33,8 +35,6 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
     const handleCloseModal = () => {
         setSelectedIndex(-1)
     }
-
-
 
     return (
         <section data-name='featured-photographs' className='py-3 relative z-1'>
@@ -49,68 +49,77 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                 </div>
             </Container>
             <Container className='flex flex-col gap-7 items-center justify-center overflow-visible !pt-0 md:gap-7'>
-                <Swiper 
-                    slidesPerView={1}
-                    spaceBetween={35}
-                    breakpoints={{
-                        300: {
-                            slidesPerView: 1.2
-                        },
-                        414: {
-                            slidesPerView: 1.4
-                        },
-                        660: {
-                            slidesPerView: 2.2
-                        },
-                        1025: {
-                            slidesPerView: 3
+                <motion.div
+                    whileInView={() => {
+                        if(!isInView) {
+                            setIsInView(true);
                         }
+                        return {};
                     }}
-                    scrollbar={{
-                        draggable: true
-                    }}
-                    style={{
-                        '--swiper-scrollbar-size': '7px',
-                        '--swiper-scrollbar-drag-bg-color': 'var(--primary-brand)',
-                        '--swiper-scrollbar-bg-color': 'var(--neutral-med)',
-                      }}
-                    className='w-full !overflow-visible'
-                >
-                    {photographs.map((photo, index) => {
-                        return(
-                            <SwiperSlide className='!h-auto pb-10' key={`featured-photograph-${index}`}>
-                            <div className='bg-white h-full w-full'>
-                                <div>
-                                    <Image 
-                                        alt={''}
-                                        imageContent={photo.image}
-                                        sizeSteps={THUMBNAIL_SIZE_STEPS}
-                                    />
-                                    <div className='flex flex-col gap-3 text-center p-3 py-7'>
-                                        <Paragraph>
-                                            <strong>{photo.location}</strong>
-                                        </Paragraph>
-                                        <Heading variant='h3' styleAs='h4'>
-                                            {photo.title}
-                                        </Heading>
-                                        <Paragraph>
-                                            {photo.shortDescription}
-                                        </Paragraph>
-                                        <div>
-                                            <Button 
-                                                buttonVariant='open' 
-                                                linkContent={{text: 'View Photo'}} 
-                                                onClick={() => handleClick(index)} 
+                    viewport={{ once: true }}
+                ></motion.div>
+                
+                    <Swiper 
+                        slidesPerView={1}
+                        spaceBetween={35}
+                        breakpoints={{
+                            300: {
+                                slidesPerView: 1.2
+                            },
+                            414: {
+                                slidesPerView: 1.4
+                            },
+                            660: {
+                                slidesPerView: 2.2
+                            },
+                            1025: {
+                                slidesPerView: 3
+                            }
+                        }}
+                        scrollbar={{
+                            draggable: true
+                        }}
+                        style={{
+                            '--swiper-scrollbar-size': '7px',
+                            '--swiper-scrollbar-drag-bg-color': 'var(--primary-brand)',
+                            '--swiper-scrollbar-bg-color': 'var(--neutral-med)',
+                        }}
+                        className='w-full !overflow-visible'
+                    >
+                        {photographs.map((photo, index) => {
+                            return(
+                                <SwiperSlide className='!h-auto pb-10' key={`featured-photograph-${index}`}>
+                                    <ScaleInWhenViewAnimation isInView={isInView} delay={0.35 * index} className='flex flex-col h-full w-full'>
+                                            <Image 
+                                                alt={''}
+                                                imageContent={photo.image}
+                                                sizeSteps={THUMBNAIL_SIZE_STEPS}
                                             />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </SwiperSlide>
+                                            <div className='bg-white flex flex-col gap-3 grow text-center p-3 py-7'>
+                                                <Paragraph>
+                                                    <strong>{photo.location}</strong>
+                                                </Paragraph>
+                                                <Heading variant='h3' styleAs='h4'>
+                                                    {photo.title}
+                                                </Heading>
+                                                <Paragraph>
+                                                    {photo.shortDescription}
+                                                </Paragraph>
+                                                <div>
+                                                    <Button 
+                                                        buttonVariant='open' 
+                                                        linkContent={{text: 'View Photo'}} 
+                                                        onClick={() => handleClick(index)} 
+                                                    />
+                                                </div>
+                                            </div>
+             
+                                    </ScaleInWhenViewAnimation>
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
 
-                        )
-                    })}
-                </Swiper>
                 
                 <AnimatePresence
                     initial={false}

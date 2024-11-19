@@ -20,12 +20,12 @@ export const FadeInWhenVisible = ({ children, className, delay=0 }) => {
   );
 }
 
-export const HeadlineAnimation = ({children, className, delay=0}) => {
+export const ScaleInAnimation = ({children, className, delay=0}) => {
   return (
     <motion.div
       className={ className }
-      initial={{ opacity: 0, scale: 0.5, y: 49 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.5, y: 49, x: -49 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
       viewport={{ once: true }}
       transition={{
           duration: 0.25,
@@ -39,6 +39,29 @@ export const HeadlineAnimation = ({children, className, delay=0}) => {
   );
 }
 
+export const ScaleInWhenViewAnimation = ({children, className, isInView=false, delay=0}) => {
+  return (
+    <motion.div
+      className={ className }
+      initial={{ opacity: 0, scale: 0.5, y: 49, x: -49 }}
+      animate={
+        isInView && {
+        opacity: 1, scale: 1, y: 0, x: 0,
+        transition: {
+          duration: 0.25,
+          delay: delay,
+          type: 'spring',
+          bounce: 0.35,
+          duration: 1.4
+        }
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+
 export const LightRaysAnimation = ({children, className, index=0, delay=0}) => {
   return (
     <motion.div
@@ -49,7 +72,7 @@ export const LightRaysAnimation = ({children, className, index=0, delay=0}) => {
       transition={{
           duration: 0.25,
           delay: delay,
-          type: 'spring',
+          type: 'spring', 
           bounce: 0.35,
           duration: 1.4
       }}>
@@ -62,15 +85,14 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
   return (
     <motion.div
       className={ className }
-      initial={{opacity: 0.3}}
-      whileInView='visible'
+      initial={{opacity: 0.6}}
       viewport={{ once: true }}
       animate={{
-        opacity: [0.35, 0.84, 0.7],
+        opacity: [0.6, 0.8, 0.7],
       }}
       transition={{
         delay: 1.05,
-        duration: 3.5,
+        duration: 2.1,
       }}
     >
       {children}
