@@ -85,13 +85,13 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
   return (
     <motion.div
       className={ className }
-      initial={{opacity: 0.6}}
+      initial={{opacity: 0.5}}
       viewport={{ once: true }}
       animate={{
-        opacity: [0.6, 0.8, 0.7],
+        opacity: [0.5, 0.77],
       }}
       transition={{
-        delay: 1.05,
+        delay: 1.4,
         duration: 2.1,
       }}
     >
