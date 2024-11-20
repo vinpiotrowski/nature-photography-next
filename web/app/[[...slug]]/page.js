@@ -48,7 +48,13 @@ export default async function Page(context) {
         {pageContent._type == 'gallery' && (
           <Gallery galleryContent={pageContent} />
         )}
+        
       </main>
+      {/*<div className='absolute h-full pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
+          <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+              <polygon points='100,0 100,2.1 0,14 0,16.2 100,29 100,26 2.8,15.1 100,3.5' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
+          </svg>
+      </div>*/}
       <Footer />
     </>
   );

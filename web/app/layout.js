@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="<generated>" />
       </Head>
       <html lang="en" className='w-full'>
-        <body className={`${inter.className} relative h-full w-full`}>
+        <body className={`${inter.className} h-full overflow-hidden relative w-full`}>
             {children}
         </body>
       </html>

@@ -124,7 +124,7 @@ const ModalWithCarousel = ({
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
                                 />
                                 <div className='flex justify-center max-w-screen-md w-full md:justify-end md:mr-5 lg:max-w-screen-lg'>
-                                    <Paragraph variant='snug' className='bg-white max-w-[91%] p-5 -mt-2.5 md:max-w-prose md:p-[3vh] md:-mt-14'>
+                                    <Paragraph variant='snug' className='bg-white max-w-[91%] p-5 -mt-2.5 md:max-w-prose md:p-[3vh] md:-mt-10'>
                                         <strong>{image.location}</strong> — {image.longDescription}
                                     </Paragraph>
                                 </div>
