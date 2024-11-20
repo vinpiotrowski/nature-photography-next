@@ -16,7 +16,7 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
     ]
 
     const { scrollYProgress, scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 2100], [0, 1400]);
+    const y = useTransform(scrollY, [0, 2100], [0, 1050]);
 
     return (
         <BrightenImageAnimation>
