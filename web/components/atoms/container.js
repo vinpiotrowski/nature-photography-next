@@ -1,6 +1,3 @@
-'use client'; // This is a client component
-import { FadeInWhenVisible } from './animations'
-
 const Container = ({children, variant, className}) => {
     if(variant == 'nav') {
         return (
@@ -27,11 +24,9 @@ const Container = ({children, variant, className}) => {
     }
 
     return (
-        <FadeInWhenVisible delay={0.35}>
-            <div className={`max-w-screen-xl mx-auto p-7 z-20 lg:p-14 ${className}`}>
-                {children}
-            </div>
-        </FadeInWhenVisible>
+        <div className={`max-w-screen-xl mx-auto p-7 z-20 lg:p-14 ${className}`}>
+            {children}
+        </div>
     )
 }
 

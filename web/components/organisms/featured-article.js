@@ -3,6 +3,7 @@ import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
+import { FadeInWhenVisible, ScaleInAnimation } from '../atoms/animations'
 
 const FeaturedArticle = ({featuredArticleContent, className}) => {
 
@@ -21,14 +22,18 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
 
     return (
         <section data-name='featured-article' className='bg-white py-3 relative z-1'>
-            <Container className='flex flex-col gap-7 items-center justify-center'>
+            <Container className='flex flex-col gap-7 items-center justify-center relative'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
-                    <Heading className='uppercase' variant='h2' styleAs='h3'>
-                        {headline}
-                    </Heading>
-                    <Paragraph variant='chonky'>
-                        {intro}
-                    </Paragraph>
+                    <FadeInWhenVisible delay={0}>
+                        <Heading className='uppercase' variant='h2' styleAs='h3'>
+                            {headline}
+                        </Heading>
+                    </FadeInWhenVisible>
+                    <FadeInWhenVisible delay={0.35}>
+                        <Paragraph variant='chonky'>
+                            {intro}
+                        </Paragraph>
+                    </FadeInWhenVisible>
                 </div>
 
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>

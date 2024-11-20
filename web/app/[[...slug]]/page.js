@@ -50,11 +50,28 @@ export default async function Page(context) {
         )}
         
       </main>
-      {/*<div className='absolute h-full pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
-          <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-              <polygon points='100,0 100,2.1 0,14 0,16.2 100,29 100,26 2.8,15.1 100,3.5' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
-          </svg>
-      </div>*/}
+      {slug === '/' && (
+        <>
+      
+                {/*<div className='absolute h-full pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
+              <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                  <polygon points='100,0 0,14 0,17.5 100,35 100,31.5 2.1,15.75 100,3.5' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
+              </svg>
+          </div>*/}
+          <div className='absolute h-full pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                <polygon points='100,0 0,14 0,16.1 100,0.7' style={{fill: 'rgba(53, 143, 170, 0.9)'}} />
+            </svg>
+        </div>
+
+        {<div className='absolute h-full pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                <polygon points='0,14 0,16.1 100,30 100,22' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
+            </svg>
+        </div>}
+        </>
+      )}
+
       <Footer />
     </>
   );

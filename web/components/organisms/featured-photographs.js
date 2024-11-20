@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ScaleInAnimation, ScaleInWhenViewAnimation } from '../atoms/animations'
+import { FadeInWhenVisible, ScaleInAnimation, ScaleInWhenViewAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
@@ -40,12 +40,16 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
         <section data-name='featured-photographs' className='py-3 relative z-1'>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
-                    <Heading className='uppercase' variant='h2' styleAs='h3'>
-                        {headline}
-                    </Heading>
-                    <Paragraph variant='chonky'>
-                        {intro}
-                    </Paragraph>
+                    <FadeInWhenVisible delay={0}>
+                        <Heading className='uppercase' variant='h2' styleAs='h3'>
+                            {headline}
+                        </Heading>
+                    </FadeInWhenVisible>
+                    <FadeInWhenVisible delay={0.35}>
+                        <Paragraph variant='chonky'>
+                            {intro}
+                        </Paragraph>
+                    </FadeInWhenVisible>
                 </div>
             </Container>
 
@@ -120,7 +124,6 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                             )
                         })}
                     </Swiper>
-
                 
                 <AnimatePresence
                     initial={false}

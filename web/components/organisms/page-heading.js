@@ -1,4 +1,4 @@
-import { LightRaysAnimation, ScaleInAnimation } from '../atoms/animations'
+import { div, ScaleInAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
@@ -51,26 +51,26 @@ const PageHeading = ({pageHeadingContent}) => {
                     />
                 </Container>
                 <div className='h-[140px] pointer-events-none relative w-full z-50 lg:h-[245px]' role='presentation' aria-hidden>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={0}>
+                    <div className='absolute bottom-0 h-full w-[105%] z-0' index={0}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='0,42 0,70 77,70' style={{fill: 'rgba(53, 143, 170, 0.56)'}} />
                         </svg>
-                    </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={1}>
+                    </div>
+                    <div className='absolute bottom-0 h-full w-[105%] z-0' index={1}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='100,70 100,0 35,70' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                         </svg>
-                    </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={2}>
+                    </div>
+                    <div className='absolute bottom-0 h-full w-[105%] z-0' index={2}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='100,70 100,42 0,70 0,72' style={{fill: 'rgba(53, 143, 170, 1)'}}></polygon>
                         </svg>
-                    </LightRaysAnimation>
-                    <LightRaysAnimation className='absolute bottom-0 h-full w-[105%] z-0' index={3}>
+                    </div>
+                    <div className='absolute bottom-0 h-full w-[105%] z-0' index={3}>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='0,70 0,93 35,70' style={{fill: 'rgba(53, 143, 170, 0.42)'}}></polygon>
                         </svg>
-                    </LightRaysAnimation>
+                    </div>
                 </div>
 
             </section>

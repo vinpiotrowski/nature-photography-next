@@ -24,8 +24,8 @@ export const ScaleInAnimation = ({children, className, delay=0}) => {
   return (
     <motion.div
       className={ className }
-      initial={{ opacity: 0, scale: 0.5, y: 49, x: -49 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+      initial={{ opacity: 0, scale: 0.5, y: 49 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{
           duration: 0.25,
@@ -43,10 +43,10 @@ export const ScaleInWhenViewAnimation = ({children, className, isInView=false, d
   return (
     <motion.div
       className={ className }
-      initial={{ opacity: 0, scale: 0.5, y: 49, x: -49 }}
+      initial={{ opacity: 0, scale: 0.5, y: 49 }}
       animate={
         isInView && {
-        opacity: 1, scale: 1, y: 0, x: 0,
+        opacity: 1, scale: 1, y: 0,
         transition: {
           duration: 0.25,
           delay: delay,
@@ -88,7 +88,7 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
       initial={{opacity: 0.5}}
       viewport={{ once: true }}
       animate={{
-        opacity: [0.5, 0.77],
+        opacity: [0.5, 0.84],
       }}
       transition={{
         delay: 1.4,
