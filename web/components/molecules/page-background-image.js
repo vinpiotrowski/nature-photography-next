@@ -19,11 +19,11 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
     const y = useTransform(scrollY, [0, 2100], [0, 1050]);
 
     return (
-        <BrightenImageAnimation>
+        <BrightenImageAnimation className='absolute h-full w-full'>
             <motion.div style={{y}}>
                 <Image
                     alt={''}
-                    className={'absolute max-w-100 w-full z-0'}
+                    className={'max-w-100 w-full z-0'}
                     imageContent={backgroundImage}
                     sizeSteps={BACKGROUND_IMAGE_SIZE_STEPS}
                     loading='eager'
