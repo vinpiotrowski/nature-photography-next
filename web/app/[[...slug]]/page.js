@@ -52,23 +52,33 @@ export default async function Page(context) {
       </main>
       {slug === '/' && (
         <>
-      
-                {/*<div className='absolute h-full pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
+          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
               <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                  <polygon points='100,0 0,14 0,17.5 100,35 100,31.5 2.1,15.75 100,3.5' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
+                  <polygon points='100,0 0,21 0,24.5 100,2.8' style={{fill: 'rgba(53, 143, 170, 0.5)'}} />
               </svg>
-          </div>*/}
-          <div className='absolute h-full pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+          </div>
+          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
             <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                <polygon points='100,0 0,14 0,16.1 100,0.7' style={{fill: 'rgba(53, 143, 170, 0.9)'}} />
+                <polygon points='0,21 0,24.5 100,49 100,42' style={{fill: 'rgba(53, 143, 170, 0.35)'}} />
             </svg>
-        </div>
+          </div>
 
-        {<div className='absolute h-full pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+              <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                  <polygon points='100,0 0,21 0,24.5 100,2.1' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
+              </svg>
+          </div>
+          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
             <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                <polygon points='0,14 0,16.1 100,30 100,22' style={{fill: 'rgba(53, 143, 170, 0.7)'}} />
+                <polygon points='0,21 0,24.5 100,48.5 100,40.5' style={{fill: 'rgba(53, 143, 170, 0.28)'}} />
             </svg>
-        </div>}
+          </div>
+
+          {/*<div className='absolute h-full pointer-events-none top-0 w-full z-1' role='presentation' aria-hidden>
+            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
+                <polygon points='100,84 100,98 77,98' style={{fill: 'rgba(53, 143, 170, 0.49)'}} />
+            </svg>
+          </div>*/}
         </>
       )}
 
