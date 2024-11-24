@@ -28,7 +28,7 @@ const Heading = ({ children, variant, styleAs, className = ''}) => {
 
     switch (styleAs ? styleAs : variant) {
         case 'h1':
-            const size = children?.length < 20 ? 'text-5xl md:text-8xl' : 'text-4xl md:text-7xl'
+            const size = children?.length < 20 ? 'text-5xl md:text-8xl' : 'text-5xl md:text-7xl'
             styles = `${size} tracking-tight sm:tracking-tighter ${className} ${josefin_sans.className}`
             break
         case 'h2':

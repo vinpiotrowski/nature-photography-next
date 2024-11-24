@@ -15,23 +15,23 @@ const LightBeams = ({}) => {
 
     return (
         <>
-            <motion.div style={{clipPath:clipPath1}} className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <motion.div style={{clipPath:clipPath1}} className='absolute h-[60%] pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                     <polygon points='100,0 0,21 0,24.5 100,2.8' style={{fill: 'rgba(53, 143, 170, 0.5)'}} />
                 </svg>
             </motion.div>
-            <motion.div style={{clipPath:clipPath1}} className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <motion.div style={{clipPath:clipPath1}} className='absolute h-[60%] pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                     <polygon points='100,0 0,21 0,24.5 100,2.1' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
                 </svg>
             </motion.div>
 
-            <motion.div style={{clipPath:clipPath2}} className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <motion.div style={{clipPath:clipPath2}} className='absolute h-[60%] pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                     <polygon points='0,21 0,24.5 100,49 100,42' style={{fill: 'rgba(53, 143, 170, 0.35)'}} />
                 </svg>
             </motion.div>
-            <motion.div style={{clipPath:clipPath2}} className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
+            <motion.div style={{clipPath:clipPath2}} className='absolute h-[60%] pointer-events-none top-[40%] w-full z-1' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                     <polygon points='0,21 0,24.5 100,48.5 100,40.5' style={{fill: 'rgba(53, 143, 170, 0.28)'}} />
                 </svg>

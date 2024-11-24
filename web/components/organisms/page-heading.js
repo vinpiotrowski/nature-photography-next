@@ -41,7 +41,7 @@ const PageHeading = ({pageHeadingContent}) => {
 
     if( variant === 'chonky') {
         return (
-            <section className='flex flex-col justify-center h-[385px] relative md:h-[560px] lg:h-[630px]'>
+            <section className='flex flex-col justify-center h-[385px] relative md:h-[560px] lg:h-[630px] lg:pt-7'>
                 <Container variant='pageHeading' className={`${variant} grow`}>
                     <HeadingContentBlock
                         headline={headline}
