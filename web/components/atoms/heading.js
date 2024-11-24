@@ -35,7 +35,7 @@ const Heading = ({ children, variant, styleAs, className = ''}) => {
             styles = `font-bold text-4xl md:text-6xl ${className} ${josefin_sans.className}`
             break
         case 'h3':
-            styles = `font-bold text-2xl md:text-5xl ${className}`
+            styles = `font-bold text-2xl md:text-5xl ${className} ${josefin_sans.className}`
             break
         case 'h4':
             styles = `text-xl md:text-2xl ${className}`

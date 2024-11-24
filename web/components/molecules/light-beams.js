@@ -4,11 +4,11 @@ import {motion, useMotionTemplate, useScroll, useTransform} from 'framer-motion'
 const LightBeams = ({}) => {
 
     const { scrollYProgress, scrollY } = useScroll();
-    const clipA = useTransform(scrollYProgress, [0.3, 0.5], [0, 100]);
-    const clipB = useTransform(scrollYProgress, [0.3, 0.5], [100, -100]);
+    const clipA = useTransform(scrollYProgress, [0.35, 0.5], [0, 100]);
+    const clipB = useTransform(scrollYProgress, [0.35, 0.5], [100, -100]);
 
-    const clipC = useTransform(scrollYProgress, [0.4, 0.7], [0, 100]);
-    const clipD = useTransform(scrollYProgress, [0.4, 0.7], [0, 200]);
+    const clipC = useTransform(scrollYProgress, [0.45, 0.7], [0, 100]);
+    const clipD = useTransform(scrollYProgress, [0.45, 0.7], [0, 200]);
 
     const clipPath1 = useMotionTemplate`polygon(${clipB}% 0px,  100% 0px, 100% ${clipA}%)`
     const clipPath2 = useMotionTemplate`polygon(0px 0px,  0px ${clipC}%, ${clipD}% 0px)`
