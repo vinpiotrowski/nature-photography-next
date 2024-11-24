@@ -17,7 +17,7 @@ export async function generateMetadata({params, searchParams}) {
     description: metaContent?.description
   }
 }
-
+ 
 export async function generateStaticParams() {
   const pages = await fetchAllPageSlugs(false)
   return pages

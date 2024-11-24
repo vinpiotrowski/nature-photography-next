@@ -1,3 +1,11 @@
+
+import { Josefin_Sans } from 'next/font/google'
+
+export const josefin_sans = Josefin_Sans({
+    subsets: ['latin'],
+    display: 'swap',
+})
+
 const Heading1 = ({children, className}) => {
     return <h1 className={className}>{children}</h1>
 }
@@ -21,10 +29,10 @@ const Heading = ({ children, variant, styleAs, className = ''}) => {
     switch (styleAs ? styleAs : variant) {
         case 'h1':
             const size = children?.length < 20 ? 'text-5xl md:text-8xl' : 'text-4xl md:text-7xl'
-            styles = `${size} tracking-tight sm:tracking-tighter ${className}`
+            styles = `${size} tracking-tight sm:tracking-tighter ${className} ${josefin_sans.className}`
             break
         case 'h2':
-            styles = `font-bold text-4xl md:text-6xl ${className}`
+            styles = `font-bold text-4xl md:text-6xl ${className} ${josefin_sans.className}`
             break
         case 'h3':
             styles = `font-bold text-2xl md:text-5xl ${className}`

@@ -1,10 +1,13 @@
 import Head from 'next/head'
-import { Inter } from "next/font/google";
+import { Open_Sans } from 'next/font/google'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+export const open_sans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Nature Photography dot CA",
@@ -23,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="<generated>" />
       </Head>
       <html lang="en" className='w-full'>
-        <body className={`${inter.className} h-full relative w-full`}>
+        <body className={`${open_sans.className} h-full relative w-full`}>
             {children}
         </body>
       </html>

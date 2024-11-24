@@ -1,4 +1,4 @@
-import { div, ScaleInAnimation } from '../atoms/animations'
+import { ScaleInAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
