@@ -1,10 +1,9 @@
 'use client'; // This is a client component
-import {forwardRef} from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import Image from '../atoms/image'
 import {BrightenImageAnimation} from '../atoms/animations'
 
-let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroundImageContent},ref) {
+const PageBackgroundImage = ({pageBackgroundImageContent}) => {
     const {backgroundImage} = pageBackgroundImageContent;
     const BACKGROUND_IMAGE_SIZE_STEPS = [
         { w: 640, h: 854 },
@@ -15,7 +14,7 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
         { w: 1920, h: 0 }
     ]
 
-    const { scrollYProgress, scrollY } = useScroll();
+    const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 2100], [0, 1050]);
 
     return (
@@ -31,6 +30,6 @@ let PageBackgroundImage = forwardRef(function PageBackgroundImage({pageBackgroun
             </motion.div>
         </BrightenImageAnimation>
     )
-})
+}
 
 export default PageBackgroundImage

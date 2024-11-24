@@ -5,6 +5,7 @@ import ArticleListingPage from '../../components/pages/article-listing-page'
 import ContentBlockPage from '../../components/pages/content-block-page'
 import Footer from '../../components/molecules/footer'
 import Gallery from '../../components/pages/gallery-page'
+import LightBeams from '../../components/molecules/light-beams'
 import Navigation from '../../components/organisms/navigation'
 import PageBackgroundImage from '../../components/molecules/page-background-image'
 
@@ -51,35 +52,7 @@ export default async function Page(context) {
         
       </main>
       {slug === '/' && (
-        <>
-          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
-              <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                  <polygon points='100,0 0,21 0,24.5 100,2.8' style={{fill: 'rgba(53, 143, 170, 0.5)'}} />
-              </svg>
-          </div>
-          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
-            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                <polygon points='0,21 0,24.5 100,49 100,42' style={{fill: 'rgba(53, 143, 170, 0.35)'}} />
-            </svg>
-          </div>
-
-          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
-              <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                  <polygon points='100,0 0,21 0,24.5 100,2.1' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
-              </svg>
-          </div>
-          <div className='absolute h-[60%] pointer-events-none top-[30%] md:top-[40%] w-full z-1' role='presentation' aria-hidden>
-            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                <polygon points='0,21 0,24.5 100,48.5 100,40.5' style={{fill: 'rgba(53, 143, 170, 0.28)'}} />
-            </svg>
-          </div>
-
-          {/*<div className='absolute h-full pointer-events-none top-0 w-full z-1' role='presentation' aria-hidden>
-            <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                <polygon points='100,84 100,98 77,98' style={{fill: 'rgba(53, 143, 170, 0.49)'}} />
-            </svg>
-          </div>*/}
-        </>
+        <LightBeams />
       )}
 
       <Footer />
