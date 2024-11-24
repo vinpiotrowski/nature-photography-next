@@ -15,7 +15,7 @@ const PageBackgroundImage = ({pageBackgroundImageContent}) => {
     ]
 
     const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 2100], [0, 1050]);
+    const y = useTransform(scrollY, [0, 2100], [0, 1400]);
 
     return (
         <BrightenImageAnimation className='absolute h-full w-full'>

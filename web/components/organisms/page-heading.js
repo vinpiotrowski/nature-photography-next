@@ -114,7 +114,7 @@ const PageHeading = ({pageHeadingContent}) => {
                         intro={intro}
                     />
                 </Container>
-                <div className='h-[140px] pointer-events-none w-full z-1 lg:h-[245px]' role='presentation' aria-hidden>
+                <div className='h-[105px] pointer-events-none w-full z-1 lg:h-[140px]' role='presentation' aria-hidden>
                     <div className='absolute bottom-0 h-full w-[120%] z-0'>
                         <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
                             <polygon points='28,96 28,100 0,100 0,89' style={{fill: 'rgba(53, 143, 170, 0.49)'}}></polygon>

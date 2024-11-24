@@ -1,8 +1,7 @@
 'use client'; // This is a client component
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FadeInWhenVisible, ScaleInAnimation, ScaleInWhenViewAnimation } from '../atoms/animations'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
@@ -22,7 +21,6 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [images, setImages] = useState([]);
-    const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
         setImages(photographs);
@@ -40,29 +38,14 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
         <section data-name='featured-photographs' className='py-3 relative z-1'>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
-                    <FadeInWhenVisible delay={0}>
-                        <Heading className='uppercase' variant='h2' styleAs='h3'>
-                            {headline}
-                        </Heading>
-                    </FadeInWhenVisible>
-                    <FadeInWhenVisible delay={0.35}>
-                        <Paragraph variant='chonky'>
-                            {intro}
-                        </Paragraph>
-                    </FadeInWhenVisible>
+                    <Heading className='uppercase' variant='h2' styleAs='h3'>
+                        {headline}
+                    </Heading>
+                    <Paragraph variant='chonky'>
+                        {intro}
+                    </Paragraph>
                 </div>
             </Container>
-
-            <motion.div
-                className='absolute w-full h-[35px] z-0'
-                whileInView={() => {
-                    if(!isInView) {
-                        setIsInView(true);
-                    }
-                    return {};
-                }}
-                viewport={{ once: true, amount: 1 }}
-            ></motion.div>
             <Container className='flex flex-col gap-7 items-center justify-center overflow-visible !pt-0 md:gap-7'>
                     <Swiper 
                         slidesPerView={1}
@@ -94,7 +77,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                         {photographs.map((photo, index) => {
                             return(
                                 <SwiperSlide className='!h-auto pb-10 relative z-20' key={`featured-photograph-${index}`}>
-                                    <ScaleInWhenViewAnimation isInView={isInView} delay={0.35 * index} className='flex flex-col h-full w-full'>
+                                    <div className='flex flex-col h-full w-full'>
                                             <Image 
                                                 alt={''}
                                                 imageContent={photo.image}
@@ -119,7 +102,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                                                 </div>
                                             </div>
              
-                                    </ScaleInWhenViewAnimation>
+                                    </div>
                                 </SwiperSlide>
                             )
                         })}
