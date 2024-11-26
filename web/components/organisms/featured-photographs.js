@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Button from '../atoms/button'
 import Container from '../atoms/container'
+import { FadeInWhenVisible } from '../atoms/animations'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import ModalWithCarousel from '../molecules/modal-with-carousel';
 import Paragraph from '../atoms/paragraph'
-
 
 const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
@@ -36,6 +36,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
     return (
         <section data-name='featured-photographs' className='py-3 relative z-1'>
+            <FadeInWhenVisible>
             <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
                     <Heading className='uppercase' variant='h2' styleAs='h3'>
@@ -124,6 +125,7 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                 </AnimatePresence>
 
             </Container>
+            </FadeInWhenVisible>
         </section>
     )
 }

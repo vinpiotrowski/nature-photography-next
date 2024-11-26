@@ -1,5 +1,6 @@
 import Button from '../atoms/button'
 import Container from '../atoms/container'
+import { FadeInWhenVisible } from '../atoms/animations'
 import Heading from '../atoms/heading'
 import IconGroup from '../molecules/icon-group'
 import Image from '../atoms/image'
@@ -36,6 +37,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
     if(variant == 'half') {
         return (
             <section data-name='featured-gallery' className='bg-white -mt-1 py-3 relative z-1'>
+                <FadeInWhenVisible>
                 <Container className={`flex flex-col gap-3 items-center ${flexDirection} ${pullUp} md:gap-5 lg:gap-14 lg:px-24 xl:px-40`}>
                     <div className='basis-1/2'>
                         {Image && 
@@ -59,12 +61,14 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                         <Button linkContent={linkContent} buttonVariant='cta' />
                     </div>
                 </Container>
+                </FadeInWhenVisible>
         </section>
         )
     }
 
     return (
         <section data-name='featured-gallery' className='bg-white py-3 relative z-1'>
+            <FadeInWhenVisible>
             <Container className='flex flex-col gap-3 items-center justify-center md:gap-5'>
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>
                     {Image && (
@@ -89,6 +93,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
                     </div>
                 </div>
             </Container>
+            </FadeInWhenVisible>
         </section>
     )
 }
