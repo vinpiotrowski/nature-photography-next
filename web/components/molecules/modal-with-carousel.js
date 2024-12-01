@@ -111,7 +111,7 @@ const ModalWithCarousel = ({
                 <swiper-container ref={swiperRef} init='false' effect='slide' className='bg-white'>
                     {images.map((image, index) => (
                         <swiper-slide key={index}>
-                            <div className='pb-5 pt-5 m-auto max-w-[90%] md:max-w-[80%] md:pb-[3vh] md:pt-[4vh]'>
+                            <div className='pb-5 pt-5 m-auto max-w-[90%] md:max-w-[70%] md:pb-[3vh] md:pt-[4vh]'>
                                 <Heading variant='h2' className='absolute font-bold mix-blend-difference text-np-blue w-full z-10' >
                                     {image.title}
                                 </Heading>
@@ -123,7 +123,7 @@ const ModalWithCarousel = ({
                                     alt={image.shortDescription}
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
                                 />
-                                <div className='pt-5 flex m-auto max-w-[90%] w-full md:max-w-[80%] md:justify-end'>
+                                <div className='pt-5 flex m-auto max-w-[90%] w-full md:max-w-[70%] md:justify-end'>
                                     <Paragraph variant='snug' className='bg-np-grey-dark md:max-w-prose text-np-grey-light md:p-[3vh] md:pb-0 md:-mt-14'>
                                         <strong>{image.location}</strong> {image.location && image.longDescription ? '—' : ''} {image.longDescription}
                                     </Paragraph>
