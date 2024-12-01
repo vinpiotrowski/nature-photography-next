@@ -38,7 +38,7 @@ const featuredPhotographs = {
                 {type: 'photograph'}
               ]
             }],
-            validation: Rule => Rule.length(3)
+            //validation: Rule => Rule.length(3)
         }
     ]
 }

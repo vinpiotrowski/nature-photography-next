@@ -104,15 +104,15 @@ const ModalWithCarousel = ({
             transition={{ duration: 0.7 }}
             exit={{ opacity: 0 }}
         >
-            <div id='photo-modal' className='bg-gradient-to-b from-white to-np-grey-lightest overflow-y-auto h-full w-full'>
+            <div id='photo-modal' className={`bg-np-grey-dark overflow-y-auto h-full w-full`}>
                 <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-5 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
-                <swiper-container ref={swiperRef} init='false' effect='slide'>
+                <swiper-container ref={swiperRef} init='false' effect='slide' className='bg-white'>
                     {images.map((image, index) => (
                         <swiper-slide key={index}>
-                            <div className='m-auto max-w-screen-md pt-5 pb-5 md:pt-[2vh] md:pb-[3vh] lg:max-w-screen-lg'>
-                                <Heading variant='h2' className='absolute font-bold mix-blend-difference pl-5 text-np-blue w-full z-10 md:pl-0' >
+                            <div className='pb-5 pt-5 m-auto max-w-[90%] md:max-w-[80%] md:pb-[3vh] md:pt-[4vh]'>
+                                <Heading variant='h2' className='absolute font-bold mix-blend-difference text-np-blue w-full z-10' >
                                     {image.title}
                                 </Heading>
                             </div>
@@ -123,9 +123,9 @@ const ModalWithCarousel = ({
                                     alt={image.shortDescription}
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
                                 />
-                                <div className='flex justify-center max-w-screen-md w-full md:justify-end md:mr-5 lg:max-w-screen-lg'>
-                                    <Paragraph variant='snug' className='bg-white max-w-[91%] p-5 -mt-2.5 md:max-w-prose md:p-[3vh] md:-mt-10'>
-                                        <strong>{image.location}</strong> — {image.longDescription}
+                                <div className='pt-5 flex m-auto max-w-[90%] w-full md:max-w-[80%] md:justify-end'>
+                                    <Paragraph variant='snug' className='bg-np-grey-dark md:max-w-prose text-np-grey-light md:p-[3vh] md:pb-0 md:-mt-14'>
+                                        <strong>{image.location}</strong> {image.location && image.longDescription ? '—' : ''} {image.longDescription}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -133,9 +133,10 @@ const ModalWithCarousel = ({
                     ))}
                 </swiper-container>
             </div>
-            <div className='absolute bottom-0 flex gap-0 items-center justify-end pb-10 pr-10 w-full z-20 lg:mb-0'>
-                <div className={`pagination-${id} -mr-5 z-30`} ></div>
-                <Button buttonVariant='next-fancy' className={`button-next-${id}`} />
+            <div className='absolute bottom-0 flex gap-3.5 items-center justify-end mb-10 pr-10 w-full z-20'>
+                <div className={`pagination-${id} hidden`} ></div>
+                <Button buttonVariant='previous' className={`button-prev-${id}`} />
+                <Button buttonVariant='next' className={`button-next-${id}`} />
             </div>
         </motion.div>
     );

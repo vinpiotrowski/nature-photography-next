@@ -50,9 +50,9 @@ const generateSrcSets = (image, sizeSteps) => {
         new Set([
             ...baseSizes
         ])
-    )/*.filter((size) => {
+    ).filter((size) => {
         return (imageDimensions && size.w <= imageDimensions.width * 1.1 && size.w <= maxDimensions.w) // do not upscale
-    })*/
+    })
 
     const def = retinaSizes.at(-1) || { w: 1, h: 1 }
 

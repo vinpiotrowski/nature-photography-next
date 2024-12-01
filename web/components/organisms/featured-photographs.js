@@ -37,8 +37,8 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
     return (
         <section data-name='featured-photographs' className='py-3 relative z-1'>
             <FadeInWhenVisible>
-            <Container className='flex flex-col gap-7 items-center justify-center md:gap-14'>
-                <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white md:gap-7'>
+            <Container className='flex items-center justify-center'>
+                <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center text-white w-full md:gap-7'>
                     <Heading className='uppercase' variant='h2' styleAs='h3'>
                         {headline}
                     </Heading>
@@ -79,30 +79,29 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                             return(
                                 <SwiperSlide className='!h-auto pb-10 relative z-20' key={`featured-photograph-${index}`}>
                                     <div className='flex flex-col h-full w-full'>
-                                            <Image 
-                                                alt={''}
-                                                imageContent={photo.image}
-                                                sizeSteps={THUMBNAIL_SIZE_STEPS}
-                                            />
-                                            <div className='bg-white flex flex-col gap-3 grow text-center p-3 py-7'>
-                                                <Paragraph>
-                                                    <strong>{photo.location}</strong>
-                                                </Paragraph>
-                                                <Heading variant='h3' styleAs='h4'>
-                                                    {photo.title}
-                                                </Heading>
-                                                <Paragraph>
-                                                    {photo.shortDescription}
-                                                </Paragraph>
-                                                <div>
-                                                    <Button 
-                                                        buttonVariant='open' 
-                                                        linkContent={{text: 'View Photo'}} 
-                                                        onClick={() => handleClick(index)} 
-                                                    />
-                                                </div>
+                                        <Image 
+                                            alt={''}
+                                            imageContent={photo.image}
+                                            sizeSteps={THUMBNAIL_SIZE_STEPS}
+                                        />
+                                        <div className='bg-white flex flex-col gap-3 grow text-center p-3 py-7'>
+                                            <Paragraph>
+                                                <strong>{photo.location}</strong>
+                                            </Paragraph>
+                                            <Heading variant='h3' styleAs='h4'>
+                                                {photo.title}
+                                            </Heading>
+                                            <Paragraph>
+                                                {photo.shortDescription}
+                                            </Paragraph>
+                                            <div>
+                                                <Button 
+                                                    buttonVariant='open' 
+                                                    linkContent={{text: 'View Photo'}} 
+                                                    onClick={() => handleClick(index)} 
+                                                />
                                             </div>
-             
+                                        </div>
                                     </div>
                                 </SwiperSlide>
                             )

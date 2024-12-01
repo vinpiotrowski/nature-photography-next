@@ -11,6 +11,7 @@ module.exports = {
         'np-blue': 'var(--primary-brand)',
         'np-grey-dark': 'var(--neutral-dark)',
         'np-grey': 'var(--neutral-med)',
+        'np-grey-light': 'var(--neutral-light)',
         'np-grey-lightest': '#F5F5F7',
         'np-pink': 'var(--alert)',
       },
