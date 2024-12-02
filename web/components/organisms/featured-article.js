@@ -40,10 +40,12 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                         sizeSteps={IMAGE_SIZE_STEPS} 
                     />
                     <div className='np-panel bottom-0 left-0 flex flex-col gap-3 items-center justify-center p-7 text-[#989898] text-center w-full
-                        lg:max-w-prose lg:absolute lg:py-10 lg:px-14 lg:translate-x-[7vw] lg:translate-y-7'>
-                            <Paragraph className=''>
-                                <strong>{article?.date}</strong>
-                            </Paragraph>
+                        lg:max-w-prose lg:p-10 lg:absolute lg:translate-x-[7vw] lg:translate-y-7'>
+                            {false && (
+                                <Paragraph className=''>
+                                    <strong>{article?.date}</strong>
+                                </Paragraph>
+                            )}
                             <Heading variant='h3' styleAs='h4' className=''>
                                 {article?.title}
                             </Heading>

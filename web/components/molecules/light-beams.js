@@ -28,23 +28,23 @@ const LightBeams = ({}) => {
         <div ref={ref} className='absolute h-[45%] pointer-events-none top-[28%] w-full z-1 md:h-[60%] md:top-[40%]' role='presentation' aria-hidden>
             <motion.div style={{clipPath:clipPath1}} className='absolute h-full w-full z-1'>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                    <polygon points='100,0 0,21 0,24.5 100,2.8' style={{fill: 'rgba(53, 143, 170, 0.5)'}} />
+                    <polygon points='100,0 0,21 0,24.5 100,2.1' style={{fill: 'rgba(53, 143, 170, 0.6)'}} />
                 </svg>
             </motion.div>
             <motion.div style={{clipPath:clipPath1}} className='absolute h-full w-full' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                    <polygon points='100,0 0,21 0,24.5 100,2.1' style={{fill: 'rgba(53, 143, 170, 0.42)'}} />
+                    <polygon points='100,0 0,21 0,24.5 100,1.4' style={{fill: 'rgba(53, 143, 170, 0.52)'}} />
                 </svg>
             </motion.div>
 
             <motion.div style={{clipPath:clipPath2}} className='absolute h-full w-full' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                    <polygon points='0,21 0,24.5 100,49 100,42' style={{fill: 'rgba(53, 143, 170, 0.35)'}} />
+                    <polygon points='0,21 0,24.5 100,49 100,42' style={{fill: 'rgba(53, 143, 170, 0.45)'}} />
                 </svg>
             </motion.div>
             <motion.div style={{clipPath:clipPath2}} className='absolute h-full w-full' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio='none' viewBox='0 0 100 100'>
-                    <polygon points='0,21 0,24.5 100,48.5 100,40.5' style={{fill: 'rgba(53, 143, 170, 0.28)'}} />
+                    <polygon points='0,21 0,24.5 100,48.5 100,40.5' style={{fill: 'rgba(53, 143, 170, 0.38)'}} />
                 </svg>
             </motion.div>
         </div>
