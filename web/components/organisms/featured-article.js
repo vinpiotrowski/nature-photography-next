@@ -39,7 +39,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                         alt={''}
                         sizeSteps={IMAGE_SIZE_STEPS} 
                     />
-                    <div className='np-panel bottom-0 left-0 flex flex-col gap-3 items-center justify-center p-7 text-[#989898] text-center w-full
+                    <div className='bg-np-grey-dark bottom-0 left-0 flex flex-col gap-3 items-center justify-center p-7 text-np-grey-light text-center w-full
                         lg:max-w-prose lg:p-10 lg:absolute lg:translate-x-[7vw] lg:translate-y-7'>
                             {false && (
                                 <Paragraph className=''>

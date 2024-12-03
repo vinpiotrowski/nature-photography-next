@@ -4,6 +4,7 @@ import FeaturedArticle from './featured-article'
 import FeaturedPhotographs from './featured-photographs'
 import FiftyFifty from '../molecules/fifty-fifty'
 import FeaturedGallery from './featured-gallery'
+import Slideshow from './slideshow'
 
 const ContentBlocks = ({contentBlocksContent}) => {
     return contentBlocksContent.map((contentBlock, index) => {
@@ -31,6 +32,10 @@ const ContentBlocks = ({contentBlocksContent}) => {
             case 'galleryCard':
                 return (
                     <FeaturedGallery featuredGalleryContent={contentBlock} position={index} key={contentBlock._id} />
+                )
+            case 'slideshow':
+                return (
+                    <Slideshow slideshowContent={contentBlock} key={contentBlock._id} />
                 )
         }
     })

@@ -60,7 +60,8 @@ const contentBlockPage = {
               {type: 'featuredArticle'},
               {type: 'featuredPhotographs'},
               {type: 'fiftyFifty'},
-              {type: 'galleryCard'}
+              {type: 'galleryCard'},
+              {type: 'slideshow'}
             ]
           }
         ]

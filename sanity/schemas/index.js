@@ -12,6 +12,7 @@ import link from './link-schema'
 import pageHeading from './page-heading-schema'
 import photograph from './photograph-schema'
 import richText from './rich-text-schema'
+import slideshow from './slideshow-schema'
 
 export const schemaTypes = [
     article,
@@ -27,5 +28,6 @@ export const schemaTypes = [
     link,
     pageHeading,
     photograph,
-    richText
+    richText,
+    slideshow
 ]

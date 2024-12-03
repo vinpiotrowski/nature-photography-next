@@ -4,6 +4,7 @@ import featuredArticleProjection from './featured-article-projection'
 import featuredPhotographsProjection from './featured-photographs-projection'
 import fiftyFiftyProjection from './fifty-fifty-projection'
 import featuredGalleryProjection from './featured-gallery-projection'
+import slideshowProjection from './slideshow-projection'
 
 const contentBlocksProjection = `{
     _id,
@@ -13,7 +14,8 @@ const contentBlocksProjection = `{
     _type == 'featuredArticle' => ${featuredArticleProjection},
     _type == 'featuredPhotographs' => ${featuredPhotographsProjection},
     _type == 'fiftyFifty' => ${fiftyFiftyProjection},
-    _type == 'galleryCard' => ${featuredGalleryProjection}
+    _type == 'galleryCard' => ${featuredGalleryProjection},
+    _type == 'slideshow' => ${slideshowProjection}
 }`
 
 export default contentBlocksProjection

@@ -36,7 +36,7 @@ const FiftyFifty = ({fiftyFiftyContent}) => {
         <section data-name='fiftyFifty' className={`${useNoneBackground ? 'np-light-text' : 'bg-white'} -mt-1 py-3 relative z-1`}>
             <Container className={`flex flex-col gap-7 items-center relative ${flexDirection} ${getVerticalPadding()} md:gap-11 lg:gap-14`}>
                 <div className='basis-1/2'>
-                    {Image && 
+                    {image && 
                         <Image
                             alt={''}
                             imageContent={image}
