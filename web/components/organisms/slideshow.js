@@ -90,7 +90,7 @@ const Slideshow = ({slideshowContent}) => {
     return (
         <section data-name='slideshow' className={`${useNoneBackground ? 'np-light-text' : 'bg-white'} -mt-1 py-3 relative z-1`}>
             <Container className={`flex flex-col gap-7 items-center relative ${flexDirection} ${getVerticalPadding()} md:gap-11 lg:gap-14`}>
-                <div className='basis-1/2 relative'>
+                <div className='flex p-3 relative md:basis-2/3 lg:basis-1/2'>
                 { images.length && (
                     <>
                     <div className='absolute bg-black bottom-[10%] left-[15%] pt-[33.333%] w-1/2'>
@@ -129,7 +129,7 @@ const Slideshow = ({slideshowContent}) => {
                 )}
 
                 </div>
-                <div className='basis-1/2 flex flex-col gap-5 justify-center md:gap-7'>
+                <div className='md:basis-1/3 lg:basis-1/2 flex flex-col gap-5 justify-center md:gap-7'>
                     {headline && (
                         <div className='np-heading'>
                             <Heading variant='h2' styleAs='h3' className='uppercase text-center'>
