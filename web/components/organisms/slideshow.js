@@ -118,7 +118,7 @@ const Slideshow = ({slideshowContent}) => {
                             )}
                         )}
                     </div>
-                    <NextImage
+                    <img
                         src='/static/camera-frame.png'
                         alt={''}
                         width={924}
