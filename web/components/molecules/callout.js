@@ -7,8 +7,6 @@ const Callout = ({calloutContent}) => {
     const {headline, backgroundImage, link, linkText} = calloutContent
 
     const CALLOUT_SIZE_STEPS = [
-        { w: 360, h: 0 },
-        { w: 414, h: 0 },
         { w: 640, h: 0 },
         { w: 768, h: 0 },
         { w: 1024, h: 0 },
