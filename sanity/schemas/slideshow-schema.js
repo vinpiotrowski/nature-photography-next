@@ -62,6 +62,15 @@ const slideshow = {
             type: 'richText'
         },
         {
+            name: 'frameImage',
+            title: 'Frame Image',
+            description: 'A very specific image to be used as the camera frame',
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+        },
+        {
             name: 'images',
             title: 'Slideshow Images',
             type: 'array',

@@ -9,6 +9,7 @@ const slideshowProjection = `{
     textPlacement,
     headline,
     body ${richTextProjection},
+    frameImage ${imageProjection},
     images[] ${imageProjection},
 }`
 

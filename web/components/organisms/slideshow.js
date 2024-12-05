@@ -14,14 +14,19 @@ const Slideshow = ({slideshowContent}) => {
         eliminateBottomPadding,
         textPlacement, 
         headline, 
-        body, 
+        body,
+        frameImage,
         images} = slideshowContent
 
     const flexDirection = textPlacement == 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
 
-    const SLIDESHOW_SIZE_STEPS = [
-        { w: 414, h: 276 },
-        { w: 768, h: 512 }
+    const FRAME_SIZE_STEPS = [
+        { w: 360, h: 0 },
+        { w: 768, h: 0 }
+    ]
+    
+    const SLIDE_SIZE_STEPS = [
+        { w: 480, h: 320},
     ]
 
     function getVerticalPadding() {
@@ -112,18 +117,17 @@ const Slideshow = ({slideshowContent}) => {
                                         className='absolute top-0 left-0'
                                         alt={''}
                                         imageContent={slide}
-                                        sizeSteps={SLIDESHOW_SIZE_STEPS}
+                                        sizeSteps={SLIDE_SIZE_STEPS}
                                     />
                                 </motion.div>
                             )}
                         )}
                     </div>
-                    <img
-                        src='/static/camera-frame.png'
-                        alt={''}
-                        width={924}
-                        height={696}
+                    <Image
                         className='relative'
+                        alt={''}
+                        imageContent={frameImage}
+                        sizeSteps={FRAME_SIZE_STEPS}
                     />
                     </>
                 )}
