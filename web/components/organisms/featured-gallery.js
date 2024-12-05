@@ -67,7 +67,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
     }
 
     return (
-        <section data-name='featured-gallery' className='bg-white py-3 relative z-1'>
+        <section data-name='featured-gallery' className='bg-white py-3 pb-14 relative z-1 last:pb-28'>
             <FadeInWhenVisible>
             <Container className='flex flex-col gap-3 items-center justify-center md:gap-5'>
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>
