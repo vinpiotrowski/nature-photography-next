@@ -104,7 +104,7 @@ const ModalWithCarousel = ({
             transition={{ duration: 0.7 }}
             exit={{ opacity: 0 }}
         >
-            <div id='photo-modal' className={`bg-np-grey-dark overflow-y-auto h-full w-full`}>
+            <div id='photo-modal' className={`bg-np-neutral-darkest overflow-y-auto h-full w-full`}>
                 <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-5 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
@@ -124,7 +124,7 @@ const ModalWithCarousel = ({
                                     sizeSteps={PHOTOGRAPH_SIZE_STEPS} 
                                 />
                                 <div className='pt-5 flex m-auto max-w-[90%] w-full md:max-w-[70%] md:justify-end'>
-                                    <Paragraph variant='snug' className='bg-np-grey-dark md:max-w-prose text-np-grey-light md:p-[3vh] md:pb-0 md:-mt-14'>
+                                    <Paragraph variant='snug' className='bg-np-neutral-darkest md:max-w-prose text-np-neutral-light md:p-[3vh] md:pb-0 md:-mt-14'>
                                         <strong>{image.location}</strong> {image.location && image.longDescription ? '—' : ''} {image.longDescription}
                                     </Paragraph>
                                 </div>

@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-linked-in:before {
+  content: "\e905";
+}
 .icon-bird-circle:before {
   content: "\e900";
 }

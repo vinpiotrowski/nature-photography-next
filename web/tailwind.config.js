@@ -9,10 +9,11 @@ module.exports = {
     extend: {
       colors: {
         'np-blue': 'var(--primary-brand)',
-        'np-grey-dark': 'var(--neutral-dark)',
-        'np-grey': 'var(--neutral-med)',
-        'np-grey-light': 'var(--neutral-light)',
-        'np-grey-lightest': '#F5F5F7',
+        'np-neutral-darkest': 'var(--neutral-dark)',
+        'np-neutral-dark': 'var(--neutral-dark-med)',
+        'np-neutral': 'var(--neutral-med)',
+        'np-neutral-light': 'var(--neutral-light)',
+        'np-neutral-lightest': '#F5F5F7',
         'np-pink': 'var(--alert)',
       },
     },

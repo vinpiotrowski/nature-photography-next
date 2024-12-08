@@ -3,7 +3,7 @@ import Container from '../atoms/container'
 const Footer = ({footerContent}) => {
 
     return (
-        <footer className='bg-[#333333] text-white relative z-20'>
+        <footer className='bg-np-neutral-dark text-white relative z-20'>
             <Container variant={'footer'} className='flex flex-wrap items-center justify-center'>
                 <div className='flex self-start flex-shrink-0'>
                     <span className='flex self-start'>
@@ -13,11 +13,11 @@ const Footer = ({footerContent}) => {
                     </span>
                 </div>
                 <div className='block flex flex-grow gap-5 justify-end md:gap-7'>
-                    <a href='//naturephotography.123guestbook.com/' className='text-[#AAAAAA] flex items-center gap-1 py-1 relative md:text-lg'>
-                        <em className='icon-comment-o text-2xl' /><span>Guestbook</span>
-                    </a>
-                    <a href='//www.instagram.com/mostly_carbon/' className='text-[#AAAAAA] flex items-center gap-1 py-1 relative md:text-lg'>
+                    <a href='//www.instagram.com/mostly_carbon/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
                         <em className='icon-instagram text-2xl' /><span>Instagram</span>
+                    </a>
+                    <a href='//www.linkedin.com/in/vincent-piotrowski/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
+                        <em className='icon-linked-in text-2xl' /><span>LinkedIn</span>
                     </a>
                 </div>
             </Container>
