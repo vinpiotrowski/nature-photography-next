@@ -32,7 +32,7 @@ const FeaturedGallery = ({featuredGalleryContent, position}) => {
     const linkContent = {internalRef: gallery?.slug?.current, text: 'View Gallery', variant: 'internal'}
     const flexDirection = textPlacement == 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
     const textPanel = textPlacement == 'left' ? 'lg:translate-x-[7vw]' : 'lg:left-auto lg:right-0 lg:-translate-x-[7vw]'
-    const pullUp = position == 0 ? '-mt-24 lg:-mt-32' : ''
+    const pullUp = position == 0 ? '-mt-32 lg:-mt-40' : ''
 
     if(variant == 'half') {
         return (

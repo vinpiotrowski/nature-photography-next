@@ -1,8 +1,8 @@
-import Callout from '../molecules/callout'
+import Callout from './callout'
 import ColumnedContent from './columned-content'
 import FeaturedArticle from './featured-article'
 import FeaturedPhotographs from './featured-photographs'
-import FiftyFifty from '../molecules/fifty-fifty'
+import FiftyFifty from './fifty-fifty'
 import FeaturedGallery from './featured-gallery'
 import Slideshow from './slideshow'
 

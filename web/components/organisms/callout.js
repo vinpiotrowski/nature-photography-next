@@ -7,7 +7,6 @@ const Callout = ({calloutContent}) => {
     const {headline, backgroundImage, link, linkText} = calloutContent
 
     const CALLOUT_SIZE_STEPS = [
-        { w: 640, h: 0 },
         { w: 768, h: 0 },
         { w: 1024, h: 0 },
         { w: 1280, h: 0 },
@@ -17,7 +16,7 @@ const Callout = ({calloutContent}) => {
 
     
     return (
-        <section data-name='callout' className='bg-white -mt-1 pb-0 pt-14 overflow-hidden relative z-1'>
+        <section data-name='callout' className='bg-white -mt-1 pb-0 pt-0 overflow-hidden relative z-1'>
             {backgroundImage && 
                 <Image
                     alt={''}
@@ -26,14 +25,13 @@ const Callout = ({calloutContent}) => {
                     sizeSteps={CALLOUT_SIZE_STEPS}
                 />
             }
-            {/*<div className='absolute top-0 h-full right-0 -translate-y-[1px] w-full z-0' role='presentation' aria-hidden>
+            {<div className='absolute top-0 h-full invisible right-0 -translate-y-[1px] w-full z-0 md:visible' role='presentation' aria-hidden>
                 <svg className='h-full w-full' preserveAspectRatio="none" viewBox="0 0 100 100">
                     <polygon points="0,0 0,28 100,1 100,0" opacity="1" style={{fill: 'rgba(255,255,255,1)'}}></polygon>
                 </svg>
-            </div>*/}
+            </div>}
             <Container className={`flex flex-col gap-7 items-end relative md:gap-20 z-10`}>
-                <div className='flex flex-col gap-5 pb-7 pt-20 items-end justify-end text-right
-                         text-white md:gap-7 md:pb-14 md:pt-28'>
+                <div className='flex flex-col gap-5 pb-7 pt-20 items-end text-right text-white md:gap-7 md:pb-14 md:pt-28'>
                     {headline && (
                         <>
                             <Heading variant='h4' className='np-outline-text font-bold'>

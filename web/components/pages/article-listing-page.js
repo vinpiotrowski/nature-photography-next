@@ -5,7 +5,7 @@ import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import PageHeading from '../organisms/page-heading'
-import TableOfContents from '../organisms/table-of-contents';
+import TableOfContents from '../molecules/table-of-contents';
 
 
 const ArticleListingPage = ({articleListingPageContent}) => {
