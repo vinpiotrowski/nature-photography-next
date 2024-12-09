@@ -12,12 +12,20 @@ const Navigation = ({navigationContent}) => {
     }
 
     return (
-        <nav className='relative text-white w-full z-20'>
+        <nav className='bg-gradient-to-b from-[rgba(0,0,0,0.35)] to-[rgba(0,0,0,0)] relative text-white w-full z-20'>
             <Container variant={'nav'} className='flex flex-wrap items-center justify-center'>
-            <div className='flex items-center flex-shrink-0'>
+            <div className='flex items-center flex-shrink-0 stroke-np-blue'>
                 <a href='/' className='flex items-center relative'>
-                    <svg className='bg-black bg-opacity-20 scale-90 lg:scale-100' width='43.13' height='49' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
-                        <path d='M0,0v142h125V0H0ZM30.76,122.27l-4.03-8.03,7.19-14.48,3.85,7.82-7.01,14.7ZM20.06,63.28l-5.27,11.06h-7.64l12.74-26.98,27.94,55.59,27.59-55.74,4.01,7.69-31.55,63.74-27.82-55.35ZM82.04,104.71l-4.19-7h28.47l-32.42-62.45-27.63,55.6-3.96-7.82,31.41-63.32,44.12,84.98h-35.81Z'/>
+                    <svg
+                        className='h-auto w-[56px] md:w-[70px]'
+                        viewBox="0 0 1592.5 1016.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeWidth={91}
+                            fill="none"
+                            d='M492.9,130.1c0,0-420,726-433.5,745.5s-30.5,45.5-18,72c15.7,33.3,47.5,22.8,98.5,24.5 c59,2,1335.5-3.5,1369.8-3.5s48.3-10.4,45.2-51.5s-249-424-260-442s-37.9-76.8-95-78c-47-1-77,48-125,91c-37,33.1-70.1,31.2-85,21 c-48-33-310-392-310-392c-20-29-57-81-91-81C540.4,36.1,521.4,80.6,492.9,130.1z'
+                        />
                     </svg>
                     <span className='ml-2 text-2xl lg:text-3xl'>
                         vince<strong>piotrowski</strong>
