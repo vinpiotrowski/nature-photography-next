@@ -1,18 +1,48 @@
+'use client'; // This is a client component
+import {useState} from 'react'
+import {motion} from 'framer-motion'
 import Container from '../atoms/container'
 
 const Footer = ({footerContent}) => {
 
+    const [isInView, setIsInView] = useState(false);
+
     return (
         <footer className='bg-np-neutral-dark text-white relative z-20'>
             <Container variant={'footer'} className='flex flex-wrap items-center justify-center'>
-                <div className='flex self-start flex-shrink-0'>
-                    <span className='flex self-start'>
-                        <svg className='max-w-10 md:max-w-12 lg:max-w-14' width='86' height='98' style={{fill: 'rgba(53,143,170,1)'}} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 142'>
-                            <path d='M0,0v142h125V0H0ZM30.76,122.27l-4.03-8.03,7.19-14.48,3.85,7.82-7.01,14.7ZM20.06,63.28l-5.27,11.06h-7.64l12.74-26.98,27.94,55.59,27.59-55.74,4.01,7.69-31.55,63.74-27.82-55.35ZM82.04,104.71l-4.19-7h28.47l-32.42-62.45-27.63,55.6-3.96-7.82,31.41-63.32,44.12,84.98h-35.81Z'/>
-                        </svg>
-                    </span>
-                </div>
-                <div className='block flex flex-grow gap-5 justify-end md:gap-7'>
+            <motion.div
+                className='absolute w-full z-0'
+                whileInView={() => {
+                    if(!isInView) {
+                        setIsInView(true);
+                    }
+                    return {};
+                }}
+                viewport={{ once: true, amount: 1 }}
+            ></motion.div>
+                <div className='flex gap-5 justify-center relative w-full md:gap-7 md:justify-end'>
+                    <div className='absolute left-0 top-0 stroke-np-blue -translate-y-[120%] w-1/3 md:-translate-y-[85%] md:w-1/4'>
+                        <motion.svg
+                            style={{ width: "100%", height: "100%" }}
+                            viewBox="0 0 1592.5 1016.5"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <motion.path
+                            initial={{ pathLength: 0 }}
+                            animate={ isInView && { pathLength: 1 }}
+                            transition={{
+                                duration: 2,
+                                ease: "easeInOut",
+        
+                                repeatDelay: 1
+                            }}
+                            strokeWidth={35}
+                            strokeDasharray="0 1"
+                            fill="none"
+                            d='M492.9,130.1c0,0-420,726-433.5,745.5s-30.5,45.5-18,72c15.7,33.3,47.5,22.8,98.5,24.5 c59,2,1335.5-3.5,1369.8-3.5s48.3-10.4,45.2-51.5s-249-424-260-442s-37.9-76.8-95-78c-47-1-77,48-125,91c-37,33.1-70.1,31.2-85,21 c-48-33-310-392-310-392c-20-29-57-81-91-81C540.4,36.1,521.4,80.6,492.9,130.1z'
+                            />
+                        </motion.svg>
+                    </div>
                     <a href='//www.instagram.com/mostly_carbon/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
                         <em className='icon-instagram text-2xl' /><span>Instagram</span>
                     </a>

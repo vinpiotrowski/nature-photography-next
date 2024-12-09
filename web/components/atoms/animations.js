@@ -1,6 +1,6 @@
 
 'use client'; // This is a client component
-import {motion, useScroll, useTransform} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 export const FadeInWhenVisible = ({ children, className, delay=0 }) => {
   return (

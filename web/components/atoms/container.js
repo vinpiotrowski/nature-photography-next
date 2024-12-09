@@ -17,7 +17,7 @@ const Container = ({children, variant, className}) => {
 
     if(variant == 'footer') {
         return (
-            <div className={`max-w-screen-xl mx-auto px-3 py-2 lg:px-14 lg:py-5 ${className}`}>
+            <div className={`max-w-screen-xl mx-auto px-3 py-10 lg:px-14 ${className}`}>
                 {children}
             </div>
         )

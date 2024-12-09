@@ -16,11 +16,11 @@ const Callout = ({calloutContent}) => {
 
     
     return (
-        <section data-name='callout' className='bg-white -mt-1 pb-0 pt-0 overflow-hidden relative z-1'>
+        <section data-name='callout' className='bg-np-neutral-darkest -mt-1 pb-0 pt-0 overflow-hidden relative z-1'>
             {backgroundImage && 
                 <Image
                     alt={''}
-                    className={'absolute block w-full h-full object-cover md:h-auto md:object-none'}
+                    className={'absolute block h-full w-full md:h-auto'}
                     imageContent={backgroundImage}
                     sizeSteps={CALLOUT_SIZE_STEPS}
                 />
@@ -31,7 +31,7 @@ const Callout = ({calloutContent}) => {
                 </svg>
             </div>}
             <Container className={`flex flex-col gap-7 items-end relative md:gap-20 z-10`}>
-                <div className='flex flex-col gap-5 pb-7 pt-20 items-end text-right text-white md:gap-7 md:pb-14 md:pt-28'>
+                <div className='flex flex-col gap-5 py-7 items-end text-right text-white md:gap-7 md:pb-14 md:pt-28'>
                     {headline && (
                         <>
                             <Heading variant='h4' className='np-outline-text font-bold'>
