@@ -1,7 +1,7 @@
 const Container = ({children, variant, className}) => {
     if(variant == 'nav') {
         return (
-            <div className={`max-w-screen-xl mx-auto px-3 py-2 lg:px-14 lg:py-5 ${className}`}>
+            <div className={`max-w-screen-xl mx-auto px-3 py-4 lg:px-14 lg:py-5 ${className}`}>
                 {children}
             </div>
         )
@@ -24,7 +24,7 @@ const Container = ({children, variant, className}) => {
     }
 
     return (
-        <div className={`max-w-screen-xl mx-auto px-5 py-10 z-20 lg:px-14 lg:py-20 ${className}`}>
+        <div className={`max-w-screen-xl mx-auto px-5 py-10 z-20 md:py-14 lg:px-14 lg:py-20 ${className}`}>
             {children}
         </div>
     )

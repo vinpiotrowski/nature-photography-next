@@ -93,10 +93,10 @@ const ColumnedContent = ({columnedContentContent, className=''}) => {
     function getVerticalPadding() {
         let paddingClassname = ''
         if(eliminateTopPadding) {
-            paddingClassname = 'pt-2 md:pt-3 lg:pt-3'
+            paddingClassname += ' pt-3 md:pt-5 lg:pt-5'
         }
         if(eliminateBottomPadding) {
-            paddingClassname += ' pb-2 md:pb-3 lg:pb-3'
+            paddingClassname += ' pb-3 md:pb-5 lg:pb-5'
         }
         return paddingClassname
     }
