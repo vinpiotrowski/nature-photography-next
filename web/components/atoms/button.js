@@ -1,5 +1,3 @@
-import NextLink from 'next/link'
-
 const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => {
     const {externalRef, internalRef, text, variant} = linkContent
 
@@ -9,18 +7,18 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
         case 'chonky':
             return (
                 <div className='flex justify-center py-1.5'>
-                    <NextLink href={href} scroll={true} className='np-button np-transition px-4 py-2.5 
+                    <a href={href} className='np-button np-transition px-4 py-2.5 
                             z-10 sm:px-5 sm:py-3 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
                         <span className=' block font-bold sm:text-lg'>{text}</span>
-                    </NextLink>
+                    </a>
                 </div>
             )
         case 'navigation':
             return (
                 <span className='block flex flex-grow justify-end'>
-                    <NextLink href={href} className='relative py-1'>
+                    <a href={href} className='relative py-1'>
                         <span className='block px-3 lg:inline-block'>{text}</span>
-                    </NextLink>
+                    </a>
                 </span>
             )
         case 'close':
@@ -69,10 +67,10 @@ const Button = ({ linkContent = {}, buttonVariant, onClick, className = ''}) => 
         default:
             return (
                 <div className='flex'>
-                    <NextLink href={href} scroll={true} className='np-button np-transition px-3 py-2 
+                    <a href={href} className='np-button np-transition px-3 py-2 
                              text-white z-10 lg:px-3 lg:py-2.5 hover:shadow-[0.7rem_0.7rem_0_rgba(255,0,108,1)]'>
                         <span className='block font-bold text-sm lg:text-base $className'>{text}</span>
-                    </NextLink>
+                    </a>
                 </div>
           
             )
