@@ -84,7 +84,7 @@ const Slideshow = ({slideshowContent}) => {
 
     const numSlides = images.length;
 
-    const dur = 2.1;
+    const dur = 1.4;
 
     const [startSlideshow, setStartSlideshow] = useState(false)
 

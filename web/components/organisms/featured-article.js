@@ -1,6 +1,5 @@
 import Button from '../atoms/button'
 import Container from '../atoms/container'
-import { FadeInWhenVisible } from '../atoms/animations'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
@@ -10,8 +9,6 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
     const {headline, intro, article, image} = featuredArticleContent
 
     const IMAGE_SIZE_STEPS = [
-        { w: 360, h: 360 }, 
-        { w: 414, h: 414 },
         { w: 640, h: 640 },
         { w: 768, h: 768 },
         { w: 1024, h: 0 },
@@ -22,7 +19,6 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
 
     return (
         <section data-name='featured-article' className='bg-white py-3 relative z-1'>
-            <FadeInWhenVisible>
             <Container className='flex flex-col gap-7 items-center justify-center relative'>
                 <div className='np-heading flex flex-col gap-5 max-w-screen-md text-center md:gap-7'>
                     <Heading className='uppercase' variant='h2' styleAs='h3'>
@@ -60,7 +56,6 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                     </div>
                 </div>
             </Container>
-            </FadeInWhenVisible>
         </section>
     )
 }

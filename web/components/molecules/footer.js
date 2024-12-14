@@ -11,7 +11,7 @@ const Footer = ({footerContent}) => {
         <footer className='bg-np-neutral-dark text-white relative z-20'>
             <Container variant={'footer'} className='flex flex-wrap items-center justify-center'>
             <motion.div
-                className='absolute w-full z-0'
+                className='absolute -top-10 z-0'
                 whileInView={() => {
                     if(!isInView) {
                         setIsInView(true);
