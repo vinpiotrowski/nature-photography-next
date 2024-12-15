@@ -3,9 +3,9 @@ import {useState} from 'react'
 import {motion} from 'framer-motion'
 import Container from '../atoms/container'
 
-const Footer = ({footerContent}) => {
+const Footer = ({isHomepage}) => {
 
-    const [isInView, setIsInView] = useState(false);
+    const [isInView, setIsInView] = useState(!isHomepage);
 
     return (
         <footer className='bg-np-neutral-dark text-white relative z-20'>

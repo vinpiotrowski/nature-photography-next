@@ -55,7 +55,7 @@ export default async function Page(context) {
         <LightBeams />
       )}
 
-      <Footer />
+      <Footer isHomepage={slug === '/'}/>
     </>
   );
 }
