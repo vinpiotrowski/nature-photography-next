@@ -41,7 +41,7 @@ const Footer = ({isHomepage}) => {
                             />
                         </motion.svg>
                     </div>
-                    <a href='//www.instagram.com/vinpiot/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
+                    <a href='//www.instagram.com/mostly_carbon/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
                         <em className='icon-instagram text-2xl' /><span>Instagram</span>
                     </a>
                     <a href='//www.linkedin.com/in/vincent-piotrowski/' className='text-np-neutral-light flex items-center gap-1 py-1 relative md:text-lg'>
