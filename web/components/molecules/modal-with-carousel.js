@@ -108,7 +108,7 @@ const ModalWithCarousel = ({
                 <div className='flex gap-3 justify-end m-auto max-w-screen-md pb-5 z-10 lg:max-w-screen-lg'>
                     <Button buttonVariant='close' onClick={onClose} />
                 </div>
-                <swiper-container ref={swiperRef} init='false' effect='slide' className='bg-white'>
+                <swiper-container ref={swiperRef} init='false' effect='slide' className='bg-np-neutral-darkest'>
                     {images.map((image, index) => (
                         <swiper-slide key={index}>
                             <div className='pb-5 pt-5 m-auto max-w-[90%] md:max-w-[63%] md:pb-[3vh] md:pt-[4vh]'>

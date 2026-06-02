@@ -1,3 +1,5 @@
+@import url(icons.css);
+
 :root {
   --primary-brand: #358faa;
   --alert: #FF006C;
@@ -163,6 +165,3 @@ blockquote em {
     @apply text-[rgba(48,127,151,1)];
   }
 }
-
-
-@import url(icons.css)
