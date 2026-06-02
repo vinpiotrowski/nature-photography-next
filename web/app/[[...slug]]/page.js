@@ -10,8 +10,9 @@ import Navigation from '../../components/organisms/navigation'
 import PageBackgroundImage from '../../components/molecules/page-background-image'
 
 export async function generateMetadata({params, searchParams}) {
-  const slug = '/' + (params?.slug ? params.slug.join('/') : '')
-  const metaContent = await fetchPageMetadataBySlug(slug, false)
+  const { slug }  = await params;
+  const normalizedSlug = '/' + (slug ? slug.join('/') : '')
+  const metaContent = await fetchPageMetadataBySlug(normalizedSlug, false)
   return {
     title: metaContent?.title,
     description: metaContent?.description
@@ -24,8 +25,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Page(context) {
-  const slug = '/' + (context?.params?.slug ? context.params.slug.join('/') : '')
-  const pageContent = await fetchPageBySlug(slug, false)
+  const { slug }  = await context.params;
+  const normalizedSlug = '/' + (slug ? slug.join('/') : '')
+  const pageContent = await fetchPageBySlug(normalizedSlug, false)
   if (!pageContent) {
 		return notFound()
 	}
@@ -51,11 +53,11 @@ export default async function Page(context) {
         )}
         
       </main>
-      {slug === '/' && (
+      {normalizedSlug === '/' && (
         <LightBeams />
       )}
 
-      <Footer isHomepage={slug === '/'}/>
+      <Footer isHomepage={normalizedSlug === '/'}/>
     </>
   );
 }
