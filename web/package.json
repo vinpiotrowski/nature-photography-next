@@ -15,8 +15,8 @@
     "@sanity/image-url": "^2.1.1",
     "framer-motion": "^12.40.0",
     "next": "16.2.7",
-    "react": "^19",
-    "react-dom": "^19",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "swiper": "^12.2.0"
   },
   "devDependencies": {
