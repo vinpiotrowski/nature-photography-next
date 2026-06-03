@@ -76,7 +76,13 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                         {photographs.map((photo, index) => {
                             return(
                                 <SwiperSlide className='!h-auto pb-10 relative z-20' key={`featured-photograph-${index}`}>
-                                    <div className='flex flex-col h-full w-full'>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true, amount: 0.05 }}
+                                        transition={{ delay: index * 0.15, duration: 1.4, type: 'spring', stiffness: 100 }}
+                                        className='flex flex-col h-full w-full'
+                                    >
                                         <Image 
                                             alt={''}
                                             imageContent={photo.image}
@@ -100,12 +106,11 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                                                 />
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </SwiperSlide>
                             )
                         })}
                     </Swiper>
-                
                 <AnimatePresence
                     initial={false}
                     mode={'wait'}
