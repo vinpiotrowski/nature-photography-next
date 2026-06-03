@@ -20,7 +20,7 @@ const Callout = ({calloutContent}) => {
             {backgroundImage && 
                 <Image
                     alt={''}
-                    className={'absolute block h-full w-full object-cover md:h-auto md:object-none'}
+                    className={'absolute block h-full w-full object-cover md:h-auto'}
                     imageContent={backgroundImage}
                     sizeSteps={CALLOUT_SIZE_STEPS}
                 />
