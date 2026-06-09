@@ -1,8 +1,10 @@
+'use client'; // This is a client component
 import Button from '../atoms/button'
 import Container from '../atoms/container'
 import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import Paragraph from '../atoms/paragraph'
+import { SlideInAnimation } from '../atoms/animations';
 
 const FeaturedArticle = ({featuredArticleContent, className}) => {
 
@@ -29,14 +31,18 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                     </Paragraph>
                 </div>
                 <div className='flex flex-col justify-center items-center relative lg:flex-row'>
-                    <Image
-                        className=''
-                        imageContent={image} 
-                        alt={''}
-                        sizeSteps={IMAGE_SIZE_STEPS} 
-                    />
-                    <div className='bg-np-neutral-darkest bottom-0 left-0 flex flex-col gap-3 items-center justify-center p-7 text-np-neutral-light text-center w-full
-                        lg:max-w-prose lg:p-10 lg:absolute lg:translate-x-[7vw] lg:translate-y-7'>
+                    <SlideInAnimation>
+                        <Image
+                            containerClassName=''
+                            imageContent={image} 
+                            alt={''}
+                            sizeSteps={IMAGE_SIZE_STEPS} 
+                            />
+                    </SlideInAnimation>
+
+                    <SlideInAnimation
+                        className='bg-np-neutral-darkest bottom-0 flex flex-col gap-3 items-center justify-center p-7 -mt-3 text-np-neutral-light text-center w-full
+                            lg:max-w-prose lg:absolute lg:-bottom-14 lg:left-10 lg:ml-10 lg:p-10'>
                             {false && (
                                 <Paragraph className=''>
                                     <strong>{article?.date}</strong>
@@ -53,7 +59,7 @@ const FeaturedArticle = ({featuredArticleContent, className}) => {
                                 text: 'Read Article',
                                 variant: 'internal'
                             }} />
-                    </div>
+                    </SlideInAnimation>
                 </div>
             </Container>
         </section>

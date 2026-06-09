@@ -8,6 +8,7 @@ import Heading from '../atoms/heading'
 import Image from '../atoms/image'
 import ModalWithCarousel from '../molecules/modal-with-carousel';
 import Paragraph from '../atoms/paragraph'
+import { SlideInAnimation } from '../atoms/animations';
 
 const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
 
@@ -76,7 +77,10 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                         {photographs.map((photo, index) => {
                             return(
                                 <SwiperSlide className='!h-auto pb-10 relative z-20' key={`featured-photograph-${index}`}>
-                                    <div className='flex flex-col h-full w-full'>
+                                    <SlideInAnimation 
+                                        className='flex flex-col h-full w-full'
+                                        delay={index * 0.15}
+                                    >
                                         <Image 
                                             alt={''}
                                             imageContent={photo.image}
@@ -100,12 +104,11 @@ const FeaturedPhotographs = ({featuredPhotographsContent, className}) => {
                                                 />
                                             </div>
                                         </div>
-                                    </div>
+                                    </SlideInAnimation>
                                 </SwiperSlide>
                             )
                         })}
                     </Swiper>
-                
                 <AnimatePresence
                     initial={false}
                     mode={'wait'}

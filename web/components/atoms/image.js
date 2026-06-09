@@ -2,6 +2,7 @@ import generateSrcSets from '../../utils/image-helpers'
 
 const Image = ({
     className,
+    containerClassName,
     imageContent,
     sizeSteps,
     altText,
@@ -14,7 +15,7 @@ const Image = ({
     )
 
     return (
-        <picture>
+        <picture className={containerClassName}>
             {srcSets?.srcSets?.map((srcSetItem, idx) => {
                 return (
                     <source

@@ -2,7 +2,7 @@
 'use client'; // This is a client component
 import {motion} from 'framer-motion'
 
-export const FadeInWhenVisible = ({ children, className, delay=0 }) => {
+export const FadeInWhenVisible = ({ children, className, delay=0.15 }) => {
   return (
     <motion.div
       className={ className }
@@ -20,7 +20,7 @@ export const FadeInWhenVisible = ({ children, className, delay=0 }) => {
   );
 }
 
-export const ScaleInAnimation = ({children, className, delay=0}) => {
+export const ScaleInAnimation = ({children, className, delay=0.15}) => {
   return (
     <motion.div
       className={ className }
@@ -39,7 +39,7 @@ export const ScaleInAnimation = ({children, className, delay=0}) => {
   );
 }
 
-export const ScaleInWhenViewAnimation = ({children, className, isInView=false, delay=0}) => {
+export const ScaleInWhenViewAnimation = ({children, className, isInView=false, delay=0.15}) => {
   return (
     <motion.div
       className={ className }
@@ -62,7 +62,7 @@ export const ScaleInWhenViewAnimation = ({children, className, isInView=false, d
 }
 
 
-export const LightRaysAnimation = ({children, className, index=0, delay=0}) => {
+export const LightRaysAnimation = ({children, className, index=0, delay=0.15}) => {
   return (
     <motion.div
       className={ className }
@@ -81,7 +81,7 @@ export const LightRaysAnimation = ({children, className, index=0, delay=0}) => {
   );
 }
 
-export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
+export const BrightenImageAnimation = ({ children, className, delay=1.4 }) => {
   return (
     <motion.div
       className={ className }
@@ -91,7 +91,7 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
         opacity: [0.5, 0.84],
       }}
       transition={{
-        delay: 1.4,
+        delay: delay,
         duration: 2.1,
       }}
     >
@@ -100,3 +100,15 @@ export const BrightenImageAnimation = ({ children, className, delay=0 }) => {
   );
 }
 
+export const SlideInAnimation = ({ children, className, delay=0.15}) => {
+  return (
+    <motion.div 
+      className={ className }
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.05 }}
+      transition={{ delay: delay, duration: 1.4, type: 'spring', stiffness: 100 }}>
+        {children}
+    </motion.div>
+  );
+}

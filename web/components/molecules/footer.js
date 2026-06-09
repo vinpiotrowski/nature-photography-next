@@ -6,9 +6,9 @@ const Footer = () => {
         <footer className='bg-np-neutral-dark text-white relative z-20'>
             <Container variant={'footer'} className='flex flex-wrap items-center justify-center'>
                 <div className='flex gap-3 justify-end relative w-full md:gap-7'>
-                    <div className='absolute left-0 top-0 stroke-np-blue -translate-y-[25%] w-28 md:w-20 md:-translate-y-[50%]'>
+                    <div className='absolute left-0 top-0 stroke-np-blue -translate-y-[25%] w-28 md:w-48 md:-translate-y-[50%]'>
                         <svg
-                            className='h-full w-full md:h-1/2 md:w-1/2'
+                            className='h-full w-full'
                             viewBox='0 0 1592.5 1016.5'
                             xmlns='http://www.w3.org/2000/svg'
                         >
