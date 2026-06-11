@@ -88,11 +88,13 @@ footer a:before {
   transition: transform .3s ease-in-out;
 }
 
-a.inline-link:hover:before,
-nav a:hover:before,
-footer a:hover:before {
-  transform-origin: left;
-  transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+  a.inline-link:hover:before,
+  nav a:hover:before,
+  footer a:hover:before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
 }
 
 hr {
